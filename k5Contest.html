@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>K-5 Coding Contest</title>
+
+  <!-- Site globals -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <!-- Header (global) -->
+  <div class="header-container">
+    <div id="menu-placeholder"></div>
+  </div>
+
+  <main class="k5-page">
+    <!-- Hero / Title -->
+    <section class="k5-section">
+      <h1 class="k5-title">K-5 Coding Contest</h1>
+      <p>
+        The K-5 Coding Contest is an annual event that invites elementary students to build creative, working projects while practicing problem-solving and computational thinking. Contestants code solutions to age-appropriate prompts and present their projects to judges.
+      </p>
+
+      <h2 class="k5-h2">Why Focus on K-5?</h2>
+      <p>
+        Early exposure to coding strengthens curiosity, logic, and creativity. By centering K-5 learners—who are often underserved in formal CS programs—the contest helps build a strong foundation and broadens participation in computing from the start.
+      </p>
+    </section>
+
+    <!-- Year filter -->
+    <section class="k5-section">
+      <div class="k5-header-with-filter">
+        <div class="k5-filter">
+          <label for="k5-year-filter">Search by Year:</label>
+          <select id="k5-year-filter" onchange="k5FilterByYear()">
+            <option value="">Select year…</option>
+            <option value="2025" selected>2025</option>
+            <option value="2024">2024</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 2025 ===================== -->
+    <section id="k5-content-2025" class="k5-section k5-content-year">
+      <h2 class="k5-h2">2025 Contest Overview</h2>
+      <p>
+        Students will create a project that responds to an on-the-day prompt using Scratch or ScratchJr (grade-appropriate). Judges will evaluate clarity of idea, creativity, and how well the code addresses the prompt.
+      </p>
+
+      <h2 class="k5-h2">Prizes</h2>
+      <ul>
+        <li><strong>1st Place:</strong> PlayStation&nbsp;5</li>
+        <li><strong>2nd Place:</strong> Nintendo Switch Lite</li>
+        <li><strong>3rd Place:</strong> Nintendo Switch Lite</li>
+        <li><strong>All Participants:</strong> Participation gift</li>
+      </ul>
+
+      <h2 class="k5-h2">Eligibility &amp; Rules</h2>
+      <ul>
+        <li>Open to students in <strong>grades K–5</strong>.</li>
+        <li>Projects built in <strong>Scratch</strong> or <strong>ScratchJr</strong> (grade-appropriate).</li>
+        <li><strong>Individual entries only</strong> (no teams).</li>
+        <li>Contest prompt announced at the start of the event.</li>
+        <li><strong>Parents/guardians must accompany and supervise their child</strong> for the entire event (not a drop-off event).</li>
+      </ul>
+
+      <h2 class="k5-h2">Coding Levels</h2>
+      <ul>
+        <li><strong>Level 1:</strong> K–2 — ScratchJr</li>
+        <li><strong>Level 2:</strong> Grades 3–4 — ScratchJr or Scratch</li>
+        <li><strong>Level 3:</strong> Grade 5 — Scratch (or ScratchJr if preferred)</li>
+      </ul>
+
+      <h2 class="k5-h2">Schedule</h2>
+      <ul>
+        <li><strong>8:30 AM – 9:00 AM:</strong> Check-in &amp; review</li>
+        <li><strong>9:00 AM – 12:00 PM:</strong> Coding time</li>
+        <li><strong>12:00 PM – 1:00 PM:</strong> Lunch (pizza provided)</li>
+        <li><strong>1:00 PM – 3:30 PM:</strong> Presentations &amp; judging</li>
+        <li><strong>3:30 PM – 4:00 PM:</strong> Awards</li>
+      </ul>
+
+      <h2 class="k5-h2">Location</h2>
+      <p>
+        <strong>Date:</strong> Saturday, March 29<br>
+        <strong>Location:</strong> Fiedler Hall, Rooms 1115–1118<br>
+        Engineering Building, Kansas State University<br>
+        <a href="https://maps.app.goo.gl/eT41T8SfC9spBN7k7" target="_blank">Directions</a>
+      </p>
+
+      <!-- Poster / Links -->
+      <section class="k5-section">
+        <h3 class="k5-h3">
+          Contest Poster
+          <a href="assets/images/k5/25_event0.png" target="_blank">pdf</a>
+        </h3>
+
+        <div class="k5-poster-and-links">
+          <img src="assets/images/k5/25_event0.png" alt="2025 Contest Poster" class="k5-poster-image">
+
+          <div class="k5-links">
+            <div class="k5-link-box">
+              <img src="assets/icons/enrollment-icon.png" alt="Enroll Icon" class="k5-link-icon">
+              <p>Enroll for the Contest</p>
+              <a href="https://forms.gle/2F4SZ2DfY2miNUeJA" target="_blank">Click Here</a>
+            </div>
+
+            <div class="k5-link-box">
+              <img src="assets/icons/inquiry-icon.png" alt="Inquiry Icon" class="k5-link-icon">
+              <p>Ask a Question</p>
+              <a href="mailto:info.k12datascience@gmail.com?subject=K-5 Coding Contest - Question">Click Here</a>
+            </div>
+
+            <div class="k5-link-box">
+              <img src="assets/icons/volunteer-icon.png" alt="Volunteer Icon" class="k5-link-icon">
+              <p>Sign Up to Volunteer</p>
+              <a href="https://forms.gle/a3dpaf3KeLcbxk1P6" target="_blank">Click Here</a>
+            </div>
+
+            <div class="k5-link-box">
+              <img src="assets/icons/Partner-icon.png" alt="Partner Icon" class="k5-link-icon">
+              <p>Partner With Us</p>
+              <a href="mailto:info.k12datascience@gmail.com?subject=K-5 Coding Contest - Partner With Us">Click Here</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <h2 class="k5-h2">Organizing</h2>
+      <div class="k5-team-grid">
+        <div class="k5-person-card">
+          <img src="assets/images/member1.jpg" alt="Dr. Safia Malallah">
+          <p>Dr. Safia Malallah — Event Coordinator</p>
+        </div>
+        <div class="k5-person-card">
+          <img src="assets/images/member5.jpg" alt="Dr. Hande Küçük McGinty">
+          <p>Dr. Hande Küçük McGinty — Event Coordinator</p>
+        </div>
+        <div class="k5-person-card">
+          <img src="assets/images/member3.jpg" alt="Dr. Lior Shamir">
+          <p>Dr. Lior Shamir — Event Coordinator</p>
+        </div>
+      </div>
+
+      <h2 class="k5-h2">Sponsored</h2>
+      <div class="k5-team-grid">
+        <div class="k5-person-card">
+          <img src="assets/icons/cs.jpg" alt="Computer Science Department">
+          <p>Computer Science Department</p>
+        </div>
+        <div class="k5-person-card">
+          <img src="assets/icons/kdsc_logo.jpg" alt="Kansas Data Science Consortium">
+          <p>Kansas Data Science Consortium</p>
+        </div>
+        <div class="k5-person-card">
+          <img src="assets/icons/DIC.png" alt="Diversity in Computing">
+          <p>Diversity in Computing</p>
+        </div>
+        <div class="k5-person-card">
+          <img src="assets/icons/wids_logo.jpg" alt="Women in Data Science - Kansas">
+          <p>Women in Data Science — Kansas</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 2024 ===================== -->
+    <section id="k5-content-2024" class="k5-section k5-content-year">
+      <h2 class="k5-h2">2024 Contest Overview</h2>
+      <p>
+        Participants coded solutions in Scratch/ScratchJr to a day-of prompt and presented to judges.
+      </p>
+
+      <h2 class="k5-h2">Prizes</h2>
+      <ul>
+        <li><strong>1st:</strong> Trophy, medal and certificate </li>
+        <li><strong>2nd:</strong>  Trophy, medal and certificate  </li>
+        <li><strong>3rd:</strong> Trophy, medal and certificate </li>
+        <li><strong>All Participants:</strong> Participation gift</li>
+      </ul>
+
+      <h2 class="k5-h2">Eligibility &amp; Rules</h2>
+      <ul>
+        <li>Grades K–5, individual entries, prompt announced at event.</li>
+        <li>Scratch or ScratchJr only.</li>
+        <li>Parent/guardian supervision required throughout (not a drop-off event).</li>
+      </ul>
+
+      <h2 class="k5-h2">Schedule (Summary)</h2>
+      <ul>
+        <li>Morning: Check-in &amp; coding</li>
+        <li>Lunch provided</li>
+        <li>Afternoon: Presentations, judging, awards</li>
+      </ul>
+    </section>
+
+   
+    <!-- Related Links -->
+    <section class="k5-section">
+      <h3 class="k5-h3">Related Links</h3>
+      <ul>
+        <li><a href="https://www.cs.ksu.edu/about/news/stories/k-5-coding-contest-2025/" target="_blank">Press 2025</a></li>
+        <li><a href="https://www.k-state.edu/today/announcement/?id=96168" target="_blank">Press 2024</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- Footer (global) -->
+  <div id="footer-placeholder"></div>
+
+  <!-- Scripts -->
+  <script>
+    // Load shared chrome
+    fetch('menu.html').then(r => r.text()).then(t => { document.getElementById('menu-placeholder').innerHTML = t; });
+    fetch('footer.html').then(r => r.text()).then(t => { document.getElementById('footer-placeholder').innerHTML = t; });
+
+    // Hide all by default on load; show selected year
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.k5-content-year').forEach(el => el.style.display = 'none');
+      k5FilterByYear(); // initialize based on current select value
+    });
+
+    function k5FilterByYear() {
+      const val = document.getElementById('k5-year-filter').value; // '', '2025', '2024', '2023'
+      const sections = document.querySelectorAll('.k5-content-year');
+
+      // Hide all
+      sections.forEach(el => el.style.display = 'none');
+
+      // Show selection (if any)
+      if (val) {
+        const target = document.getElementById(`k5-content-${val}`);
+        if (target) target.style.display = '';
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Courses & Programs | D³KIDS Playground</title>
+
+  <meta name="description" content="Browse D³KIDS Playground courses, certificates, and bootcamps for kids, teens, and teachers — online and in-person." />
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+  <!-- Page-scoped polish consistent with your project pages -->
+  <style>
+    .page-wrap{max-width:1100px;margin:0 auto;padding:12px 16px 40px;}
+    .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:center;margin:18px 0 8px;}
+    .hero-card{background:#fff;border:1px solid #eef1f5;border-radius:20px;padding:20px 22px;box-shadow:0 8px 30px rgba(17,24,39,.06);}
+    .hero h1{font-size:1.9rem;margin:.1rem 0 .4rem;}
+    .chipbar{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0 6px;}
+    .chip{background:#f5f7fb;border:1px solid #e5e7eb;padding:6px 10px;border-radius:999px;font-size:.85rem}
+    .cta-row{display:flex;gap:12px;flex-wrap:wrap;margin:14px 0 4px;}
+    .btn-lg{display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:14px;font-weight:700;text-decoration:none}
+    .btn-primary{background:#0ea5e9;color:#fff;box-shadow:0 10px 24px rgba(14,165,233,.22);}
+    .btn-ghost{background:#f5f7fb;border:1px solid #e5e7eb;color:#111827}
+    .hero-art{background:linear-gradient(180deg,#fff 0,#f7fbff 100%);border:1px solid #eef1f5;border-radius:22px;padding:14px;display:flex;align-items:center;justify-content:center;}
+    .hero-art img{width:100%;max-width:480px;opacity:.92}
+
+    .section{margin:28px 0 8px;}
+    .section h2{font-size:1.25rem;letter-spacing:.04em;margin:0 0 8px;color:#00b3b3;display:flex;align-items:center;gap:8px}
+    .card{background:#fff;border:1px solid #eef1f5;border-radius:16px;padding:16px 18px;box-shadow:0 8px 30px rgba(17,24,39,.04);}
+
+    /* Filters */
+    .filters{display:grid;gap:10px;margin:10px 0}
+    .filters-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+    .filter-label{font-weight:700;margin-right:4px}
+    .pill{border:1px solid #e5e7eb;background:#f8fafc;border-radius:999px;padding:6px 10px;font-weight:600;cursor:pointer;user-select:none}
+    .pill.active{background:#0ea5e9;color:#fff;border-color:#0ea5e9}
+    .search-wrap{display:flex;gap:8px;margin-top:6px}
+    .search-wrap input{flex:1;border:1px solid #e5e7eb;border-radius:12px;padding:10px 12px}
+
+    /* Grid */
+    .course-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px;margin-top:12px}
+    .course{background:#fff;border:1px solid #eef1f5;border-radius:16px;padding:14px;display:flex;flex-direction:column;gap:10px;transition:transform .12s,box-shadow .12s}
+    .course:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(0,0,0,.06)}
+    .course .title{font-weight:700;font-size:1.05rem}
+    .badges{display:flex;flex-wrap:wrap;gap:6px}
+    .badge{background:#f5f7fb;border:1px solid #e5e7eb;border-radius:999px;padding:4px 8px;font-size:.78rem}
+    .meta{color:#6b7280;font-size:.92rem}
+    .tags{display:flex;gap:6px;flex-wrap:wrap}
+    .tag{background:#f5f7fb;border:1px solid #e5e7eb;padding:3px 8px;border-radius:999px;font-size:.78rem}
+    .cta-mini{display:flex;gap:8px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;gap:8px;border:1px solid #e5e7eb;background:#f8fafc;border-radius:10px;padding:8px 10px;text-decoration:none;font-weight:700;color:inherit}
+    .btn.primary{background:#0ea5e9;color:#fff;border-color:#0ea5e9}
+    .note{color:#6b7280}
+
+    /* Tables */
+    .table{width:100%;border-collapse:collapse}
+    .table th,.table td{padding:10px;border-bottom:1px solid #eef1f5;text-align:left}
+    .table th{font-size:.9rem;color:#6b7280}
+    .icon{color:#0ea5e9}
+
+    @media (max-width:900px){.hero{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+
+  <!-- Header / Nav -->
+  <div class="header-container">
+    <div id="menu-placeholder"></div>
+    <script>
+      fetch('menu.html').then(r=>r.text()).then(html=>{
+        document.getElementById('menu-placeholder').innerHTML = html;
+      });
+    </script>
+  </div>
+
+  <main class="page-wrap">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-card">
+        <h1>Courses, Certificates &amp; Bootcamps</h1>
+        <p>
+          Hands-on learning for students, families, and teachers. Explore offerings in
+          <strong>AI</strong>, <strong>Data Science</strong>, <strong>Computational Thinking</strong>, programming, and more.
+          Join us <em>online</em>, <em>in-person</em>, or <em>hybrid</em>—with options that include
+          stackable <strong>certificates</strong> and intensive <strong>bootcamps</strong>.
+        </p>
+        <div class="chipbar">
+          <span class="chip"><i class="fa-solid fa-globe"></i> Online</span>
+          <span class="chip"><i class="fa-solid fa-location-dot"></i> In-Person (K-State &amp; partners)</span>
+          <span class="chip"><i class="fa-solid fa-layer-group"></i> Stackable Certificates</span>
+          <span class="chip"><i class="fa-solid fa-bolt"></i> Weekend Bootcamps</span>
+        </div>
+    
+      </div>
+
+      <div class="hero-art">
+        <img src="assets/images/courses.png" alt="Kids learning data science and AI" onerror="this.src='assets/images/about-safia.jpg'">
+      </div>
+    </section>
+
+    <!-- FILTERS -->
+    <section class="section">
+      <h2><i class="fa-solid fa-filter icon"></i> Find a Program</h2>
+      <div class="card">
+        <div class="filters">
+          <div class="filters-row" data-group="delivery">
+            <span class="filter-label">Delivery:</span>
+            <span class="pill active" data-value="*">All</span>
+            <span class="pill" data-value="online">Online</span>
+            <span class="pill" data-value="inperson">In-Person</span>
+            <span class="pill" data-value="hybrid">Hybrid</span>
+          </div>
+          <div class="filters-row" data-group="type">
+            <span class="filter-label">Type:</span>
+            <span class="pill active" data-value="*">All</span>
+            <span class="pill" data-value="course">Course</span>
+            <span class="pill" data-value="certificate">Certificate</span>
+            <span class="pill" data-value="bootcamp">Bootcamp</span>
+            <span class="pill" data-value="workshop">Workshop/PD</span>
+          </div>
+          <div class="filters-row" data-group="audience">
+            <span class="filter-label">Audience:</span>
+            <span class="pill active" data-value="*">All</span>
+            <span class="pill" data-value="k2">K-2</span>
+            <span class="pill" data-value="35">3-5</span>
+            <span class="pill" data-value="68">6-8</span>
+            <span class="pill" data-value="912">9-12</span>
+            <span class="pill" data-value="teachers">Teachers</span>
+            <span class="pill" data-value="families">Families</span>
+          </div>
+          <div class="filters-row" data-group="level">
+            <span class="filter-label">Level:</span>
+            <span class="pill active" data-value="*">All</span>
+            <span class="pill" data-value="beginner">Beginner</span>
+            <span class="pill" data-value="intermediate">Intermediate</span>
+            <span class="pill" data-value="advanced">Advanced</span>
+          </div>
+          <div class="search-wrap">
+            <input id="courseSearch" type="search" placeholder="Search by title, tool, or topic (e.g., Python, AI, charts)"/>
+            <button class="pill" id="clearFilters"><i class="fa-solid fa-rotate-left"></i> Reset</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COURSE GRID -->
+    <section class="section">
+      <h2><i class="fa-solid fa-layer-group icon"></i> All Offerings</h2>
+      <div id="courseGrid" class="course-grid">
+
+        <!-- Course cards (edit details/links as needed) -->
+
+        <article class="course"
+          data-delivery="online"
+          data-type="course"
+          data-audience="35 68"
+          data-level="beginner">
+          <div class="title">Data Science for Kids (Charts & Patterns)</div>
+          <div class="badges">
+            <span class="badge"><i class="fa-solid fa-globe"></i> Online</span>
+            <span class="badge"><i class="fa-solid fa-signal"></i> Beginner</span>
+            <span class="badge"><i class="fa-solid fa-clock"></i> 6 weeks</span>
+          </div>
+          <p class="meta">A playful intro to collecting data, bar/line charts, and telling stories with numbers using kid-friendly tools.</p>
+          <div class="tags">
+            <span class="tag">K-5</span><span class="tag">Charts</span><span class="tag">Inquiry</span>
+          </div>
+          <div class="cta-mini">
+            <a class="btn" href="resources/syllabi/ds-for-kids.pdf" target="_blank"><i class="fa-regular fa-file-lines"></i> Syllabus</a>
+            <a class="btn primary" href="#" onclick="return false;"><i class="fa-solid fa-ticket"></i> Register</a>
+            <a class="btn" href="mailto:safia@ksu.edu?subject=Invoice%20Request%20DS%20for%20Kids"><i class="fa-solid fa-file-invoice"></i> Invoice</a>
+          </div>
+        </article>
+
+        <article class="course"
+          data-delivery="inperson"
+          data-type="bootcamp"
+          data-audience="68 912"
+          data-level="beginner">
+          <div class="title">Roblox Studio Bootcamp (Game Design + Lua)</div>
+          <div class="badges">
+            <span class="badge"><i class="fa-solid fa-location-dot"></i> In-Person</span>
+            <span class="badge"><i class="fa-solid fa-bolt"></i> Bootcamp (Weekend)</span>
+            <span class="badge"><i class="fa-solid fa-clock"></i> 12 hours</span>
+          </div>
+          <p class="meta">Design, script, and publish a simple Roblox world. Perfect for first-time creators.</p>
+          <div class="tags">
+            <span class="tag">6-12</span><span class="tag">Lua</span><span class="tag">Game Design</span>
+          </div>
+          <div class="cta-mini">
+            <a class="btn" href="resources/syllabi/roblox-bootcamp.pdf" target="_blank"><i class="fa-regular fa-file-lines"></i> Outline</a>
+            <a class="btn primary" href="#" onclick="return false;"><i class="fa-solid fa-ticket"></i> Register</a>
+            <a class="btn" href="#" onclick="return false;"><i class="fa-solid fa-circle-info"></i> Cohort Dates</a>
+          </div>
+        </article>
+
+        <article class="course"
+          data-delivery="hybrid"
+          data-type="certificate"
+          data-audience="68 912"
+          data-level="intermediate">
+          <div class="title">AI Foundations Certificate (Middle & High School)</div>
+          <div class="badges">
+            <span class="badge"><i class="fa-solid fa-shuffle"></i> Hybrid</span>
+            <span class="badge"><i class="fa-solid fa-certificate"></i> Certificate</span>
+            <span class="badge"><i class="fa-solid fa-clock"></i> 8 weeks</span>
+          </div>
+          <p class="meta">Core AI ideas: data → models, training vs. inference, bias & fairness, and real-world applications.</p>
+          <div class="tags">
+            <span class="tag">AI/ML</span><span class="tag">Ethics</span><span class="tag">Projects</span>
+          </div>
+          <div class="cta-mini">
+            <a class="btn" href="resources/syllabi/ai-foundations-certificate.pdf" target="_blank"><i class="fa-regular fa-file-lines"></i> Syllabus</a>
+            <a class="btn primary" href="#" onclick="return false;"><i class="fa-solid fa-ticket"></i> Apply</a>
+            <a class="btn" href="#" onclick="return false;"><i class="fa-solid fa-award"></i> Credit/Badge</a>
+          </div>
+        </article>
+
+        <article class="course"
+          data-delivery="online"
+          data-type="course"
+          data-audience="912"
+          data-level="beginner">
+          <div class="title">Intro to Python for Data Science</div>
+          <div class="badges">
+            <span class="badge"><i class="fa-solid fa-globe"></i> Online</span>
+            <span class="badge"><i class="fa-solid fa-signal"></i> Beginner</span>
+            <span class="badge"><i class="fa-solid fa-clock"></i> 6 weeks</span>
+          </div>
+          <p class="meta">Learn Python basics, data structures, and simple analysis/plots. No prior coding required.</p>
+          <div class="tags">
+            <span class="tag">9-12</span><span class="tag">Python</span><span class="tag">Matplotlib</span>
+          </div>
+          <div class="cta-mini">
+            <a class="btn" href="resources/syllabi/python-intro.pdf" target="_blank"><i class="fa-regular fa-file-lines"></i> Syllabus</a>
+            <a class="btn primary" href="#" onclick="return false;"><i class="fa-solid fa-ticket"></i> Register</a>
+            <a class="btn" href="mailto:safia@ksu.edu?subject=Python%20Intro%20Placement"><i class="fa-solid fa-clipboard-check"></i> Placement</a>
+          </div>
+        </article>
+
+        <article class="course"
+          data-delivery="online"
+          data-type="course"
+          data-audience="k2 35"
+          data-level="beginner">
+          <div class="title">Scratch Jr. Play Lab (Pre-Reader Friendly)</div>
+          <div class="badges">
+            <span class="badge"><i class="fa-solid fa-globe"></i> Online</span>
+            <span class="badge"><i class="fa-solid fa-children"></i> Early Grades</span>
+            <span class="badge"><i class="fa-solid fa-clock"></i> 4 weeks</span>
+          </div>
+          <p class="meta">Story-based coding with icons and sounds—perfect for first steps in CS and CT.</p>
+          <div class="tags">
+            <span class="tag">K-2</span><span class="tag">Scratch Jr.</span><span class="tag">Creativity</span>
+          </div>
+          <div class="cta-mini">
+            <a class="btn" href="resources/syllabi/scratchjr-playlab.pdf" target="_blank"><i class="fa-regular fa-file-lines"></i> Syllabus</a>
+            <a class="btn primary" href="#" onclick="return false;"><i class="fa-solid fa-ticket"></i> Register</a>
+          </div>
+        </article>
+
+        <article class="course"
+          data-delivery="inperson"
+          data-type="workshop"
+          data-audience="teachers"
+          data-level="beginner">
+          <div class="title">Teacher PD: AI in the Classroom (One-Day)</div>
+          <div class="badges">
+            <span class="badge"><i class="fa-solid fa-location-dot"></i> In-Person</span>
+            <span class="badge"><i class="fa-solid fa-chalkboard-user"></i> PD/Workshop</span>
+            <span class="badge"><i class="fa-solid fa-clock"></i> 6 hours</span>
+          </div>
+          <p class="meta">Practical AI activities, ethics discussions, and alignment with standards. Leave with ready-to-use lessons.</p>
+          <div class="tags">
+            <span class="tag">Teachers</span><span class="tag">AI</span><span class="tag">Standards</span>
+          </div>
+          <div class="cta-mini">
+            <a class="btn" href="resources/syllabi/teacher-ai-pd.pdf" target="_blank"><i class="fa-regular fa-file-lines"></i> Agenda</a>
+            <a class="btn primary" href="#" onclick="return false;"><i class="fa-solid fa-building"></i> School Booking</a>
+          </div>
+        </article>
+
+        <article class="course"
+          data-delivery="hybrid"
+          data-type="certificate"
+          data-audience="912"
+          data-level="intermediate">
+          <div class="title">Data Science Certificate (High School)</div>
+          <div class="badges">
+            <span class="badge"><i class="fa-solid fa-shuffle"></i> Hybrid</span>
+            <span class="badge"><i class="fa-solid fa-certificate"></i> Certificate</span>
+            <span class="badge"><i class="fa-solid fa-clock"></i> 10 weeks</span>
+          </div>
+          <p class="meta">Collect → clean → analyze → communicate. Projects with real datasets and a final showcase.</p>
+          <div class="tags">
+            <span class="tag">9-12</span><span class="tag">Pandas</span><span class="tag">Visualization</span>
+          </div>
+          <div class="cta-mini">
+            <a class="btn" href="resources/syllabi/ds-certificate-hs.pdf" target="_blank"><i class="fa-regular fa-file-lines"></i> Syllabus</a>
+            <a class="btn primary" href="#" onclick="return false;"><i class="fa-solid fa-ticket"></i> Apply</a>
+            <a class="btn" href="#" onclick="return false;"><i class="fa-solid fa-award"></i> College Credit</a>
+          </div>
+        </article>
+
+        <article class="course"
+          data-delivery="online"
+          data-type="course"
+          data-audience="families"
+          data-level="beginner">
+          <div class="title">Family Night: Data Detectives</div>
+          <div class="badges">
+            <span class="badge"><i class="fa-solid fa-globe"></i> Online</span>
+            <span class="badge"><i class="fa-solid fa-house-chimney"></i> Family</span>
+            <span class="badge"><i class="fa-solid fa-clock"></i> 90 minutes</span>
+          </div>
+          <p class="meta">Parents + kids investigate a fun mystery using clues and simple charts. No prior experience.</p>
+          <div class="tags">
+            <span class="tag">Families</span><span class="tag">Data Literacy</span><span class="tag">Fun</span>
+          </div>
+          <div class="cta-mini">
+            <a class="btn" href="resources/syllabi/family-data-detectives.pdf" target="_blank"><i class="fa-regular fa-file-lines"></i> Outline</a>
+            <a class="btn primary" href="#" onclick="return false;"><i class="fa-solid fa-ticket"></i> Register</a>
+          </div>
+        </article>
+
+      </div>
+      <p class="note" style="margin-top:8px">Need financial aid, group rates, or a purchase order? Email <a href="mailto:safia@ksu.edu">safia@ksu.edu</a>.</p>
+    </section>
+
+    <!-- CERTIFICATES & BOOTCAMPS INFO -->
+    <section class="section">
+      <h2><i class="fa-solid fa-award icon"></i> Certificates & Bootcamps</h2>
+      <div class="card">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Program</th>
+              <th>Format</th>
+              <th>Length</th>
+              <th>Outcome</th>
+              <th>Next Start</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>AI Foundations Certificate</td>
+              <td>Hybrid (weekly)</td>
+              <td>8 weeks</td>
+              <td>Digital badge & portfolio</td>
+              <td>Rolling cohorts</td>
+              <td><a class="btn" href="#" onclick="return false;"><i class="fa-solid fa-ticket"></i> Apply</a></td>
+            </tr>
+            <tr>
+              <td>Data Science Certificate (HS)</td>
+              <td>Hybrid (weekly)</td>
+              <td>10 weeks</td>
+              <td>Certificate; optional credit</td>
+              <td>Fall & Spring</td>
+              <td><a class="btn" href="#" onclick="return false;"><i class="fa-solid fa-ticket"></i> Apply</a></td>
+            </tr>
+            <tr>
+              <td>Roblox Studio Bootcamp</td>
+              <td>In-Person (weekend)</td>
+              <td>12 hours</td>
+              <td>Published mini-game</td>
+              <td>Monthly</td>
+              <td><a class="btn" href="#" onclick="return false;"><i class="fa-solid fa-ticket"></i> Register</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- FAQ / CONTACT -->
+    <section class="section">
+      <h2><i class="fa-solid fa-circle-question icon"></i> FAQ & Contact</h2>
+      <div class="card">
+        <p><strong>Devices:</strong> Chromebooks or laptops are fine for most programs; Roblox bootcamps require a Windows/Mac laptop.</p>
+        <p><strong>Scholarships:</strong> Limited need-based seats are available for each cohort.</p>
+        <p><strong>Refunds:</strong> Full refund up to 7 days before the start; credit thereafter.</p>
+        <div class="cta-row">
+          <a class="btn-lg btn-primary" href="mailto:safia@ksu.edu?subject=Course%20Question%20%2F%20Group%20Booking">
+            <i class="fa-regular fa-envelope"></i> Email Us
+          </a>
+          <a class="btn-lg btn-ghost" target="_blank" rel="noopener"
+             href="https://outlook.office.com/bookwithme/user/2d1b7aa5485444a6a79e6554e7f71d03@ksu.edu?anonymous&ismsaljsauthenabled&ep=plink">
+            <i class="fa-solid fa-calendar-check"></i> Book an Info Call
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <div id="footer-placeholder"></div>
+  <script>
+    fetch('footer.html').then(r=>r.text()).then(html=>{
+      document.getElementById('footer-placeholder').innerHTML = html;
+    });
+
+    // --- Simple filter/search logic ---
+    (function(){
+      const state = {delivery:'*', type:'*', audience:'*', level:'*', q:''};
+      const grid = document.getElementById('courseGrid');
+      const cards = Array.from(grid.querySelectorAll('.course'));
+      const search = document.getElementById('courseSearch');
+
+      function apply(){
+        const q = state.q.trim().toLowerCase();
+        cards.forEach(card=>{
+          const okDelivery = state.delivery==='*' || card.dataset.delivery===state.delivery;
+          const okType = state.type==='*' || card.dataset.type===state.type;
+          const okLevel = state.level==='*' || card.dataset.level===state.level;
+
+          const aud = (card.dataset.audience||'').split(/\s+/);
+          const okAudience = state.audience==='*' || aud.includes(state.audience);
+
+          const text = card.innerText.toLowerCase();
+          const okQ = !q || text.includes(q);
+
+          card.style.display = (okDelivery && okType && okAudience && okLevel && okQ) ? '' : 'none';
+        });
+      }
+
+      document.querySelectorAll('.filters-row').forEach(row=>{
+        row.addEventListener('click', e=>{
+          const pill = e.target.closest('.pill');
+          if(!pill) return;
+          row.querySelectorAll('.pill').forEach(p=>p.classList.remove('active'));
+          pill.classList.add('active');
+          const value = pill.dataset.value;
+          const group = row.dataset.group;
+          state[group] = value;
+          apply();
+        });
+      });
+
+      search.addEventListener('input', e=>{
+        state.q = e.target.value;
+        apply();
+      });
+
+      document.getElementById('clearFilters').addEventListener('click', ()=>{
+        state.delivery='*'; state.type='*'; state.audience='*'; state.level='*'; state.q='';
+        document.querySelectorAll('.filters-row').forEach(row=>{
+          row.querySelectorAll('.pill').forEach((pill,i)=>{
+            pill.classList.toggle('active', i===0);
+          });
+        });
+        search.value='';
+        apply();
+      });
+    })();
+  </script>
+</body>
+</html>

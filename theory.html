@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Theory & Frameworks</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <!-- Header -->
+  <div class="header-container">
+    <div id="menu-placeholder"></div>
+    <script>
+      fetch('menu.html').then(res=>res.text()).then(html => {
+        document.getElementById('menu-placeholder').innerHTML = html;
+      });
+    </script>
+  </div>
+
+  <main class="theory-wrap">
+    <section class="theory-hero">
+      <h1>Theory & Frameworks</h1>
+      <p>Conceptual models and pedagogical frameworks we design to guide CS, AI, and Data Science education.</p>
+
+      <!-- Search / Filters / Sort -->
+      <div class="filters">
+        <div class="field" style="flex:1 1 320px;">
+          <label for="q">Search (title, keywords)</label>
+          <input type="search" id="q" placeholder="e.g., computational thinking, early childhood, VR...">
+        </div>
+
+        <div class="field">
+          <label for="domain">Domain</label>
+          <select id="domain">
+            <option value="">All</option>
+            <option value="CT">Computational Thinking</option>
+            <option value="AI">Artificial Intelligence</option>
+            <option value="DS">Data Science</option>
+            <option value="ECED">Early Childhood</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="status">Status</label>
+          <select id="status">
+            <option value="">All</option>
+            <option value="published">Published</option>
+            <option value="in-review">In Review</option>
+            <option value="in-progress">In Progress</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="year">Year</label>
+          <select id="year"><option value="">All</option></select>
+        </div>
+
+        <div class="field">
+          <label for="sortBy">Sort</label>
+          <select id="sortBy">
+            <option value="yearLatest">Year (latest first)</option>
+            <option value="yearOldest">Year (oldest first)</option>
+            <option value="nameAZ">Title (A–Z)</option>
+          </select>
+        </div>
+
+        <button class="btn-clear" id="clearFilters" type="button">Clear filters</button>
+        <div class="count" id="matchCount">0 shown</div>
+      </div>
+    </section>
+
+    <!-- Render target -->
+    <section id="theoryList"></section>
+  </main>
+
+  <!-- Footer -->
+  <div id="footer-placeholder"></div>
+  <script>
+    fetch('footer.html').then(res=>res.text()).then(html=>{
+      document.getElementById('footer-placeholder').innerHTML=html;
+    });
+  </script>
+
+  <!-- Data + Rendering + Filters/Sorting -->
+  <script>
+    // ===== 1) DATA (edit/extend this) =====
+    // Use placeholder images if needed: assets/images/theory/placeholder.png
+    const FRAMEWORKS = [
+  {
+    title: "Computational Thinking Virtual Worlds Framework for Early Childhood (VW-EC)",
+    year: 2025,
+    status: "published",
+    domains: ["CT", "ECED"],
+    venue: "ASEE Annual Conference & Exposition ",
+    abstract:
+      "The VW-EC Framework provides structured guidance for designing, evaluating, and implementing virtual worlds that foster computational thinking in early childhood education. Developed through systematic literature analysis, expert validation, and thematic synthesis, it highlights five essential dimensions—engagement, inclusivity, creativity, safety & ethics, and teacher facilitation—ensuring virtual experiences are developmentally appropriate and pedagogically sound.",
+    coverSrc: "assets/theory/VW_CT.PNG",
+    links: {
+      pdf: "assets/theory/VW_CT.pdf",
+      abstract: "",
+      poster: ""
+    },
+    keywords:
+      "computational thinking, virtual worlds, early childhood, framework design, engagement, inclusivity, ethics"
+  },
+  {
+    title: "Computational Thinking Pedagogical Framework Plus (CTPF+)",
+    year: 2023,
+    status: "published",
+    domains: ["CT", "ECED","AI","DS"],
+    venue: "ASEE Annual Conference & Exposition ",
+    abstract:
+      "CTPF+ expands traditional computational thinking instruction by integrating emerging domains such as robotics, engineering, AI, and data science. The framework introduces nine learning modes—Unplugged, Tinkering, Making, Remixing, Robotics+, Engineering, Coding, Dataying, and AI—within a Foundation-to-Creation model. It emphasizes guided inquiry, reflective learning, and CT-HOT questioning to scaffold skills from exploration to innovation.",
+    coverSrc: "assets/theory/CTPF+.PNG",
+    links: {
+      pdf: "assets/theory/CTPF+.pdf",
+      abstract: ""
+    },
+    keywords:
+      "computational thinking, pedagogy, early childhood, AI education, robotics, data literacy, inquiry learning"
+  },
+  {
+    title: "besTech: Technology Practice Framework for Early Childhood Education",
+    year: 2023,
+    status: "published",
+    domains: ["ECED"],
+    venue: "ASEE Annual Conference & Exposition",
+    abstract:
+      "The besTech Framework organizes the benefits, challenges, and risks of technology use in early childhood into nine interrelated dimensions, guiding educators to balance screen time, creativity, and developmentally appropriate practices. It provides a lens for designing technology-enhanced environments that are safe, ethical, and inclusive while promoting cognitive, emotional, and social growth.",
+    coverSrc: "assets/theory/besTech.PNG",
+    links: {
+      pdf: "assets/theory/besTech.pdf",
+      abstract: ""
+    },
+    keywords:
+      "technology integration, early childhood, ethics, child development, equity, digital wellbeing, framework"
+  },
+  {
+    title: "STEM Model Framework for Gulf Countries",
+	year: 2021,
+	status: "published",
+	domains: ["STEM", "GCC", "EducationPolicy"],
+	venue: "ASEE Annual Conference & Exposition ",
+	abstract:
+    "The GCC STEM Model Framework was developed to explain reversed gender stereotypes in STEM education across the Arab Gulf region. Building on a tri-domain structure—technological, economic, and sociocultural—the model integrates 18 interrelated subfactors, including Availability, Quality, Passion, Workforce, Geography, Finances, Prestige, Family, Friends, Schools, Communities, Life Routine, Study Method, Maturity, Ability, Gender, Language, and Religion. The framework identifies how social expectations, education regulations, and cultural practices shape student preferences and performance, revealing that females in Gulf countries often emerge as High-Ability Learners, while males face maturity barriers linked to sociocultural factors.",
+  coverSrc: "assets/theory/GCC_STEM_Model.PNG",
+  links: {
+      pdf: "assets/theory/GCC_STEM_Model.pdf",
+      abstract: ""
+    },
+    keywords:
+      "technology integration, early childhood, ethics, child development, equity, digital wellbeing, framework"
+  }, 
+  {
+    title: "Dataying: Data Science Framework for Early Childhood Education",
+    year: 2023,
+    status: "published",
+    domains: ["DS", "ECED"],
+    venue: "ASEE Annual Conference & Exposition",
+    abstract:
+      "The Dataying Framework introduces young learners to data science through playful, developmentally appropriate experiences. It structures early data literacy around a cyclical process—posing questions, collecting small data sets, organizing, visualizing, and reflecting. Designed for PreK–2 learners, it supports early pattern recognition, sense-making, and communication of findings using tangible and story-based contexts.",
+    coverSrc: "assets/theory/dataying.PNG",
+    links: {
+      pdf: "assets/theory/dataying.pdf",
+      abstract: ""
+    },
+    keywords:
+      "data science, early childhood, data literacy, pattern recognition, visualization, storytelling, unplugged learning"
+  }
+];
+
+
+    // ===== 2) UTILS =====
+    const $ = s => document.querySelector(s);
+    const yearList = [...new Set(FRAMEWORKS.map(f=>f.year))].sort((a,b)=>a-b);
+
+    // ===== 3) RENDER =====
+    function render(list){
+      const wrap = document.getElementById('theoryList');
+      wrap.innerHTML = "";
+
+      list.forEach(f => {
+        const card = document.createElement('article');
+        card.className = "theory-card";
+        card.dataset.title = f.title.toLowerCase();
+        card.dataset.year = String(f.year);
+        card.dataset.status = f.status;
+        card.dataset.domains = (f.domains||[]).join(',').toLowerCase();
+
+        const img = document.createElement('img');
+        img.className = "theory-cover";
+        img.src = f.coverSrc || "assets/images/theory/placeholder.png";
+        img.alt = f.title;
+        img.onerror = function(){ this.src = "assets/images/theory/placeholder.png"; };
+
+        const body = document.createElement('div');
+        body.className = "theory-body";
+        body.innerHTML = `
+          <div class="theory-title">${f.title}</div>
+          <div class="theory-meta">
+            <span class="pill"><i class="fa-regular fa-calendar"></i> ${f.year}</span>
+            <span class="pill"><i class="fa-regular fa-flag"></i> ${f.status.replace('-', ' ')}</span>
+            ${ (f.domains||[]).map(d=>`<span class="pill">${d}</span>`).join('') }
+          </div>
+          <div class="theory-abstract">${f.abstract}</div>
+          <div class="theory-meta" style="margin-top:-4px;">
+            <span><i class="fa-solid fa-location-dot"></i> ${f.venue || ""}</span>
+          </div>
+        `;
+
+        const links = document.createElement('div');
+        links.className = "theory-links";
+        if (f.links?.pdf)      links.innerHTML += `<a class="btn" href="${f.links.pdf}" target="_blank" rel="noopener"><i class="fa-regular fa-file-pdf"></i> PDF</a>`;
+        if (f.links?.abstract) links.innerHTML += `<a class="btn" href="${f.links.abstract}" target="_blank" rel="noopener"><i class="fa-regular fa-note-sticky"></i> Abstract</a>`;
+        if (f.links?.poster)   links.innerHTML += `<a class="btn" href="${f.links.poster}" target="_blank" rel="noopener"><i class="fa-regular fa-image"></i> Poster</a>`;
+
+        body.appendChild(links);
+        card.appendChild(img);
+        card.appendChild(body);
+        wrap.appendChild(card);
+      });
+
+      document.getElementById('matchCount').textContent = `${list.length} shown`;
+    }
+
+    // ===== 4) FILTERS + SORT =====
+    function normalize(s){ return (s||'').toLowerCase().trim(); }
+    function apply(){
+      const qv = normalize(document.getElementById('q').value);
+      const dom = normalize(document.getElementById('domain').value);
+      const st  = normalize(document.getElementById('status').value);
+      const yr  = normalize(document.getElementById('year').value);
+      const sortBy = document.getElementById('sortBy').value;
+
+      let out = FRAMEWORKS.filter(f=>{
+        const matchesQ = !qv || f.title.toLowerCase().includes(qv) || (f.keywords||"").toLowerCase().includes(qv);
+        const matchesD = !dom || (f.domains||[]).map(x=>x.toLowerCase()).includes(dom);
+        const matchesS = !st  || f.status === st;
+        const matchesY = !yr  || String(f.year) === yr;
+        return matchesQ && matchesD && matchesS && matchesY;
+      });
+
+      out.sort((a,b)=>{
+        if (sortBy === 'nameAZ') return a.title.localeCompare(b.title);
+        if (sortBy === 'yearLatest') return (b.year||0) - (a.year||0);
+        if (sortBy === 'yearOldest') return (a.year||0) - (b.year||0);
+        return 0;
+      });
+
+      render(out);
+    }
+
+    // ===== 5) INIT =====
+    (function init(){
+      // populate Year select
+      const yearSel = document.getElementById('year');
+      yearList.forEach(y=>{
+        const opt = document.createElement('option');
+        opt.value = y; opt.textContent = y;
+        yearSel.appendChild(opt);
+      });
+
+      // listeners
+      ['q','domain','status','year','sortBy'].forEach(id=>{
+        document.getElementById(id).addEventListener('input', apply);
+      });
+      document.getElementById('clearFilters').addEventListener('click', ()=>{
+        document.getElementById('q').value='';
+        document.getElementById('domain').value='';
+        document.getElementById('status').value='';
+        document.getElementById('year').value='';
+        document.getElementById('sortBy').value='yearLatest';
+        apply();
+      });
+
+      apply(); // initial render
+    })();
+  </script>
+</body>
+</html>

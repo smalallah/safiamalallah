@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CS Songs — Pixel & Data Music | D³KIDS Playground</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+  <meta name="description" content="Original songs that teach computer science concepts—AI, data science, algorithms, and more—for K-12 classrooms." />
+
+  <!-- Page-scoped styles to match your other project pages -->
+  <style>
+    .page-wrap{max-width:1100px;margin:0 auto;padding:12px 16px 40px;}
+    .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:center;margin:18px 0 8px;}
+    .hero-card{background:#ffffff;border:1px solid #eef1f5;border-radius:20px;padding:20px 22px;box-shadow:0 8px 30px rgba(17,24,39,.06);}
+    .hero h1{font-size:1.9rem;margin:.1rem 0 .4rem;}
+    .chipbar{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0 6px;}
+    .chip{background:#f5f7fb;border:1px solid #e5e7eb;padding:6px 10px;border-radius:999px;font-size:.85rem}
+    .cta-row{display:flex;gap:12px;flex-wrap:wrap;margin:14px 0 4px;}
+    .btn-lg{display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:14px;font-weight:700;text-decoration:none}
+    .btn-primary{background:#0ea5e9;color:#fff;box-shadow:0 10px 24px rgba(14,165,233,.22);}
+    .btn-ghost{background:#f5f7fb;border:1px solid #e5e7eb;color:#111827}
+    .hero-art{background:linear-gradient(180deg,#fff 0,#f7fbff 100%);border:1px solid #eef1f5;border-radius:22px;padding:14px;display:flex;align-items:center;justify-content:center;}
+    .hero-art img{width:100%;max-width:480px;opacity:.92}
+
+    .section{margin:28px 0 8px;}
+    .section h2{font-size:1.25rem;letter-spacing:.04em;margin:0 0 8px;color:#00b3b3;display:flex;align-items:center;gap:8px}
+    .card{background:#ffffff;border:1px solid #eef1f5;border-radius:16px;padding:16px 18px;box-shadow:0 8px 30px rgba(17,24,39,.04);}
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+
+    .team-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;margin-top:10px}
+    .person{border:1px solid #eef1f5;border-radius:14px;padding:12px;background:#fff}
+    .person .name{font-weight:700}
+    .person .role{color:#6b7280;font-size:.92rem}
+
+    .pub-item{padding:10px 0;border-bottom:1px dashed #e8ecf2}
+    .pub-item:last-child{border-bottom:0}
+    .pub-title{font-weight:700}
+    .pub-meta{color:#6b7280;font-size:.95rem}
+
+    .resource-links{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+    .resource-links a{display:flex;align-items:center;gap:12px;padding:12px 14px;border:1px solid #eef1f5;border-radius:12px;background:#fff;text-decoration:none;font-weight:600;color:inherit;transition:transform .12s,box-shadow .12s}
+    .resource-links a:hover{transform:translateY(-1px);box-shadow:0 6px 16px rgba(0,0,0,.06)}
+    .resource-links i{color:#2b9149}
+
+    /* Song catalog */
+    .song-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px}
+    .song{background:#fff;border:1px solid #eef1f5;border-radius:14px;padding:14px}
+    .song .title{font-weight:700;margin-bottom:4px}
+    .song .meta{color:#6b7280;font-size:.92rem;margin-bottom:8px}
+    .song .tags{display:flex;gap:6px;flex-wrap:wrap}
+    .tag{background:#f5f7fb;border:1px solid #e5e7eb;padding:3px 8px;border-radius:999px;font-size:.8rem}
+
+    .note{color:#6b7280}
+    .icon{color:#0ea5e9}
+    @media (max-width:900px){.hero{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+
+  <!-- Header + nav -->
+  <div class="header-container">
+    <div id="menu-placeholder"></div>
+    <script>
+      fetch('menu.html').then(r=>r.text()).then(html => {
+        document.getElementById('menu-placeholder').innerHTML = html;
+      });
+    </script>
+  </div>
+
+  <main class="page-wrap">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-card">
+        <h1>Computer Science Songs <span style="white-space:nowrap"></span></h1>
+        <p> Research shows that students retain up to twice as much information when learning with music compared to traditional instruction, making songs a powerful tool for teaching complex ideas. 
+         This project create an classroom-ready songs that make <em>AI</em>, <em>data science</em>, and core <em>CS concepts</em>
+          catchy and memorable for K-12 learners. Each track includes <strong>lyrics</strong>, a <strong>karaoke version</strong>,
+          and a <strong>teacher mini-guide</strong> with discussion prompts and quick activities.
+        </p>
+        <div class="chipbar">
+          <span class="chip"><i class="fa-solid fa-music"></i> K-12 Music Learning</span>
+          <span class="chip"><i class="fa-solid fa-robot"></i> AI &amp; Data</span>
+          <span class="chip"><i class="fa-solid fa-code"></i> CS Foundations</span>
+          <span class="chip"><i class="fa-solid fa-chalkboard-user"></i> Teacher Guides</span>
+        </div>
+
+    
+
+       
+      </div>
+
+      <div class="hero-art">
+        <img src="assets/images/songs/song.png"
+             alt="Pixel & Data CS Songs — music notes and friendly robots"
+             onerror="this.src='assets/images/about-safia.jpg'">
+      </div>
+    </section>
+
+    <!-- TEAM -->
+    <section class="section">
+      <h2><i class="fa-solid fa-people-group icon"></i> Team &amp; Mentors</h2>
+      <div class="team-grid">
+        <div class="person">
+          <div class="name">Dr. Safia Malallah</div>
+          <div class="role">Director / Lyricist — K-State</div>
+        </div>
+    
+        <div class="person">
+          <div class="name">Dr. Lior Shamir</div>
+          <div class="role">Advisor — K-State</div>
+        </div>
+   
+      </div>
+      <p class="note" style="margin-top:8px">Want to contribute? See “Get Involved.”</p>
+    </section>
+
+    <!-- GOALS -->
+    <section class="section">
+      <h2><i class="fa-solid fa-lightbulb icon"></i> Learning Goals</h2>
+      <div class="card grid-2">
+        <div>
+          <p><strong>Concept mastery:</strong> reinforce vocabulary (data, model, pattern), processes (collect → clean → visualize),
+            and big ideas (algorithms, bias, privacy) through repetition and rhyme.</p>
+          <p><strong>Transfer to activities:</strong> each song pairs with a 10-minute unplugged task and a quick reflection prompt.</p>
+        </div>
+        <div>
+          <p><strong>Accessibility:</strong> kid-friendly tempos &amp; keys, captions, lyric sheets, karaoke cuts, and
+            movement cues for multisensory learning.</p>
+          <p><strong>Assessment:</strong> exit tickets and sing-back checks included in the teacher mini-guides.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SONG CATALOG -->
+    <section class="section">
+      <h2><i class="fa-solid fa-list-music icon"></i> Song Catalog</h2>
+      <div class="card song-grid">
+        <!-- Song 1 -->
+        <div class="song">
+          <div class="title"><i class="fa-solid fa-microphone-lines"></i> Data Science Song</div>
+          <div class="meta">Target: K-5 </div>
+          <div class="tags">
+            <span class="tag">Data</span><span class="tag">Collect → Visualize</span><span class="tag">Charts</span>
+          </div>
+          <ul class="resource-links" style="margin-top:10px">
+            <li><a href="https://www.youtube.com/watch?v=rWBXU5AKYD8" target="_blank" rel="noopener"><i class="fa-brands fa-youtube"></i> Watch on YouTube</a></li>
+            <li><a href="resources/songs/data-science-song-lyrics.pdf" target="_blank" rel="noopener"><i class="fa-regular fa-file-lines"></i> Lyrics (PDF)</a></li>
+            <li><a href="resources/songs/data-science-song-karaoke.mp3" target="_blank" rel="noopener"><i class="fa-solid fa-music"></i> Karaoke (MP3)</a></li>
+            <li><a href="resources/songs/data-science-mini-guide.pdf" target="_blank" rel="noopener"><i class="fa-solid fa-chalkboard-user"></i> Teacher Mini-Guide</a></li>
+          </ul>
+        </div>
+        <!-- Song 2 -->
+        <div class="song">
+          <div class="title"><i class="fa-solid fa-robot"></i> I Spy an Algorithm</div>
+          <div class="meta">Target: K-5 </div>
+          <div class="tags">
+            <span class="tag">Algorithms</span><span class="tag">Sequencing</span><span class="tag">Decomposition</span>
+          </div>
+          <ul class="resource-links" style="margin-top:10px">
+      
+            <li><a href="https://youtu.be/ebr5o-3v1P0?si=AVlFcvmHRHCoHq8" target="_blank" rel="noopener"><i class="fa-brands fa-youtube"></i> Watch on YouTube</a></li>
+            <li><a href="resources/songs/algorithm-song-lyrics.pdf" target="_blank" rel="noopener"><i class="fa-regular fa-file-lines"></i> Lyrics (PDF)</a></li>
+            <li><a href="resources/songs/algorithm-song-karaoke.mp3" target="_blank" rel="noopener"><i class="fa-solid fa-music"></i> Karaoke (MP3)</a></li>
+            <li><a href="resources/songs/algorithm-mini-guide.pdf" target="_blank" rel="noopener"><i class="fa-solid fa-chalkboard-user"></i> Teacher Mini-Guide</a></li>
+          </ul>
+        </div>
+        <!-- Song 3 -->
+        <div class="song">
+          <div class="title"><i class="fa-solid fa-shield-heart"></i> Keep It Private</div>
+          <div class="meta">Target: K-5 </div>
+          <div class="tags">
+            <span class="tag">Privacy</span><span class="tag">Digital Citizenship</span>
+          </div>
+          <ul class="resource-links" style="margin-top:10px">
+            <li><a href="https://youtu.be/2hlN7E-sTpg" target="_blank" rel="noopener"><i class="fa-brands fa-youtube"></i> Watch on YouTube</a></li>
+            <li><a href="resources/songs/privacy-song-lyrics.pdf" target="_blank" rel="noopener"><i class="fa-regular fa-file-lines"></i> Lyrics (PDF)</a></li>
+            <li><a href="resources/songs/privacy-song-karaoke.mp3" target="_blank" rel="noopener"><i class="fa-solid fa-music"></i> Karaoke (MP3)</a></li>
+            <li><a href="resources/songs/privacy-mini-guide.pdf" target="_blank" rel="noopener"><i class="fa-solid fa-chalkboard-user"></i> Teacher Mini-Guide</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="note" style="margin-top:8px">Looking for chords/stems? See the resources below or email us.</p>
+    </section>
+
+    <!-- WATCH & RESOURCES -->
+    <section class="section">
+      <h2><i class="fa-solid fa-link icon"></i> Resources</h2>
+      <div class="card">
+        <ul class="resource-links">
+          <li>
+            <a href="resources/teacher-kit.pdf" target="_blank" rel="noopener">
+              <i class="fa-brands fa-youtube"></i> Teacher Kit
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- GET INVOLVED -->
+    <section class="section">
+      <h2><i class="fa-solid fa-handshake-angle icon"></i> Get Involved</h2>
+      <div class="card">
+        <p>We’re expanding the catalog! Join as a vocalist, producer, classroom pilot teacher, or translator.
+           We also welcome feedback from students and families.</p>
+        <div class="cta-row">
+          <a class="btn-lg btn-primary"
+             href="mailto:safia@ksu.edu?subject=Volunteer%20for%20CS%20Songs&body=Hi%20Dr.%20Malallah%2C%0A%0AI%27d%20love%20to%20help%20with%20the%20CS%20Songs%20project.%20My%20interest%3A%0A-%20Vocals%0A-%20Production%0A-%20Classroom%20pilot%0A-%20Translation%0A-%20Research%0A%0AThanks!">
+            <i class="fa-regular fa-envelope"></i> Email to Volunteer
+          </a>
+          <a class="btn-lg btn-ghost" target="_blank" rel="noopener"
+             href="https://outlook.office.com/bookwithme/user/2d1b7aa5485444a6a79e6554e7f71d03@ksu.edu?anonymous&ismsaljsauthenabled&ep=plink">
+            <i class="fa-solid fa-calendar-check"></i> Book a 15-min chat
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PUBLICATIONS / OUTPUTS -->
+    <section class="section">
+      <h2><i class="fa-solid fa-book-open icon"></i> Publications &amp; Outputs</h2>
+      <div class="card">
+        <div class="pub-item">
+          <div class="pub-title">Melodies and algorithms: A musical approach to computer science education</div>
+          <div class="pub-meta">Work in progress</div>
+          
+        </div>
+        
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <div id="footer-placeholder"></div>
+  <script>
+    fetch('footer.html').then(r=>r.text()).then(html => {
+      document.getElementById('footer-placeholder').innerHTML = html;
+    });
+  </script>
+</body>
+</html>

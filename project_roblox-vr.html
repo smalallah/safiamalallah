@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Roblox VR — Computational Thinking Island | D³KIDS Playground</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+  <meta name="description" content="Roblox VR project that helps K-12 learners practice computational thinking in an immersive, playful world." />
+
+
+</head>
+<body>
+
+  <!-- Header + nav -->
+  <div class="header-container">
+    <div id="menu-placeholder"></div>
+    <script>
+      fetch('menu.html').then(r=>r.text()).then(html => {
+        document.getElementById('menu-placeholder').innerHTML = html;
+      });
+    </script>
+  </div>
+
+  <main class="page-wrap">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-card">
+        <h1>Roblox Virtual World <span style="white-space:nowrap">Computational Thinking Island</span></h1>
+        <p>
+          An immersive Roblox world that helps K-12 learners practice core <em>computational thinking</em> (CT)
+          concepts—sequencing, decomposition, abstraction, and debugging—through narrative quests and playful challenges.
+          Built with Roblox Studio and Lua, designed to be inclusive, accessible, and teacher-friendly.
+        </p>
+        <div class="chipbar">
+          <span class="chip"><i class="fa-solid fa-vr-cardboard"></i> VR-Ready</span>
+          <span class="chip"><i class="fa-brands fa-roblox"></i> Roblox Studio + Lua</span>
+          <span class="chip"><i class="fa-solid fa-children"></i> Grades: Upper-Elem–Middle</span>
+          <span class="chip"><i class="fa-solid fa-graduation-cap"></i> CS/CT Learning</span>
+        </div>
+
+        <div class="cta-row">
+          
+       <iframe width="560" height="315" src="https://www.youtube.com/embed/x1fPzfFaWjk?si=8xQLSpBOqv516fCM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      
+        </div>
+        
+      </div>
+
+      <div class="hero-art">
+        <img height="740" src="assets/images/roblox.jpg" alt="Roblox VR Computational Thinking Island (illustration)" onerror="this.src='assets/images/about-safia.jpg'">
+      </div>
+    </section>
+
+     <!-- TEAM -->
+    <section class="section">
+      <h2><i class="fa-solid fa-people-group icon"></i> Student Team &amp; Mentors</h2>
+      <div class="team-grid">
+        <!-- Edit these easily -->
+        <div class="person">
+          <div class="name">Nathon Kean</div>
+          <div class="role">Undergraduate Researcher</div>
+        </div>
+        <div class="person">
+          <div class="name">Hayden Stewart</div>
+          <div class="role">Undergraduate Researcher </div>
+        </div>
+       
+        <!-- Mentors -->
+        <div class="person">
+          <div class="name">Dr. Safia Malallah</div>
+          <div class="role">Faculty Mentor, K-State</div>
+        </div>
+        <div class="person">
+          <div class="name">Dr. Lior Shamir</div>
+          <div class="role">Faculty Collaborator</div>
+        </div>
+      </div>
+      <p class="note" style="margin-top:8px">Want your name here? See the “Get Involved” section below.</p>
+    </section>
+
+   
+    <!-- DESCRIPTION / GOALS -->
+    <section class="section">
+      <h2><i class="fa-solid fa-lightbulb icon"></i> Project Goals</h2>
+      <div class="card grid-2">
+        <div>
+          <p><strong>Learning outcomes:</strong> help students practice CT concepts in-context, reflect on strategy, and transfer
+          ideas to unplugged/plugged activities.</p>
+          <p><strong>Design pillars:</strong> child-centered narrative, scaffolded quests, immediate feedback, and teacher
+          supports (rubrics, quick-start guides, and printable extensions).</p>
+        </div>
+        <div>
+          <p><strong>Research lens:</strong> we study engagement, self-efficacy, and learning gains, and we iterate on the world
+          using classroom observations and analytics.</p>
+          <p><strong>Accessibility:</strong> color-safe UI, captioned narrative, and input flexibility for mixed devices.</p>
+        </div>
+      </div>
+    </section>
+
+   
+
+   
+
+<!-- HOW TO TRY / LINKS -->
+<!-- HOW TO TRY / LINKS -->
+<section class="section">
+  <h2><i class="fa-solid fa-link icon"></i> Try It &amp; Resources</h2>
+  <div class="card">
+    <ul class="resource-links">
+      <li>
+        <a href="https://www.roblox.com/games/6791204917/CT-Island" target="_blank" rel="noopener">
+          <i class="fa-brands fa-roblox"></i> Roblox — CT Island
+        </a>
+      </li>
+      <li>
+        <a href="resources/virtual-worlds-framework.pdf" target="_blank" rel="noopener">
+          <i class="fa-solid fa-cubes-stacked"></i> Virtual Worlds Framework for Early Childhood
+        </a>
+      </li>
+      <li>
+        <a href="resources/teacher-kit.pdf" target="_blank" rel="noopener">
+          <i class="fa-solid fa-chalkboard-user"></i> Teacher Kit
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+
+
+    <!-- GET INVOLVED -->
+    <section class="section">
+      <h2><i class="fa-solid fa-handshake-angle icon"></i> Get Involved</h2>
+      <div class="card">
+        <p>We welcome teachers, students, and community partners. You can help by testing the world in your classroom, designing quests, creating assets, or helping with research and evaluation.</p>
+        <div class="cta-row">
+          <a class="btn-lg btn-primary" href="mailto:safia@ksu.edu?subject=Volunteer%20for%20Roblox%20VR%20Project&body=Hi%20Dr.%20Malallah%2C%0A%0AI%27m%20interested%20in%20volunteering%20on%20the%20Roblox%20VR%20project.%20Here%27s%20how%20I%27d%20like%20to%20contribute%3A%0A%0A-%20Game%20design%0A-%20Scripting%20(Lua)%0A-%20Art/UI%0A-%20Teacher%20pilot%0A-%20Research%0A%0AThanks!">
+            <i class="fa-regular fa-envelope"></i> Email to Volunteer
+          </a>
+          <a class="btn-lg btn-ghost" target="_blank" rel="noopener"
+             href="https://outlook.office.com/bookwithme/user/2d1b7aa5485444a6a79e6554e7f71d03@ksu.edu?anonymous&ismsaljsauthenabled&ep=plink">
+            <i class="fa-solid fa-calendar-check"></i> Book a 15-min chat
+          </a>
+
+          
+        </div>
+      </div>
+    </section>
+
+     <!-- PUBLICATIONS -->
+    <section class="section">
+      <h2><i class="fa-solid fa-book-open icon"></i> Publications</h2>
+      <div class="card">
+        <div class="pub-item">
+          <div class="pub-title">Developing a Computational Thinking Virtual Worlds Framework for Early Childhood</div>
+          <div class="pub-meta">S. Malallah, E. U. Osiobe, L. Shamir, N. H. Bean, R. Feldhausen, J. L. Weese — ASEE Annual Conference &amp; Exposition, 2025</div>
+          <!-- Optional: add a real link when available -->
+          <div><a href="#" onclick="return false;">Abstract (coming soon)</a></div>
+        </div>
+        <div class="pub-item">
+          <div class="pub-title">Designing a Virtual World Experience to Foster Computational Thinking in Young Learners:
+            An Hour of Code Initiative</div>
+          <div class="pub-meta">S. Malallah, E. U. Osiobe, L. Shamir, N. H. Bean, R. Feldhausen, J. L. Weese — ASEE Annual Conference &amp; Exposition, 2025</div>
+          <div><a href="#" onclick="return false;">Abstract (coming soon)</a></div>
+        </div>
+        <div class="pub-item">
+          <div class="pub-title">ARISE Virtual World for Data Science Education for Young Learners</div>
+          <div class="pub-meta">S. Malallah, L. Shamir — ARISE Annual Symposium, 2025 (Poster)</div>
+          <div><a href="#" onclick="return false;">Poster (coming soon)</a></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <div id="footer-placeholder"></div>
+  <script>
+    fetch('footer.html').then(r=>r.text()).then(html => {
+      document.getElementById('footer-placeholder').innerHTML = html;
+    });
+
+    // Optional: show video if ?video=YOUTUBE_ID is provided
+    (function(){
+      const id = new URLSearchParams(location.search).get('video');
+      if(!id) return;
+      const wrap = document.getElementById('ytWrap');
+      const frame = document.getElementById('ytFrame');
+      const note = document.getElementById('videoNote');
+      frame.src = 'https://www.youtube.com/embed/' + encodeURIComponent(id);
+      wrap.hidden = false;
+      if (note) note.remove();
+    })();
+  </script>
+</body>
+</html>

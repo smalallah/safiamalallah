@@ -1,0 +1,545 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hour of Code</title>
+
+  <!-- Site globals -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <!-- Header (global) -->
+  <div class="header-container">
+    <div id="menu-placeholder"></div>
+  </div>
+
+  <main class="k5-page">
+    <!-- Hero / Title -->
+    <section class="k5-section">
+      <h1 class="k5-title">Hour of Code</h1>
+      <p>
+        The Hour of Code is a global movement that introduces people of all ages to the exciting world of computer science through fun, accessible, and hands-on activities.
+        At Kansas State University, our Hour of Code event welcomes <strong>participants of all ages and experience levels</strong> — from curious beginners to seasoned explorers — to discover how coding powers creativity, problem-solving, and innovation across every field.
+      </p>
+      <p>
+        This event is part of <strong>Computer Science Education Week</strong>, a worldwide initiative that celebrates the importance of computer science education and empowers everyone to understand and shape the technology around them.
+      </p>
+      <p>
+        Through coding, participants learn to think logically, persevere through challenges, and turn ideas into interactive creations. Coding nurtures creativity, encourages collaboration, and strengthens critical-thinking skills — abilities that extend far beyond the computer screen and into everyday life.
+      </p>
+    </section>
+
+    <!-- Year filter -->
+    <section class="k5-section">
+      <div class="k5-header-with-filter">
+        <div class="k5-filter">
+          <label for="k5-year-filter">Search by Year:</label>
+          <select id="k5-year-filter" onchange="k5FilterByYear()">
+            <option value="">Select year…</option>
+            <option value="2025" selected="selected">2025</option>
+            <option value="2024">2024</option>
+            <option value="2023">2023</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 2025 ===================== -->
+    <section id="k5-content-2025" class="k5-section k5-content-year">
+      <h2 class="k5-h2">2025 Year Focus</h2>
+      <p>
+        This year, our Hour of Code will focus on Artificial Intelligence and Computational Thinking—two pillars that are shaping the future. Through interactive games, workshops, and exploration booths, participants will learn how computers “think,” how algorithms work, and how AI can be used responsibly to solve real-world challenges.
+        We’ll also highlight how computational thinking—the problem-solving mindset behind coding—helps in everyday life: from making logical decisions to designing creative solutions.
+      </p>
+
+      <div>
+        <h2 class="k5-h2">How It Worked</h2>
+        <p>
+          The event began with registration at the <strong>Info</strong> section. Parents completed consent forms and provided photo permissions. Upon registration, each child received a stamping sheet to begin exploring CS activities across multiple stations.
+        </p>
+        <p>
+          Children visited stations to collect stamps. After completing <strong>four activities</strong> and collecting the corresponding stamps, they could claim a certificate at the Info section. Participants also received a small gift and had the opportunity to take photos.
+        </p>
+        <p>To support different ages, the event was organized into four sections:</p>
+        <ol>
+          <li><strong>Little Tech Explorers</strong> (ages 0–6): unplugged activities like coloring, hopping, and stories.</li>
+          <li><strong>Block Adventures I</strong> (ages 8+): block programming projects.</li>
+          <li><strong>Block Adventures II</strong> (ages 8+): extended block programming projects.</li>
+          <li><strong>Byte Innovators</strong> (ages 6+): networking, data science, and game design activities.</li>
+        </ol>
+      </div>
+
+      <h2 class="k5-h2">Activity Details</h2>
+
+      <h3 class="k5-h3">Little Tech Explorers (Ages 0–6)</h3>
+      <ul>
+        <li><strong>Code Hopper</strong> — A hopscotch-style game teaching sequencing, conditionals, and repetition.</li>
+        <li><strong>Code a Cat</strong> — Step-by-step “algorithm” craft to build a cat.</li>
+        <li><strong>Read a Story</strong> — Coding-themed storybooks for early learners.</li>
+      </ul>
+
+      <h3 class="k5-h3">Block Adventures I &amp; II (Ages 8+)</h3>
+      <ul>
+        <li><strong>VR Piano (HatchXR)</strong> — Build a simple VR app using block programming.</li>
+        <li><strong>AI/ML Chatbot</strong> — Create an Einstein-themed chatbot with creativeCode + ChatGPT model.</li>
+      </ul>
+
+      <h3 class="k5-h3">Byte Innovators (Ages 6+)</h3>
+      <ul>
+        <li><strong>Game Design</strong> — Turn drawings into playable games with color codes.</li>
+        <li><strong>Networking with Makey Makey + Scratch</strong> — Learn hardware–software connections via playful circuits.</li>
+        <li><strong>Data Science Detective</strong> — Sorting/classification mystery with “Officer Ice Cream.”</li>
+      </ul>
+
+      <h2 class="k5-h2">Eligibility &amp; Guidelines</h2>
+      <ul>
+        <li><strong>Who can join:</strong> Everyone ages <strong>3+</strong> (no upper age limit).</li>
+        <li><strong>What we’ll try:</strong> Hands-on coding, data science, AI, game design, and more—for all experience levels.</li>
+        <li><strong>Experience needed:</strong> None—come explore and have fun!</li>
+        <li><strong>Supervision:</strong> Parents/guardians must remain with and actively supervise their minors at all times (not a drop-off event).</li>
+        <li><strong>How it works:</strong> Visit <strong>4 activity stations</strong>, collect a stamp at each, then pick up your certificate.</li>
+      </ul>
+
+      <h2 class="k5-h2">Location</h2>
+      <p>
+        <strong>Date:</strong> Saturday, March 29th<br>
+        <strong>Location:</strong> Fiedler Hall, Rooms 1115–1118<br>
+        Engineering Building, Kansas State University<br>
+        <a href="https://maps.app.goo.gl/eT41T8SfC9spBN7k7" target="_blank">Directions</a>
+      </p>
+
+      <div class="k5-video">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/cCubSNeNlRs?si=27KTXKIhqWd5PjpN"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+
+      <!-- Poster Info -->
+      <section class="k5-section">
+        <h3 class="k5-h3">
+          2025: The 2nd K-5 Coding Contest
+          <a href="assets/images/k5/25_event0.png" target="_blank">pdf</a>
+        </h3>
+
+        <div class="k5-poster-and-links">
+          <img src="assets/images/k5/25_event0.png" alt="2025 Contest Poster" class="k5-poster-image">
+
+          <div class="k5-links">
+            <div class="k5-link-box">
+              <img src="assets/icons/enrollment-icon.png" alt="Enroll Icon" class="k5-link-icon">
+              <p>Enroll for the Contest</p>
+              <a href="https://forms.gle/2F4SZ2DfY2miNUeJA" target="_blank">Click Here</a>
+            </div>
+
+            <div class="k5-link-box">
+              <img src="assets/icons/inquiry-icon.png" alt="Inquiry Icon" class="k5-link-icon">
+              <p>Ask a Question</p>
+              <a href="mailto:info.k12datascience@gmail.com?subject=New message from AnnoKIDS - K-5 Contest - Ask a Question">Click Here</a>
+            </div>
+
+            <div class="k5-link-box">
+              <img src="assets/icons/volunteer-icon.png" alt="Volunteer Icon" class="k5-link-icon">
+              <p>Sign Up to Volunteer</p>
+              <a href="https://forms.gle/a3dpaf3KeLcbxk1P6" target="_blank">Click Here</a>
+            </div>
+
+            <div class="k5-link-box">
+              <img src="assets/icons/Partner-icon.png" alt="Partner Icon" class="k5-link-icon">
+              <p>Partner With Us</p>
+              <a href="mailto:info.k12datascience@gmail.com?subject=New message from AnnoKIDS - K-5 Contest - Partner With Us">Click Here</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <h2 class="k5-h2">Organizing</h2>
+      <div class="k5-team-grid">
+        <div class="k5-person-card">
+          <img src="assets/images/member1.jpg" alt="Dr. Safia Malallah">
+          <p>Dr. Safia Malallah — Event Coordinator</p>
+        </div>
+        <div class="k5-person-card">
+          <img src="assets/images/member5.jpg" alt="Dr. Hande Küçük McGinty">
+          <p>Dr. Hande Küçük McGinty — Event Coordinator</p>
+        </div>
+        <div class="k5-person-card">
+          <img src="assets/images/member3.jpg" alt="Dr. Lior Shamir">
+          <p>Dr. Lior Shamir — Event Coordinator</p>
+        </div>
+      </div>
+
+      <h2 class="k5-h2">Sponsored</h2>
+      <div class="k5-team-grid">
+        <div class="k5-person-card">
+          <img src="assets/icons/cs.jpg" alt="Computer Science Department">
+          <p>Computer Science Department</p>
+        </div>
+        <div class="k5-person-card">
+          <img src="assets/icons/kdsc_logo.jpg" alt="Kansas Data Science Consortium">
+          <p>Kansas Data Science Consortium</p>
+        </div>
+        <div class="k5-person-card">
+          <img src="assets/icons/DIC.png" alt="Diversity in Computing">
+          <p>Diversity in Computing</p>
+        </div>
+        <div class="k5-person-card">
+          <img src="assets/icons/wids_logo.jpg" alt="Women in Data Science - Kansas">
+          <p>Women in Data Science — Kansas</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 2024 ===================== -->
+    <section id="k5-content-2024" class="k5-section k5-content-year">
+      <h2 class="k5-h2">2024 Year Focus</h2>
+      <p>
+        This year, our Hour of Code will focus on Artificial Intelligence and Computational Thinking—two pillars that are shaping the future. Through interactive games, workshops, and exploration booths, participants will learn how computers “think,” how algorithms work, and how AI can be used responsibly to solve real-world challenges.
+        We’ll also highlight how computational thinking—the problem-solving mindset behind coding—helps in everyday life: from making logical decisions to designing creative solutions.
+      </p>
+
+      <div>
+        <h2 class="k5-h2">How It Worked</h2>
+        <p>
+          The event began with registration at the <strong>Info</strong> section. Parents completed consent forms and provided photo permissions. Upon registration, each child received a stamping sheet to begin exploring CS activities across multiple stations.
+        </p>
+        <p>
+          Children visited stations to collect stamps. After completing <strong>four activities</strong> and collecting the corresponding stamps, they could claim a certificate at the Info section. Participants also received a small gift and had the opportunity to take photos.
+        </p>
+        <p>To support different ages, the event was organized into four sections:</p>
+        <ol>
+          <li><strong>Little Tech Explorers</strong> (ages 0–6): unplugged activities like coloring, hopping, and stories.</li>
+          <li><strong>Block Adventures I</strong> (ages 8+): block programming projects.</li>
+          <li><strong>Block Adventures II</strong> (ages 8+): extended block programming projects.</li>
+          <li><strong>Byte Innovators</strong> (ages 6+): networking, data science, and game design activities.</li>
+        </ol>
+      </div>
+
+      <h2 class="k5-h2">Activity Details</h2>
+
+      <h3 class="k5-h3">Little Tech Explorers (Ages 0–6)</h3>
+      <ul>
+        <li><strong>Code Hopper</strong> — A hopscotch-style game teaching sequencing, conditionals, and repetition.</li>
+        <li><strong>Code a Cat</strong> — Step-by-step “algorithm” craft to build a cat.</li>
+        <li><strong>Read a Story</strong> — Coding-themed storybooks for early learners.</li>
+      </ul>
+
+      <h3 class="k5-h3">Block Adventures I &amp; II (Ages 8+)</h3>
+      <ul>
+        <li><strong>VR Piano (HatchXR)</strong> — Build a simple VR app using block programming.</li>
+        <li><strong>AI/ML Chatbot</strong> — Create an Einstein-themed chatbot with creativeCode + ChatGPT model.</li>
+      </ul>
+
+      <h3 class="k5-h3">Byte Innovators (Ages 6+)</h3>
+      <ul>
+        <li><strong>Game Design</strong> — Turn drawings into playable games with color codes.</li>
+        <li><strong>Networking with Makey Makey + Scratch</strong> — Learn hardware–software connections via playful circuits.</li>
+        <li><strong>Data Science Detective</strong> — Sorting/classification mystery with “Officer Ice Cream.”</li>
+      </ul>
+
+      <h2 class="k5-h2">Eligibility &amp; Guidelines</h2>
+      <ul>
+        <li><strong>Who can join:</strong> Everyone ages <strong>3+</strong> (no upper age limit).</li>
+        <li><strong>What we’ll try:</strong> Hands-on coding, data science, AI, game design, and more—for all experience levels.</li>
+        <li><strong>Experience needed:</strong> None—come explore and have fun!</li>
+        <li><strong>Supervision:</strong> Parents/guardians must remain with and actively supervise their minors at all times (not a drop-off event).</li>
+        <li><strong>How it works:</strong> Visit <strong>4 activity stations</strong>, collect a stamp at each, then pick up your certificate.</li>
+      </ul>
+
+      <h2 class="k5-h2">Location</h2>
+      <p>
+        <strong>Date:</strong> Saturday, March 29th<br>
+        <strong>Location:</strong> Fiedler Hall, Rooms 1115–1118<br>
+        Engineering Building, Kansas State University<br>
+        <a href="https://maps.app.goo.gl/eT41T8SfC9spBN7k7" target="_blank">Directions</a>
+      </p>
+
+      <div class="k5-video">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/cCubSNeNlRs?si=27KTXKIhqWd5PjpN"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+
+      <!-- Poster Info -->
+      <section class="k5-section">
+        <h3 class="k5-h3">
+          2025: The 2nd K-5 Coding Contest
+          <a href="assets/images/k5/25_event0.png" target="_blank">pdf</a>
+        </h3>
+
+        <div class="k5-poster-and-links">
+          <img src="assets/images/k5/25_event0.png" alt="2025 Contest Poster" class="k5-poster-image">
+
+          <div class="k5-links">
+            <div class="k5-link-box">
+              <img src="assets/icons/enrollment-icon.png" alt="Enroll Icon" class="k5-link-icon">
+              <p>Enroll for the Contest</p>
+              <a href="https://forms.gle/2F4SZ2DfY2miNUeJA" target="_blank">Click Here</a>
+            </div>
+
+            <div class="k5-link-box">
+              <img src="assets/icons/inquiry-icon.png" alt="Inquiry Icon" class="k5-link-icon">
+              <p>Ask a Question</p>
+              <a href="mailto:info.k12datascience@gmail.com?subject=New message from AnnoKIDS - K-5 Contest - Ask a Question">Click Here</a>
+            </div>
+
+            <div class="k5-link-box">
+              <img src="assets/icons/volunteer-icon.png" alt="Volunteer Icon" class="k5-link-icon">
+              <p>Sign Up to Volunteer</p>
+              <a href="https://forms.gle/a3dpaf3KeLcbxk1P6" target="_blank">Click Here</a>
+            </div>
+
+            <div class="k5-link-box">
+              <img src="assets/icons/Partner-icon.png" alt="Partner Icon" class="k5-link-icon">
+              <p>Partner With Us</p>
+              <a href="mailto:info.k12datascience@gmail.com?subject=New message from AnnoKIDS - K-5 Contest - Partner With Us">Click Here</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <h2 class="k5-h2">Organizing</h2>
+      <div class="k5-team-grid">
+        <div class="k5-person-card">
+          <img src="assets/images/member1.jpg" alt="Dr. Safia Malallah">
+          <p>Dr. Safia Malallah — Event Coordinator</p>
+        </div>
+        <div class="k5-person-card">
+          <img src="assets/images/member5.jpg" alt="Dr. Hande Küçük McGinty">
+          <p>Dr. Hande Küçük McGinty — Event Coordinator</p>
+        </div>
+        <div class="k5-person-card">
+          <img src="assets/images/member3.jpg" alt="Dr. Lior Shamir">
+          <p>Dr. Lior Shamir — Event Coordinator</p>
+        </div>
+      </div>
+
+      <h2 class="k5-h2">Sponsored</h2>
+      <div class="k5-team-grid">
+        <div class="k5-person-card">
+          <img src="assets/icons/cs.jpg" alt="Computer Science Department">
+          <p>Computer Science Department</p>
+        </div>
+        <div class="k5-person-card">
+          <img src="assets/icons/kdsc_logo.jpg" alt="Kansas Data Science Consortium">
+          <p>Kansas Data Science Consortium</p>
+        </div>
+        <div class="k5-person-card">
+          <img src="assets/icons/DIC.png" alt="Diversity in Computing">
+          <p>Diversity in Computing</p>
+        </div>
+        <div class="k5-person-card">
+          <img src="assets/icons/wids_logo.jpg" alt="Women in Data Science - Kansas">
+          <p>Women in Data Science — Kansas</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 2023 ===================== -->
+    <section id="k5-content-2023" class="k5-section k5-content-year">
+      <h2 class="k5-h2">2023 Year Focus</h2>
+      <p>
+        This year, our Hour of Code will focus on Artificial Intelligence and Computational Thinking—two pillars that are shaping the future. Through interactive games, workshops, and exploration booths, participants will learn how computers “think,” how algorithms work, and how AI can be used responsibly to solve real-world challenges.
+        We’ll also highlight how computational thinking—the problem-solving mindset behind coding—helps in everyday life: from making logical decisions to designing creative solutions.
+      </p>
+
+      <div>
+        <h2 class="k5-h2">How It Worked</h2>
+        <p>
+          The event began with registration at the <strong>Info</strong> section. Parents completed consent forms and provided photo permissions. Upon registration, each child received a stamping sheet to begin exploring CS activities across multiple stations.
+        </p>
+        <p>
+          Children visited stations to collect stamps. After completing <strong>four activities</strong> and collecting the corresponding stamps, they could claim a certificate at the Info section. Participants also received a small gift and had the opportunity to take photos.
+        </p>
+        <p>To support different ages, the event was organized into four sections:</p>
+        <ol>
+          <li><strong>Little Tech Explorers</strong> (ages 0–6): unplugged activities like coloring, hopping, and stories.</li>
+          <li><strong>Block Adventures I</strong> (ages 8+): block programming projects.</li>
+          <li><strong>Block Adventures II</strong> (ages 8+): extended block programming projects.</li>
+          <li><strong>Byte Innovators</strong> (ages 6+): networking, data science, and game design activities.</li>
+        </ol>
+      </div>
+
+      <h2 class="k5-h2">Activity Details</h2>
+
+      <h3 class="k5-h3">Little Tech Explorers (Ages 0–6)</h3>
+      <ul>
+        <li><strong>Code Hopper</strong> — A hopscotch-style game teaching sequencing, conditionals, and repetition.</li>
+        <li><strong>Code a Cat</strong> — Step-by-step “algorithm” craft to build a cat.</li>
+        <li><strong>Read a Story</strong> — Coding-themed storybooks for early learners.</li>
+      </ul>
+
+      <h3 class="k5-h3">Block Adventures I &amp; II (Ages 8+)</h3>
+      <ul>
+        <li><strong>VR Piano (HatchXR)</strong> — Build a simple VR app using block programming.</li>
+        <li><strong>AI/ML Chatbot</strong> — Create an Einstein-themed chatbot with creativeCode + ChatGPT model.</li>
+      </ul>
+
+      <h3 class="k5-h3">Byte Innovators (Ages 6+)</h3>
+      <ul>
+        <li><strong>Game Design</strong> — Turn drawings into playable games with color codes.</li>
+        <li><strong>Networking with Makey Makey + Scratch</strong> — Learn hardware–software connections via playful circuits.</li>
+        <li><strong>Data Science Detective</strong> — Sorting/classification mystery with “Officer Ice Cream.”</li>
+      </ul>
+
+      <h2 class="k5-h2">Eligibility &amp; Guidelines</h2>
+      <ul>
+        <li><strong>Who can join:</strong> Everyone ages <strong>3+</strong> (no upper age limit).</li>
+        <li><strong>What we’ll try:</strong> Hands-on coding, data science, AI, game design, and more—for all experience levels.</li>
+        <li><strong>Experience needed:</strong> None—come explore and have fun!</li>
+        <li><strong>Supervision:</strong> Parents/guardians must remain with and actively supervise their minors at all times (not a drop-off event).</li>
+        <li><strong>How it works:</strong> Visit <strong>4 activity stations</strong>, collect a stamp at each, then pick up your certificate.</li>
+      </ul>
+
+      <h2 class="k5-h2">Location</h2>
+      <p>
+        <strong>Date:</strong> Saturday, March 29th<br>
+        <strong>Location:</strong> Fiedler Hall, Rooms 1115–1118<br>
+        Engineering Building, Kansas State University<br>
+        <a href="https://maps.app.goo.gl/eT41T8SfC9spBN7k7" target="_blank">Directions</a>
+      </p>
+
+      <div class="k5-video">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/cCubSNeNlRs?si=27KTXKIhqWd5PjpN"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+
+      <!-- Poster Info -->
+      <section class="k5-section">
+        <h3 class="k5-h3">
+          2025: The 2nd K-5 Coding Contest
+          <a href="assets/images/k5/25_event0.png" target="_blank">pdf</a>
+        </h3>
+
+        <div class="k5-poster-and-links">
+          <img src="assets/images/k5/25_event0.png" alt="2025 Contest Poster" class="k5-poster-image">
+
+          <div class="k5-links">
+            <div class="k5-link-box">
+              <img src="assets/icons/enrollment-icon.png" alt="Enroll Icon" class="k5-link-icon">
+              <p>Enroll for the Contest</p>
+              <a href="https://forms.gle/2F4SZ2DfY2miNUeJA" target="_blank">Click Here</a>
+            </div>
+
+            <div class="k5-link-box">
+              <img src="assets/icons/inquiry-icon.png" alt="Inquiry Icon" class="k5-link-icon">
+              <p>Ask a Question</p>
+              <a href="mailto:info.k12datascience@gmail.com?subject=New message from AnnoKIDS - K-5 Contest - Ask a Question">Click Here</a>
+            </div>
+
+            <div class="k5-link-box">
+              <img src="assets/icons/volunteer-icon.png" alt="Volunteer Icon" class="k5-link-icon">
+              <p>Sign Up to Volunteer</p>
+              <a href="https://forms.gle/a3dpaf3KeLcbxk1P6" target="_blank">Click Here</a>
+            </div>
+
+            <div class="k5-link-box">
+              <img src="assets/icons/Partner-icon.png" alt="Partner Icon" class="k5-link-icon">
+              <p>Partner With Us</p>
+              <a href="mailto:info.k12datascience@gmail.com?subject=New message from AnnoKIDS - K-5 Contest - Partner With Us">Click Here</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <h2 class="k5-h2">Organizing</h2>
+      <div class="k5-team-grid">
+        <div class="k5-person-card">
+          <img src="assets/images/member1.jpg" alt="Dr. Safia Malallah">
+          <p>Dr. Safia Malallah — Event Coordinator</p>
+        </div>
+        
+        <div class="k5-person-card">
+          <img src="assets/images/member3.jpg" alt="Dr. Lior Shamir">
+          <p>Dr. Lior Shamir — Event Coordinator</p>
+        </div>
+      </div>
+
+      <h2 class="k5-h2">Sponsored</h2>
+      <div class="k5-team-grid">
+        <div class="k5-person-card">
+          <img src="assets/icons/cs.jpg" alt="Computer Science Department">
+          <p>Computer Science Department</p>
+        </div>
+        <div class="k5-person-card">
+          <img src="assets/icons/kdsc_logo.jpg" alt="Kansas Data Science Consortium">
+          <p>Kansas Data Science Consortium</p>
+        </div>
+        <div class="k5-person-card">
+          <img src="assets/icons/DIC.png" alt="Diversity in Computing">
+          <p>Diversity in Computing</p>
+        </div>
+        <div class="k5-person-card">
+          <img src="assets/icons/wids_logo.jpg" alt="Women in Data Science - Kansas">
+          <p>Women in Data Science — Kansas</p>
+        </div>
+      </div>
+    </section>
+
+    
+
+    <!-- Related Links -->
+    <section class="k5-section">
+      <h3 class="k5-h3">Related Links</h3>
+      <ul>
+        
+        <li><a href="a1.html" target="_blank">Press 2023</a></li>
+        <li><a href="https://www.k-state.edu/today/announcement/?id=99277" target="_blank">Press 2024</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- Footer (global) -->
+  <div id="footer-placeholder"></div>
+
+  <!-- Scripts -->
+  <script>
+    // Load shared chrome
+    fetch('menu.html').then(r => r.text()).then(t => { document.getElementById('menu-placeholder').innerHTML = t; });
+    fetch('footer.html').then(r => r.text()).then(t => { document.getElementById('footer-placeholder').innerHTML = t; });
+
+    // Hide all by default on load
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.k5-content-year').forEach(el => el.style.display = 'none');
+      k5FilterByYear(); // initialize based on current select value
+    });
+
+    function k5FilterByYear() {
+      const val = document.getElementById('k5-year-filter').value; // '', 'all', '2025', '2024', '2023'
+      const sections = document.querySelectorAll('.k5-content-year');
+
+      // Hide all
+      sections.forEach(el => el.style.display = 'none');
+
+      // Show selection
+     if (val) {
+        const target = document.getElementById(`k5-content-${val}`);
+        if (target) target.style.display = '';
+      }
+    }
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

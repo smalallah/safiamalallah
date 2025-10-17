@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bored Games | D³KIDS Playground</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+  <meta name="description" content="Upcoming unplugged games that teach K–5 learners computational thinking, AI, and data science through play." />
+</head>
+<body>
+
+  <!-- Header + nav -->
+  <div class="header-container">
+    <div id="menu-placeholder"></div>
+    <script>
+      fetch('menu.html').then(r=>r.text()).then(html => {
+        document.getElementById('menu-placeholder').innerHTML = html;
+      });
+    </script>
+  </div>
+
+  <main class="page-wrap">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-card">
+        <h1>Board & Card Games</h1>
+        <p>
+         Board and card games are structured play activities that use physical pieces, cards, or dice to guide players toward specific goals. 
+We create unplugged board and card games that help learners explore computer science, AI, and data science concepts through movement and hands-on play. 
+Some games are designed for tables, while others are large floor games where children can move, jump, and interact with CS concepts no screens required.
+        </p>
+        <p class="note"><em>All projects below are in development — official release coming soon!</em></p>
+      </div>
+
+      <div class="hero-art">
+        <img height="440" src="assets/images/projects/unplugged.png" alt="D³KIDS Bored Games Preview" onerror="this.src='assets/images/about-safia.jpg'">
+      </div>
+    </section>
+
+    <!-- PROJECT IDEAS -->
+    <section class="section">
+      <h2><i class="fa-solid fa-dice icon"></i> Game Concepts in Development</h2>
+      <div class="card grid-2">
+        <div>
+          <h3><i class="fa-solid fa-layer-group"></i> 1. CT Concept Cards</h3>
+          <p>
+            A collectible <strong>card game</strong> where each card represents a key <em>computational thinking concept</em>—
+            such as sequencing, decomposition, abstraction, or debugging.  
+            Players draw, trade, and combine cards to complete real-world “challenge missions.”
+          </p>
+          <p class="note"><em>Prototype testing planned for Spring 2026.</em></p>
+        </div>
+        <div>
+          <h3><i class="fa-solid fa-chart-line"></i> 2. Data Science Board Game</h3>
+          <p>
+            A dice-and-cards <strong>data adventure game</strong> that teaches how data is collected, cleaned, and visualized.  
+            Players roll, analyze, and compete to make discoveries—learning data literacy while having fun.
+          </p>
+          <p class="note"><em>Early sketches under review.</em></p>
+        </div>
+      </div>
+
+      <div class="card grid-2" style="margin-top:20px;">
+        <div>
+          <h3><i class="fa-solid fa-hand"></i> 3. Simon Says: AI Edition</h3>
+          <p>
+            A <strong>card-based version</strong> of “Simon Says” that introduces children to
+            <em>machine learning patterns</em>—follow the rules that AI “learns,” spot the biases, and adapt as the “model” evolves.  
+            Great for group movement and reflection.
+          </p>
+          <p class="note"><em>Playtesting planned for elementary workshops.</em></p>
+        </div>
+        <div>
+          <h3><i class="fa-solid fa-person-running"></i> 4. The Hopping Board Game</h3>
+          <p>
+            A large-floor or outdoor <strong>movement game</strong> where children jump between AI concept tiles—like “Data,”
+            “Pattern,” “Decision,” and “Feedback Loop.”  
+            Each hop unlocks a question or mini-challenge about how AI learns.
+          </p>
+          <p class="note"><em>Design prototypes in progress.</em></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ANNOUNCEMENT -->
+    <section class="section">
+      <h2><i class="fa-solid fa-bullhorn icon"></i> Announcement</h2>
+      <div class="card">
+        <p>
+          Stay tuned! The first official <strong>D³KIDS Board &amp; Card Game collection</strong> will be announced soon,
+          featuring printable kits, teacher guides, and activity videos.  
+          We’ll share updates on the <a href="index.html">D³KIDS Playground homepage</a> and social media channels once testing begins.
+        </p>
+      </div>
+    </section>
+
+    <!-- GET INVOLVED -->
+    <section class="section">
+      <h2><i class="fa-solid fa-handshake-angle icon"></i> Get Involved</h2>
+      <div class="card">
+        <p>We welcome teachers, designers, and student collaborators!  
+           You can help by testing games, illustrating cards, or contributing new concept ideas.</p>
+        <div class="cta-row">
+          <a class="btn-lg btn-primary" href="mailto:safia@ksu.edu?subject=Join%20D3KIDS%20Board%20Games&body=Hi%20Dr.%20Malallah%2C%0A%0AI%27m%20interested%20in%20joining%20the%20Bored%20Games%20project.%20Here%27s%20how%20I%27d%20like%20to%20help%3A%0A%0A-%20Game%20Design%0A-%20Artwork%0A-%20Playtesting%0A-%20Teacher%20Pilot%0A-%20Research%0A%0AThanks!">
+            <i class="fa-regular fa-envelope"></i> Email to Volunteer
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <div id="footer-placeholder"></div>
+  <script>
+    fetch('footer.html').then(r=>r.text()).then(html => {
+      document.getElementById('footer-placeholder').innerHTML = html;
+    });
+  </script>
+</body>
+</html>

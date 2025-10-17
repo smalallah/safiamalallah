@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Students I Advise</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+ 
+</head>
+
+<body>
+  <!-- Header -->
+  <div class="header-container">
+    <div id="menu-placeholder"></div>
+    <script>
+      fetch('menu.html').then(res=>res.text()).then(html => {
+        document.getElementById('menu-placeholder').innerHTML = html;
+      });
+    </script>
+  </div>
+
+  
+  <main class="students-wrap">
+    <section class="students-hero">
+      <h1>Students I Advise</h1>
+      <p>Search, filter, and sort by graduation date.</p>
+
+      <div class="students-filterbar" id="studentsFilters">
+        <div class="field" style="flex:1 1 260px;">
+          <label for="q">Search (name or project)</label>
+          <input type="search" id="q" placeholder="e.g., Jane, data, dashboard...">
+        </div>
+
+        <div class="field">
+          <label for="level">Level</label>
+          <select id="level">
+            <option value="">All</option>
+            <option value="undergraduate">Undergraduate</option>
+            <option value="graduate">Graduate</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="status">Status</label>
+          <select id="status">
+            <option value="">All</option>
+            <option value="active">Active</option>
+            <option value="graduated">Graduated</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="year">Graduation Year</label>
+          <select id="year">
+            <option value="">All</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="sortBy">Sort</label>
+          <select id="sortBy">
+            <option value="gradSoonest">Graduation (soonest first)</option>
+            <option value="gradLatest">Graduation (latest first)</option>
+            <option value="nameAZ">Name (A–Z)</option>
+          </select>
+        </div>
+
+        <button class="btn-clear" id="clearFilters" type="button">Clear filters</button>
+        <div class="count" id="matchCount">0 shown</div>
+      </div>
+    </section>
+
+    <!-- Render target -->
+    <section id="studentsList"></section>
+  </main>
+
+  <!-- Modal for images -->
+  <div id="event-modal2">
+    <div class="modal-content2">
+      <button class="close" aria-label="Close">&times;</button>
+      <img id="modal-img" src="" alt="">
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div id="footer-placeholder"></div>
+  <script>
+    fetch('footer.html').then(res=>res.text()).then(html=>{
+      document.getElementById('footer-placeholder').innerHTML=html;
+    });
+  </script>
+
+  <!-- Data + Rendering + Filters/Sorting -->
+  <script>
+    // ======== 1) STUDENT DATA (edit this) ========
+    // gradDate: use ISO like '2026-05-15' so sorting is reliable
+    const STUDENTS = [
+	  {
+        name: "Jack Cannell",
+        level: "undergraduate",
+        status: "active",
+        gradDate: "2025-12-15",
+        degree: "B.S. in Data Science",
+        department: "Department of Computer Science",
+        projectTitle: " ",
+        projectDesc: " ",
+     coverSrc: "assets/images/advice/0.PNG",
+        gallery: [
+          "assets/images/advice/0.PNG",
+		  "assets/images/advice/0.PNG",
+		  "assets/images/advice/0.PNG",
+        ]
+      },
+	  	  {
+        name: "Hiep Nguyen",
+        level: "undergraduate",
+        status: "active",
+        gradDate: "2025-12-15",
+        degree: "B.S. in Data Science",
+        department: "Department of Computer Science",
+        projectTitle: " ",
+        projectDesc: " ",
+         coverSrc: "assets/images/advice/0.PNG",
+        gallery: [
+          "assets/images/advice/0.PNG",
+		  "assets/images/advice/0.PNG",
+		  "assets/images/advice/0.PNG",
+        ]
+      },
+	    {
+        name: "Surya Chandramouli",
+        level: "undergraduate",
+        status: "active",
+        gradDate: "2027-05-15",
+        degree: "B.S. in Integrated Computer Science",
+        department: "College of Arts and Sciences",
+        projectTitle: " ",
+        projectDesc: " ",
+        coverSrc: "assets/images/advice/0.PNG",
+        gallery: [
+          "assets/images/advice/0.PNG",
+		  "assets/images/advice/0.PNG",
+		  "assets/images/advice/0.PNG",
+        ]
+      },
+	  {
+        name: "Taj Ikhlaas",
+        level: "undergraduate",
+        status: "active",
+        gradDate: "2025-12-15",
+        degree: "B.S. in Data Science",
+        department: "Department of Computer Science",
+        projectTitle: " ",
+        projectDesc: " ",
+      coverSrc: "assets/images/advice/0.PNG",
+        gallery: [
+          "assets/images/advice/0.PNG",
+		  "assets/images/advice/0.PNG",
+		  "assets/images/advice/0.PNG",
+        ]
+      },
+      {
+        name: "Tatenda Sekabanja",
+        level: "undergraduate",
+        status: "graduate",
+        gradDate: "2025-05-15",
+        degree: "B.S. in Computer Science",
+        department: "Department of Computer Science",
+        projectTitle: "Local Concert",
+        projectDesc: "She developed an innovative system designed to support local artists in Manhattan, Kansas. Inspired by her own passion for singing, Tatenda set out to build a platform that helps young artists like herself host events, invite collaborators, sell tickets, and even share QR codes for entry and more. It was an absolute pleasure working with her. Tatenda demonstrated outstanding communication and problem-solving skills throughout the process. Wishing her all the best as she embarks on her internship with Amazon—I’m confident this is just the beginning. The future is bright, and I can’t wait to see where her journey takes her. Let the sky be your limit, girl!",
+        coverSrc: "assets/images/advice/Tatenda7.jpg",
+        gallery: [ 
+          "assets/images/advice/Tatenda2.JPG",
+          "assets/images/advice/Tatenda3.JPG",
+		  "assets/images/advice/Tatenda4.JPG",
+		  "assets/images/advice/Tatenda5.JPG",
+		  "assets/images/advice/Tatenda6.JPG",
+          "assets/images/advice/Tatenda1.JPG"
+        ]
+      },
+	       {
+        name: "Lucas Boice",
+        level: "undergraduate",
+        status: "graduate",
+        gradDate: "2024-12-15",
+        degree: "B.S. in Computer Science",
+        department: "Department of Computer Science",
+        projectTitle: "GRAPEVYNE",
+        projectDesc: "A couple of months ago, one of our students became a father and turned that inspiration into his capstone project. Lucas Boice ❤️❤️ He developed an app named after his daughter to track her milestones and compare them with developmental expectations—a meaningful and creative idea. He’s shown great communication, dedication, and effort throughout, and I’m so proud of his hard work. Despite some challenges with tools, his perseverance stood out. It’s been a pleasure to be part of his journey as an advisor, and I look forward to seeing his continued growth as a father and developer.",
+        coverSrc: "assets/images/advice/Lucas7.jpg",
+        gallery: [ 
+          "assets/images/advice/Lucas1.JPG",
+          "assets/images/advice/Lucas2.JPG",
+		  "assets/images/advice/Lucas3.JPG",
+		  "assets/images/advice/Lucas4.JPG",
+		  "assets/images/advice/Lucas5.JPG"
+        ]
+      },
+      {
+        name: "Carrie Aponte",
+        level: "undergraduate",
+        status: "graduated",
+        gradDate: "2024-05-15",
+        degree: "B.S. in Data Science",
+        department: "Department of Computer Science",
+        projectTitle: "Minimum Wage Matters: Investigating The Relationship Between Wages, Preemption Policies, Health, and Educational Outcomes",
+        projectDesc: "Her research use a robust data science approach that explored how economic policies impact health and education. Her research is a significant contribution to understanding the importance of addressing economic disparities and health inequities. I couldn't be prouder of her hard work and insightful findings. Wishing her all the best in her future endeavors—there's no doubt she will continue to make impactful contributions to the world!",
+         coverSrc: "assets/images/advice/Carrie0.jpg",
+        gallery: [ 
+          "assets/images/advice/Carrie2.JPG",
+          "assets/images/advice/Carrie3.JPG",
+		  "assets/images/advice/Carrie4.JPG",
+		  "assets/images/advice/Carrie5.JPG",
+		  "assets/images/advice/Carrie6.JPG"
+        ]
+      }
+    ];
+
+    // ======== 2) UTILITIES ========
+    const $ = sel => document.querySelector(sel);
+    const $$ = sel => Array.from(document.querySelectorAll(sel));
+    const fmtGrad = iso => {
+      if (!iso) return "";
+      const d = new Date(iso);
+      const opts = { year: "numeric", month: "long" };
+      return d.toLocaleDateString(undefined, opts);
+    };
+    const yearOf = iso => (iso ? String(new Date(iso).getFullYear()) : "");
+
+    // ======== 3) RENDERING ========
+    function renderStudents(list){
+      const container = document.getElementById('studentsList');
+      container.innerHTML = "";
+
+      list.forEach(s => {
+        const card = document.createElement('article');
+        card.className = 'student-card';
+        // data-* for quick filtering if needed later
+        card.dataset.name = s.name.toLowerCase();
+        card.dataset.project = (s.projectTitle || "").toLowerCase();
+        card.dataset.level = s.level;
+        card.dataset.status = s.status;
+        card.dataset.gradyear = yearOf(s.gradDate);
+
+        const cover = document.createElement('img');
+        cover.className = 'student-cover';
+        cover.src = s.coverSrc;
+        cover.alt = `${s.name} portrait`;
+        cover.onerror = function(){ this.src = 'assets/images/advice/0.PNG'; };
+
+        const body = document.createElement('div');
+        body.className = 'student-body';
+        body.innerHTML = `
+          <div class="student-header">
+            <span class="student-name">${s.name}</span>
+          </div>
+
+          <div class="student-meta">
+            <div class="line"><i class="fa-solid fa-graduation-cap"></i>
+              <span class="student-degree">${s.degree || ""}</span>
+            </div>
+            <div class="line"><i class="fa-solid fa-building-columns"></i>
+              ${s.department || ""}
+            </div>
+            <div class="line"><i class="fa-solid fa-calendar-check"></i>
+              Graduation: ${fmtGrad(s.gradDate)}
+            </div>
+          </div>
+
+          <div class="project">
+            <div class="project-title"><i class="fa-solid fa-flask"></i> Project: ${s.projectTitle || ""}</div>
+            <div class="project-desc">${s.projectDesc || ""}</div>
+          </div>
+        `;
+
+        const gallery = document.createElement('div');
+        gallery.className = 'student-gallery';
+        (s.gallery || []).forEach(src => {
+          const img = document.createElement('img');
+          img.src = src; img.alt = `${s.name} project image`;
+          img.addEventListener('click', () => openModal(src));
+          gallery.appendChild(img);
+        });
+
+        body.appendChild(gallery);
+        card.appendChild(cover);
+        card.appendChild(body);
+        container.appendChild(card);
+      });
+
+      // Update count
+      document.getElementById('matchCount').textContent = `${list.length} shown`;
+    }
+
+    // ======== 4) FILTERS & SORT ========
+    function normalize(s){ return (s||'').toLowerCase().trim(); }
+
+    function applyFiltersAndSort(){
+      const qv = normalize(document.getElementById('q').value);
+      const lv = normalize(document.getElementById('level').value);
+      const sv = normalize(document.getElementById('status').value);
+      const yv = normalize(document.getElementById('year').value);
+      const sortBy = document.getElementById('sortBy').value;
+
+      // Filter
+      let filtered = STUDENTS.filter(s => {
+        const name = normalize(s.name);
+        const proj = normalize(s.projectTitle);
+        const yr = yearOf(s.gradDate).toLowerCase();
+
+        const matchesText = !qv || name.includes(qv) || proj.includes(qv);
+        const matchesLevel = !lv || s.level === lv;
+        const matchesStatus = !sv || s.status === sv;
+        const matchesYear = !yv || yr === yv;
+        return matchesText && matchesLevel && matchesStatus && matchesYear;
+      });
+
+      // Sort
+      filtered.sort((a,b) => {
+        if (sortBy === 'nameAZ') {
+          return a.name.localeCompare(b.name);
+        }
+        const da = a.gradDate ? new Date(a.gradDate).getTime() : 0;
+        const db = b.gradDate ? new Date(b.gradDate).getTime() : 0;
+        if (sortBy === 'gradSoonest') return da - db;      // earliest first
+        if (sortBy === 'gradLatest')  return db - da;      // latest first
+        return 0;
+      });
+
+      renderStudents(filtered);
+    }
+
+    // ======== 5) INIT ========
+    (function init(){
+      // Populate year dropdown from data
+      const years = Array.from(new Set(STUDENTS.map(s => yearOf(s.gradDate)).filter(Boolean))).sort();
+      const yearSel = document.getElementById('year');
+      years.forEach(y => {
+        const opt = document.createElement('option');
+        opt.value = y; opt.textContent = y;
+        yearSel.appendChild(opt);
+      });
+
+      // Wire events
+      ['q','level','status','year','sortBy'].forEach(id => {
+        document.getElementById(id).addEventListener('input', applyFiltersAndSort);
+      });
+      document.getElementById('clearFilters').addEventListener('click', () => {
+        document.getElementById('q').value='';
+        document.getElementById('level').value='';
+        document.getElementById('status').value='';
+        document.getElementById('year').value='';
+        document.getElementById('sortBy').value='gradSoonest';
+        applyFiltersAndSort();
+      });
+
+      // First render (default sort: soonest)
+      applyFiltersAndSort();
+    })();
+
+    // ======== 6) Modal helpers ========
+    function openModal(src){
+      document.getElementById('modal-img').src = src;
+      document.getElementById('event-modal2').classList.add('show');
+    }
+    document.querySelector('#event-modal2 .close').addEventListener('click', ()=>{
+      document.getElementById('event-modal2').classList.remove('show');
+    });
+    document.getElementById('event-modal2').addEventListener('click', e=>{
+      if(e.target.id==='event-modal2'){ e.currentTarget.classList.remove('show'); }
+    });
+  </script>
+</body>
+</html>

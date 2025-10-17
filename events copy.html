@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events - INNOKIDS Research Lab</title>
+	 <link rel="stylesheet" href="css/styles2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+ 
+
+</head>
+<body>
+
+ <div class="header-container">
+          <!-- Menu placeholder (will load menu.html) -->
+    <div id="menu-placeholder"></div>
+    <script>
+      fetch('menu.html')
+        .then(res => res.text())
+        .then(data => { document.getElementById('menu-placeholder').innerHTML = data; });
+    </script>
+	   
+	   
+    </div>
+ 
+	
+	 <h1>&nbsp; &nbsp; &nbsp; Events - INNOKIDS Research Lab </h1>
+	
+  <div class="top-section">
+      <!-- Filter Section -->
+        <section class="filter-section">
+		 <h1>Our Events</h1>
+		 We host various events and workshops year-round, including:<br>
+		 Hour of Code (Fall), K-5 Coding Contest (Spring), Summer-Camp (Summer). 
+		 
+            <h1>Filter Events</h1>
+            <select id="filter-date" onchange="filterEvents()">
+                <option value="">All Dates</option>
+                <option value="past">Past Events</option>
+                <option value="upcoming">Upcoming Events</option>
+            </select>
+            <select id="filter-location" onchange="filterEvents()">
+                <option value="">All Locations</option>
+                <option value="INNOKIDS Lab">INNOKIDS Lab</option>
+            </select>
+            <select id="filter-type" onchange="filterEvents()">
+                <option value="">All Types</option>
+                <option value="Coding">Coding</option>
+                <option value="STEM">STEM</option>
+            </select>
+            <select id="filter-age-group" onchange="filterEvents()">
+                <option value="">All Age Groups</option>
+                <option value="5-10">5-10</option>
+                <option value="10-15">10-15</option>
+            </select>
+            <select id="filter-volunteer" onchange="filterEvents()">
+                <option value="">All Volunteering</option>
+                <option value="true">Open for Volunteering</option>
+                <option value="false">Volunteering Closed</option>
+            </select>
+        </section>
+
+
+        <!-- Calendar Section -->
+        <div id="calendar-container">
+            <div id="calendar"></div>
+        </div>
+		
+		
+		<section class="filter-section">
+		 <h2>Request a Workshop</h2>
+  <p>Interested in a workshop? Fill out the form below, and we’ll get back to you!</p>
+<form id="workshop-form">
+    <!-- Hidden field for FormSubmit to enable redirect -->
+     
+    <label for="name">Your Name:</label>
+    <input type="text" id="name" name="name" required><br>
+    
+    <label for="email">Your Email:</label> 
+    <input type="email" id="email" name="email" required><br>
+    
+    <label for="workshop-type">Workshop Type:</label>
+    <select id="workshop-type" name="workshop-type" required>
+	  <option value="Data-Science">Data Science</option>
+	   <option value="AI">AI</option>
+	   <option value="Eng">Engineering</option>
+	   <option value="Robotics">Robotics</option>
+	   <option value="Cybersecurity">Cybersecurity</option>
+	   <option value="Coding">Coding</option>
+	   <option value="Unplugged">Unplugged</option>
+      <option value="custom-workshop">Custom Workshop</option>
+    </select>
+    
+    <label for="details">Additional Details:</label><br>
+    <textarea id="details" name="details" placeholder="Provide any specific requirements or questions." rows="4"></textarea>
+	<br>
+    
+    <button type="submit">Submit Request</button>
+  </form>
+		</section>
+
+    </div>
+	
+	
+		
+
+
+    <!-- Modal -->
+    <div id="event-modal2">
+        <div class="modal-content2">
+            <button class="close" onclick="closeEventModalCal()">&times;</button>
+            <div id="event-modal2-content"></div>
+        </div>
+    </div>
+	
+	
+
+    <!-- Events Section -->
+    <section id="events-section" class="events-section">
+        <div id="events-container" class="events-grid"></div>
+        <div class="pagination" id="pagination"></div>
+    </section>
+
+    <!-- Event Modal -->
+    <div id="event-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeEventModal()">&times;</span>
+            <div id="event-modal-content"></div>
+            <img id="main-image" src="" alt="Main Event Image">
+            <div class="image-thumbnails"></div>
+            <div class="gallery-navigation">
+			    <button id="prev-button" onclick="prevImage()">Previous</button>
+                <button id="next-button" onclick="nextImage()">Next</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const eventsData = {
+          id1: {
+                title: "K-5 Coding Competition",
+                description: "A coding competition for elementary students using Scratch/ScratchJr. Open to children in grades K-5",
+                location: "Engineering Hall, Kansas State University",
+                type: "Competition",
+                ageGroup: "k-5",
+                date: "2025-03-29",
+                time: "09 am - 4 pm" , image: "assets/images/k5/25_event0.png",
+               images: ["assets/images/k5/25_event0.png", "assets/images/k5/24_event1.jpg","assets/images/k5/24_event2.jpg", "assets/images/k5/24_event3.jpg", "assets/images/k5/24_event4.jpg"],
+                enrollmentForm: "https://forms.gle/2F4SZ2DfY2miNUeJA",
+                feedbackForm: "https://forms.gle/fhWpJuSBArLurw976", 
+                volunteerForm: "https://forms.gle/a3dpaf3KeLcbxk1P6",
+				volunteerfeedbackForm: "https://forms.gle/7qz7Ec7zdPLLan6Z9",
+				homepage: "k5Contest.html",
+                futureEvent: false,
+                volunteerActive: false
+            },
+           
+            // Add more events...
+        };
+		
+	
+(function() {
+    // Initialize EmailJS with your User ID
+    emailjs.init("8usIpmtvBVxCH5yp8");
+  })();
+  
+document.getElementById("workshop-form").addEventListener("submit", function(event) {
+  event.preventDefault(); // Prevent form from refreshing the page
+  
+  // Collect form data
+  const formData = new FormData(event.target);
+
+  // Send the email using EmailJS
+  emailjs
+    .send("service_9jw02i2", "template_l8mln47", {
+      name: formData.get("name"),
+      email: formData.get("email"),
+      workshop_type: formData.get("workshop-type"),
+      details: formData.get("details"),
+    })
+    .then(
+      () => alert("Workshop request submitted successfully!"),
+      (error) => alert("Failed to send workshop request: " + error.text)
+    );
+});
+
+
+	
+		
+  let filteredEvents = Object.keys(eventsData);
+    let currentPage = 1;
+    const eventsPerPage = 6;
+    let currentImageIndex = 0;
+    let currentEventImages = [];
+
+    function renderEvents() {
+        const container = document.getElementById("events-container");
+        container.innerHTML = "";
+
+        const startIndex = (currentPage - 1) * eventsPerPage;
+        const endIndex = startIndex + eventsPerPage;
+
+        filteredEvents.slice(startIndex, endIndex).forEach(eventId => {
+            const event = eventsData[eventId];
+            const card = document.createElement("div");
+            card.className = `event-card ${event.futureEvent ? "upcoming-event" : "past-event"}`;
+            card.innerHTML = `
+                <img src="${event.image}" alt="${event.title}">
+                <h3>${event.title}</h3>
+				 <p> <strong>Date: </strong> ${event.date}</p>
+                <p><strong>Time: </strong> ${event.time}</p>
+                <p> ${event.description}</p>
+                <button><a href="${event.homepage}" target="_blank" class="button-link">Details</a></button> 
+               	<button>${event.futureEvent ? `<a href="${event.enrollmentForm}" target="_blank">attend</a>` : `<a href="${event.feedbackForm}" target="_blank">Attendee's Feedback</a>`}</button>
+                <button>${event.volunteerActive ? `<a href="${event.volunteerForm}" target="_blank">Volunteer</a>` : `<a href="${event.volunteerfeedbackForm}" target="_blank">Volunteer's Feedback</a>`}</button>
+				         `;
+            container.appendChild(card);
+        });
+
+        renderPagination();
+    }
+	
+
+    function renderPagination() {
+        const pagination = document.getElementById("pagination");
+        pagination.innerHTML = "";
+
+        const totalPages = Math.ceil(filteredEvents.length / eventsPerPage);
+
+        for (let i = 1; i <= totalPages; i++) {
+            const button = document.createElement("button");
+            button.textContent = i;
+            button.onclick = () => {
+                currentPage = i;
+                renderEvents();
+            };
+            if (i === currentPage) {
+                button.style.fontWeight = "bold";
+            }
+            pagination.appendChild(button);
+        }
+    }
+
+    function filterEvents() {
+        const dateFilter = document.getElementById("filter-date").value;
+        const locationFilter = document.getElementById("filter-location").value;
+        const typeFilter = document.getElementById("filter-type").value;
+        const ageGroupFilter = document.getElementById("filter-age-group").value;
+        const volunteerFilter = document.getElementById("filter-volunteer").value;
+
+        filteredEvents = Object.keys(eventsData).filter(eventId => {
+            const event = eventsData[eventId];
+
+            return (
+                (!dateFilter || (dateFilter === "past" && !event.futureEvent) || (dateFilter === "upcoming" && event.futureEvent)) &&
+                (!locationFilter || event.location === locationFilter) &&
+                (!typeFilter || event.type === typeFilter) &&
+                (!ageGroupFilter || event.ageGroup === ageGroupFilter) &&
+                (!volunteerFilter || event.volunteerActive.toString() === volunteerFilter)
+            );
+        });
+
+        currentPage = 1;
+        renderEvents();
+    }
+
+    function showEventModal(eventId) {
+        const event = eventsData[eventId];
+        const modalContent = document.getElementById("event-modal-content");
+        modalContent.innerHTML = `
+            <h2>${event.title}</h2>
+            <p>${event.description}</p>
+            <p><strong>Location:</strong> ${event.location}</p>
+            <p><strong>Type:</strong> ${event.type}</p>
+            <p><strong>Age Group:</strong> ${event.ageGroup}</p>
+        `;
+
+        currentEventImages = event.images;
+        currentImageIndex = 0;
+        updateImageGallery(currentEventImages);
+        document.getElementById("event-modal").classList.add("show");
+    }
+	
+	
+	
+	
+	
+	
+	
+	
+	// Convert eventsData into FullCalendar format
+        const calendarEvents = Object.keys(eventsData).map(eventId => {
+    const event = eventsData[eventId];
+    return {
+        id: eventId,
+        title: event.title,
+        start: event.date,
+        extendedProps: {
+            description: event.description,
+            image: event.image,
+            enrollmentForm: event.enrollmentForm,
+            feedbackForm: event.feedbackForm,
+            volunteerForm: event.volunteerForm,
+            volunteerfeedbackForm: event.volunteerfeedbackForm,
+            volunteerActive: event.volunteerActive,
+            futureEvent: event.futureEvent
+        }
+    };
+});
+
+// Initialize FullCalendar
+document.addEventListener("DOMContentLoaded", function () {
+    const calendarEl = document.getElementById("calendar");
+    const calendar = new FullCalendar.Calendar(calendarEl, {
+        initialView: "dayGridMonth",
+        headerToolbar: {
+            left: "prev,next today",
+            center: "title",
+            right: "dayGridMonth"
+        },
+        events: calendarEvents,
+        eventClick: function (info) {
+            showEventModalCal(info.event);
+        }
+    });
+
+    calendar.render();
+});
+
+// Show modal with event details
+function showEventModalCal(event) {
+    const modalContent = document.getElementById("event-modal2-content");
+    const props = event.extendedProps;
+
+    modalContent.innerHTML = `
+        <img src="${props.image}" alt="${event.title}">
+        <h3>${event.title}</h3>
+        <p>${props.description}</p>
+        <button>${props.futureEvent ? `<a href="${props.enrollmentForm}" target="_blank">Enroll</a>` : `<a href="${props.feedbackForm}" target="_blank">Attendee's Feedback</a>`}</button>
+        <button>${props.volunteerActive ? `<a href="${props.volunteerForm}" target="_blank">Volunteer</a>` : `<a href="${props.volunteerfeedbackForm}" target="_blank">Volunteer's Feedback</a>`}</button>
+    `;
+
+    document.getElementById("event-modal2").classList.add("show");
+}
+
+// Close the modal
+function closeEventModalCal() {
+    document.getElementById("event-modal2").classList.remove("show");
+}
+		
+		
+		
+		
+		
+		
+		
+		
+
+    function updateImageGallery(images) {
+    const mainImage = document.getElementById("main-image");
+    const thumbnailsContainer = document.querySelector(".image-thumbnails");
+
+    // Set the main image with fixed dimensions
+    mainImage.src = images[currentImageIndex];
+    mainImage.alt = `Main Image - ${currentImageIndex + 1}`;
+    mainImage.style.width = "200px"; // Set width
+    mainImage.style.height = "300px"; // Set height
+    mainImage.style.objectFit = "cover"; // Ensure image fits nicely
+    mainImage.style.cursor = "pointer"; // Indicate it is clickable
+
+    // Add click functionality to open the original image
+    mainImage.onclick = () => {
+        window.open(images[currentImageIndex], "_blank");
+    };
+
+    // Clear existing thumbnails
+    thumbnailsContainer.innerHTML = "";
+
+    // Generate thumbnails
+    images.forEach((imageSrc, index) => {
+        const thumbnail = document.createElement("img");
+        thumbnail.src = imageSrc;
+        thumbnail.alt = `Thumbnail ${index + 1}`;
+        thumbnail.className = index === currentImageIndex ? "active" : "";
+        thumbnail.style.width = "100px";
+        thumbnail.style.height = "100px";
+        thumbnail.style.objectFit = "cover";
+        thumbnail.onclick = () => {
+            currentImageIndex = index;
+            updateImageGallery(images);
+        };
+        thumbnailsContainer.appendChild(thumbnail);
+    });
+
+    // Enable or disable navigation buttons
+    document.getElementById("prev-button").disabled = currentImageIndex === 0;
+    document.getElementById("next-button").disabled = currentImageIndex === images.length - 1;
+}
+
+
+    function prevImage() {
+        if (currentImageIndex > 0) {
+            currentImageIndex--;
+            updateImageGallery(currentEventImages);
+        }
+    }
+
+    function nextImage() {
+        if (currentImageIndex < currentEventImages.length - 1) {
+            currentImageIndex++;
+            updateImageGallery(currentEventImages);
+        }
+    }
+
+    function closeEventModal() {
+        document.getElementById("event-modal").classList.remove("show");
+    }
+	
+	
+    // Initial render
+    renderEvents();
+</script>
+</body>
+</html>

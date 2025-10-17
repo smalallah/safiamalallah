@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projects - INNOKIDS Research Lab</title>
+
+  <!-- Fonts & your site styles -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <!-- Top menu -->
+  <div class="header-container">
+    <div id="menu-placeholder"></div>
+  </div>
+
+  <main>
+    <h1 class="about-header"> Lab Projects</h1>
+
+    <!-- Filters (no calendar) -->
+    <div class="top-section">
+      <section class="filter-section">
+        <h1>Filter Projects</h1>
+
+        <!-- Optional keyword search (title/description) -->
+        <input id="search-text" type="text" placeholder="Search by title or description…" oninput="applyFilters()"/>
+
+        <!-- Status filter: Active / Not Active -->
+        <select id="filter-status" onchange="applyFilters()">
+          <option value="">All Statuses</option>
+          <option value="active">Active</option>
+          <option value="inactive">Not Active</option>
+        </select>
+      </section>
+    </div>
+
+    <!-- Projects grid -->
+    <section id="events-section" class="events-section">
+      <div id="events-container" class="events-grid"></div>
+      <div class="pagination" id="pagination"></div>
+    </section>
+
+    <!-- Gallery modal (kept, uses your existing styles) -->
+    <div id="event-modal" class="modal">
+      <div class="modal-content">
+        <button class="close" onclick="closeEventModal()">&times;</button>
+        <div id="event-modal-content"></div>
+        <img id="main-image" class="image-modal-content" src="" alt="Main Event Image">
+        <div class="image-thumbnails"></div>
+        <div class="gallery-navigation">
+          <button id="prev-button" onclick="prevImage()">Previous</button>
+          <button id="next-button" onclick="nextImage()">Next</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <div id="footer-placeholder"></div>
+
+  <script>
+    // Inject shared menu & footer
+    fetch('menu.html').then(r => r.text()).then(t => { document.getElementById('menu-placeholder').innerHTML = t; });
+    fetch('footer.html').then(r => r.text()).then(t => { document.getElementById('footer-placeholder').innerHTML = t; });
+
+    // ---------------- DATA ----------------
+    // Add pageUrl for each project when you have the HTML page ready.
+    // If pageUrl is missing, the "Open Page" button will be disabled.
+     /* ========== DATA (projects) ========== */
+    const eventsData = {
+      p_roblox: {
+        title: "Digital Games",
+        description: "Immersive learning experiences and games built in Roblox / VR.",
+        image: "assets/images/projects/roblox.jpg",
+        pageUrl: "project_roblox-vr",
+        active: true,
+        volunteerActive: true,
+        volunteerForm: "https://forms.gle/volunteerRobloxVR"
+      },
+	   p_boredGames: {
+        title: "Bored Games",
+        description: "bored Games to play data science",
+        image: "assets/images/projects/games.png",
+        pageUrl: "project_boredGames",
+        active: true,
+        volunteerActive: false,
+        volunteerForm: "https://forms.gle/volunteerBooks"
+      },
+      p_songs: {
+        title: "Songs",
+        description: "Original educational songs that teach CS & STEM ideas.",
+        image: "assets/images/projects/song.png",
+        pageUrl: "project_songs",
+        active: true,
+        volunteerActive: false,
+        volunteerForm: "https://forms.gle/volunteerSongs"
+      },
+      p_cartoons: {
+        title: "Cartoons",
+        description: "Short animated stories that explain computing concepts.",
+        image: "assets/images/projects/pixel-data.png",
+        pageUrl: "project_cartoons",
+        active: true,
+        volunteerActive: false,
+        volunteerForm: "https://forms.gle/volunteerCartoons"
+      },
+      p_storybooks: {
+        title: "Storybooks",
+        description: "Interactive storybooks that blend literacy with coding ideas.",
+        image: "assets/images/projects/storybooks.png",
+        pageUrl: "project_storybooks",
+        active: true,
+        volunteerActive: false,
+        volunteerForm: "https://forms.gle/volunteerStorybooks"
+      },
+      p_courses: {
+        title: "Courses",
+        description: "K–5 friendly courses and classroom-ready modules.",
+        image: "assets/images/projects/courses.png",
+        pageUrl: "project_courses",
+        active: true,
+        volunteerActive: true,
+        volunteerForm: "https://forms.gle/volunteerCourses"
+      },
+      p_books: {
+        title: "Books",
+        description: "Books and workbooks authored by the lab.",
+        image: "assets/images/projects/books.png",
+        pageUrl: "project_books",
+        active: true,
+        volunteerActive: false,
+        volunteerForm: "https://forms.gle/volunteerBooks"
+      },
+     
+      p_undergrad: {
+        title: "Undergraduate Students Projects",
+        description: "Selected capstones and research projects by our undergrads.",
+        image: "assets/images/projects/up.png",
+        pageUrl: "project_undergraduate",
+        active: true,
+        volunteerActive: false,
+        volunteerForm: "https://forms.gle/volunteerUndergrad"
+      }
+    };
+
+
+    // ---------------- STATE ----------------
+    let keys = Object.keys(eventsData);
+    let filteredKeys = keys.slice();
+    let currentPage = 1;
+    const cardsPerPage = 9;
+    let currentImageIndex = 0;
+    let currentEventImages = [];
+
+    // ---------------- RENDER ----------------
+    function renderCards() {
+      const container = document.getElementById('events-container');
+      container.innerHTML = '';
+
+      const start = (currentPage - 1) * cardsPerPage;
+      const end = start + cardsPerPage;
+
+      filteredKeys.slice(start, end).forEach(id => {
+        const e = eventsData[id];
+
+        const openDisabled = !e.pageUrl;
+        const volunteerDisabled = !e.volunteerActive;
+
+        const card = document.createElement('div');
+        card.className = `event-card ${e.futureEvent ? 'upcoming-event' : 'past-event'}`;
+        card.innerHTML = `
+        <h3>${e.title}</h3>
+          <img src="${e.image}" alt="${e.title}">
+          <p><strong>Status:</strong> ${e.futureEvent ? 'Active' : 'Not Active'}</p>
+          <p>${e.description}</p>
+         
+          <button ${openDisabled ? 'disabled' : ''} onclick="${openDisabled ? '' : `window.location.href='${e.pageUrl}'`}">
+            ${openDisabled ? 'Open Page' : 'Open Page'}
+          </button>
+          
+        `;
+        container.appendChild(card);
+      });
+
+      renderPagination();
+    }
+
+    function renderPagination() {
+      const total = Math.ceil(filteredKeys.length / cardsPerPage);
+      const el = document.getElementById('pagination');
+      el.innerHTML = '';
+      if (total <= 1) return;
+      for (let i = 1; i <= total; i++) {
+        const b = document.createElement('button');
+        b.textContent = i;
+        b.onclick = () => { currentPage = i; renderCards(); };
+        if (i === currentPage) b.style.fontWeight = 'bold';
+        el.appendChild(b);
+      }
+    }
+
+    // ---------------- FILTERS ----------------
+    function applyFilters() {
+      const q = (document.getElementById('search-text').value || '').toLowerCase().trim();
+      const status = document.getElementById('filter-status').value; // '', 'active', 'inactive'
+
+      filteredKeys = keys.filter(id => {
+        const e = eventsData[id];
+
+        const matchesText =
+          !q ||
+          e.title.toLowerCase().includes(q) ||
+          e.description.toLowerCase().includes(q);
+
+        const matchesStatus =
+          !status ||
+          (status === 'active' && e.futureEvent) ||
+          (status === 'inactive' && !e.futureEvent);
+
+        return matchesText && matchesStatus;
+      });
+
+      currentPage = 1;
+      renderCards();
+    }
+
+    // ---------------- MODAL / GALLERY ----------------
+    function showEventModal(id) {
+      const e = eventsData[id];
+      const modalContent = document.getElementById('event-modal-content');
+      modalContent.innerHTML = `
+        <h2>${e.title}</h2>
+        <p>${e.description}</p>
+        <p><strong>Location:</strong> ${e.location}</p>
+        <p><strong>Type:</strong> ${e.type}</p>
+        <p><strong>Age Group:</strong> ${e.ageGroup}</p>
+      `;
+
+      currentEventImages = e.images || [];
+      currentImageIndex = 0;
+      updateImageGallery(currentEventImages);
+      document.getElementById('event-modal').classList.add('show');
+    }
+
+    function closeEventModal() {
+      document.getElementById('event-modal').classList.remove('show');
+    }
+
+    function updateImageGallery(images) {
+      const mainImage = document.getElementById('main-image');
+      const thumbs = document.querySelector('.image-thumbnails');
+
+      if (!images.length) {
+        mainImage.src = '';
+        thumbs.innerHTML = '';
+        document.getElementById('prev-button').disabled = true;
+        document.getElementById('next-button').disabled = true;
+        return;
+      }
+
+      mainImage.src = images[currentImageIndex];
+      mainImage.alt = `Main Image - ${currentImageIndex + 1}`;
+      mainImage.onclick = () => window.open(images[currentImageIndex], '_blank');
+
+      thumbs.innerHTML = '';
+      images.forEach((src, idx) => {
+        const t = document.createElement('img');
+        t.src = src;
+        t.alt = `Thumbnail ${idx + 1}`;
+        if (idx === currentImageIndex) t.classList.add('active');
+        t.onclick = () => { currentImageIndex = idx; updateImageGallery(images); };
+        thumbs.appendChild(t);
+      });
+
+      document.getElementById('prev-button').disabled = currentImageIndex === 0;
+      document.getElementById('next-button').disabled = currentImageIndex === images.length - 1;
+    }
+
+    function prevImage() {
+      if (currentImageIndex > 0) {
+        currentImageIndex--;
+        updateImageGallery(currentEventImages);
+      }
+    }
+
+    function nextImage() {
+      if (currentImageIndex < currentEventImages.length - 1) {
+        currentImageIndex++;
+        updateImageGallery(currentEventImages);
+      }
+    }
+
+    // init
+    renderCards();
+  </script>
+</body>
+</html>

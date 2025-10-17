@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - D<sup>3</sup> Playground </title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+    <!-- Particles Background -->
+    <div id="particles-js"></div>
+
+    <div class="header-container">
+        <header class="lab-header">
+            <p  class="rainbow-text" >|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</p>
+           <hr/>
+		   
+		   <img src="assets/images/logo.png" alt="Logo" class="menu-logo2">
+            <h1 class="lab-name">D<sup>3</sup> Playground</h1>
+            <p class="lab-department" >&nbsp; &nbsp; &nbsp; 
+			 <i class="fas fa-book"></i>      Define &nbsp; 
+			<i class="fas fa-project-diagram">  </i>  Design &nbsp; 
+			<i class="fas fa-robot"></i>  Develop 
+											 &nbsp;&nbsp;</p>
+     
+	   </header>
+       
+	   <!-- Menu placeholder (will load menu.html) -->
+    <div id="menu-placeholder"></div>
+    <script>
+      fetch('menu.html')
+        .then(res => res.text())
+        .then(data => { document.getElementById('menu-placeholder').innerHTML = data; });
+    </script>
+	   
+	   
+    </div>
+<main>
+
+    <h1>Welcome to D<sup>3</sup> Playground!</h1>
+    <h2>
+    A creative learning space designed especially for K–5 learners.</h2>
+<p>
+  <strong><i class="fas fa-brain"></i> AI:</strong> Artificial Intelligence  &nbsp; 
+  <strong><i class="fas fa-code"></i> C:</strong> Coding  &nbsp; 
+  <strong><i class="fas fa-cogs"></i> E:</strong> Engineering    &nbsp; 
+  <strong><i class="fas fa-database"></i> D:</strong> Data Science &nbsp; 
+  <strong><i class="fas fa-robot"></i> R:</strong> Robotics  &nbsp; 
+  <strong><i class="fas fa-shield-alt"></i> S:</strong> Security    &nbsp; 
+</p>
+
+    <p>
+     In today’s rapidly evolving world, technologies like Data Science and Artificial Intelligence are transforming 
+	 the future. But what about young children? Often, they’re left out of the picture when
+	 it comes to learning these groundbreaking concepts. At D<sup>3</sup> Playground Research Lab, 
+	 we believe the journey into science and technology should start early, with tools and 
+	 activities tailored just for them.
+	   
+	   </p>
+	  <p> 
+	  Our mission is simple yet impactful: to take complex ideas from computer science and
+	  technology and make them fun, engaging, and accessible for young learners. We design 
+	  resources that spark curiosity, empower teachers, and involve parents in their child’s 
+	  learning journey. Together, we’re building a future where every child has the opportunity 
+	  to explore and thrive in the world of science and technology.
+	  </p>
+	  
+
+
+<div class="about-section">
+            <div class="about-section2">
+			 <br/>
+                <h2>How We Make a Difference</h2>
+              <!-- Add this in your <head> if not already present -->
+
+<ul class="about-impact-list">
+  <li><span class="material-icons" style="vertical-align:middle; color:#169ba3;">science</span>
+    <strong>Research-Informed:</strong> Grounded in the latest research in computer science education, child development, and pedagogy.
+  </li>
+  <li><span class="material-icons" style="vertical-align:middle; color:#169ba3;">build</span>
+    <strong>Resource Creator:</strong> Develop practical tools, children’s books, lesson materials, and hands-on activities to make learning engaging and accessible.
+  </li>
+  <li><span class="material-icons" style="vertical-align:middle; color:#169ba3;">groups</span>
+    <strong>Workshop Leader:</strong> Organize and lead interactive workshops for students, parents, and teachers to encourage collaborative learning.
+  </li>
+  <li><span class="material-icons" style="vertical-align:middle; color:#169ba3;">event</span>
+    <strong>Conference Organizer:</strong> Host and contribute to educational conferences, connecting experts, educators, and families.
+  </li>
+  <li><span class="material-icons" style="vertical-align:middle; color:#169ba3;">forum</span>
+    <strong>Panelist &amp; Moderator:</strong> Share insights and facilitate discussions on education and technology in diverse settings.
+  </li>
+  <li><span class="material-icons" style="vertical-align:middle; color:#169ba3;">diversity_3</span>
+    <strong>Community Builder:</strong> Design programs and events that involve families, schools, and the broader community in modern learning.
+  </li>
+  <li><span class="material-icons" style="vertical-align:middle; color:#169ba3;">travel_explore</span>
+    <strong>Opportunity Seeker:</strong> Pursue new initiatives that support children’s learning and well-being, always striving to make a positive impact.
+  </li>
+</ul>
+ <br/>
+</div>
+</div>
+
+<div class="game-container">
+<h2>Let’s play a game together!</h2>
+         <div class="game-description">
+            <p> Can you help the fruit seller make an important decision?
+                He's just starting his fruit shop and sells three kinds of fruits: apples, watermelons, and bananas.
+				</p>
+               <p> <strong>Day One: </strong>It was a sunny day. He sold all the watermelons, some of the apples, and only a few bananas (the leftover bananas turned darker).<br>
+              </p> <p> <strong>Day Two:</strong> It was cooler outside. He sold all the watermelons and bananas, along with some apples.
+            </p>
+            <p>Now, he has enough money to buy only two types of fruit for the next day, which will be hot and sunny. <br>
+            What two fruits should he buy to make the most sales?</p>
+            <p><strong>Be a data detective!</strong> Look at everything multiple times before guessing:
+			the weather, what people like, and which fruits spoil faster.</p>
+      <div/>
+
+        <div class="game-container">
+        <div class="seller-image">
+            <img src="assets/images/fruit_seller.jpg" alt="Fruit Seller">
+        </div>
+        <div class="fruit-options">
+            <div class="fruit apple" id="apple" onclick="selectFruit('apple')">
+                <img src="assets/images/apple.jpg" alt="Apple">
+                <p>Apple</p>
+            </div>
+            <div class="fruit watermelon" id="watermelon" onclick="selectFruit('watermelon')">
+                <img src="assets/images/watermelon.jpg" alt="Watermelon">
+                <p>Watermelon</p>
+            </div>
+            <div class="fruit banana" id="banana" onclick="selectFruit('banana')">
+                <img src="assets/images/banana.jpg" alt="Banana">
+                <p>Banana</p>
+            </div>
+        </div>
+		       <div class="result" id="result"></div>
+
+        <button class="btn-reset" onclick="resetGame()">Reset</button>
+    </div>
+
+ </div>
+
+  	
+<div id="about-research" class="about-research">
+    <div class="about-research-container">
+        <p class="about-text">
+            This is just one example of the games we design! Our research focuses on developing frameworks that 
+            can be integrated into age-appropriate and engaging mediums such as interactive stories, virtual worlds, cartoon videos, plugged games, and unplugged games, all carefully crafted for the early childhood age range based on 
+            extensive research.
+        </p>
+        <p class="about-text">
+            Would you like to join us? We welcome children, educators, parents, and researchers to be part of our journey. Whether you're looking to learn, collaborate, or contribute, we’re open to all kinds of partnerships and ideas!
+        </p>
+    </div>
+</div>
+ </div>
+  <br/>
+    
+
+  
+</main>
+
+ <h1 class="about-header"> Lab Projects</h1>
+
+    <!-- Filters (no calendar) -->
+    <div class="top-section">
+      <section class="filter-section">
+        <h1>Filter Projects</h1>
+
+        <!-- Optional keyword search (title/description) -->
+        <input id="search-text" type="text" placeholder="Search by title or description…" oninput="applyFilters()"/>
+
+        <!-- Status filter: Active / Not Active -->
+        <select id="filter-status" onchange="applyFilters()">
+          <option value="">All Statuses</option>
+          <option value="active">Active</option>
+          <option value="inactive">Not Active</option>
+        </select>
+      </section>
+    </div>
+
+    <!-- Projects grid -->
+    <section id="events-section" class="events-section">
+      <div id="events-container" class="events-grid"></div>
+      <div class="pagination" id="pagination"></div>
+    </section>
+
+    <!-- Gallery modal (kept, uses your existing styles) -->
+    <div id="event-modal" class="modal">
+      <div class="modal-content">
+        <button class="close" onclick="closeEventModal()">&times;</button>
+        <div id="event-modal-content"></div>
+        <img id="main-image" class="image-modal-content" src="" alt="Main Event Image">
+        <div class="image-thumbnails"></div>
+        <div class="gallery-navigation">
+          <button id="prev-button" onclick="prevImage()">Previous</button>
+          <button id="next-button" onclick="nextImage()">Next</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+   <div id="footer-placeholder"></div>
+    <script>
+      fetch('footer.html')
+        .then(res => res.text())
+        .then(data => { document.getElementById('footer-placeholder').innerHTML = data; });
+    </script>
+	   
+   <script>
+    // Inject shared menu & footer
+    fetch('menu.html').then(r => r.text()).then(t => { document.getElementById('menu-placeholder').innerHTML = t; });
+    fetch('footer.html').then(r => r.text()).then(t => { document.getElementById('footer-placeholder').innerHTML = t; });
+
+    // ---------------- DATA ----------------
+    // Add pageUrl for each project when you have the HTML page ready.
+    // If pageUrl is missing, the "Open Page" button will be disabled.
+     /* ========== DATA (projects) ========== */
+    const eventsData = {
+      p_roblox: {
+        title: "Digital Games",
+        description: "Immersive learning experiences and games built in Roblox / VR.",
+        image: "assets/images/projects/roblox.jpg",
+        pageUrl: "project_roblox-vr",
+        active: true,
+        volunteerActive: true,
+        volunteerForm: "https://forms.gle/volunteerRobloxVR"
+      },
+	   p_boredGames: {
+        title: "Bored Games",
+        description: "bored Games to play data science",
+        image: "assets/images/projects/games.png",
+        pageUrl: "project_boredGames",
+        active: true,
+        volunteerActive: false,
+        volunteerForm: "https://forms.gle/volunteerBooks"
+      },
+      p_songs: {
+        title: "Songs",
+        description: "Original educational songs that teach CS & STEM ideas.",
+        image: "assets/images/projects/song.png",
+        pageUrl: "project_songs",
+        active: true,
+        volunteerActive: false,
+        volunteerForm: "https://forms.gle/volunteerSongs"
+      },
+      p_cartoons: {
+        title: "Cartoons",
+        description: "Short animated stories that explain computing concepts.",
+        image: "assets/images/projects/pixel-data.png",
+        pageUrl: "project_cartoons",
+        active: true,
+        volunteerActive: false,
+        volunteerForm: "https://forms.gle/volunteerCartoons"
+      },
+      p_storybooks: {
+        title: "Storybooks",
+        description: "Interactive storybooks that blend literacy with coding ideas.",
+        image: "assets/images/projects/storybooks.png",
+        pageUrl: "project_storybooks",
+        active: true,
+        volunteerActive: false,
+        volunteerForm: "https://forms.gle/volunteerStorybooks"
+      },
+      p_courses: {
+        title: "Courses",
+        description: "K–5 friendly courses and classroom-ready modules.",
+        image: "assets/images/projects/courses.png",
+        pageUrl: "project_courses",
+        active: true,
+        volunteerActive: true,
+        volunteerForm: "https://forms.gle/volunteerCourses"
+      },
+      p_books: {
+        title: "Books",
+        description: "Books and workbooks authored by the lab.",
+        image: "assets/images/projects/books.png",
+        pageUrl: "project_books",
+        active: true,
+        volunteerActive: false,
+        volunteerForm: "https://forms.gle/volunteerBooks"
+      },
+     
+      p_undergrad: {
+        title: "Undergraduate Students Projects",
+        description: "Selected capstones and research projects by our undergrads.",
+        image: "assets/images/projects/up.png",
+        pageUrl: "project_undergraduate",
+        active: true,
+        volunteerActive: false,
+        volunteerForm: "https://forms.gle/volunteerUndergrad"
+      }
+    };
+
+
+    // ---------------- STATE ----------------
+    let keys = Object.keys(eventsData);
+    let filteredKeys = keys.slice();
+    let currentPage = 1;
+    const cardsPerPage = 9;
+    let currentImageIndex = 0;
+    let currentEventImages = [];
+
+    // ---------------- RENDER ----------------
+    function renderCards() {
+      const container = document.getElementById('events-container');
+      container.innerHTML = '';
+
+      const start = (currentPage - 1) * cardsPerPage;
+      const end = start + cardsPerPage;
+
+      filteredKeys.slice(start, end).forEach(id => {
+        const e = eventsData[id];
+
+        const openDisabled = !e.pageUrl;
+        const volunteerDisabled = !e.volunteerActive;
+
+        const card = document.createElement('div');
+        card.className = `event-card ${e.futureEvent ? 'upcoming-event' : 'past-event'}`;
+        card.innerHTML = `
+        <h3>${e.title}</h3>
+          <img src="${e.image}" alt="${e.title}">
+          <p><strong>Status:</strong> ${e.futureEvent ? 'Active' : 'Not Active'}</p>
+          <p>${e.description}</p>
+         
+          <button ${openDisabled ? 'disabled' : ''} onclick="${openDisabled ? '' : `window.location.href='${e.pageUrl}'`}">
+            ${openDisabled ? 'Open Page' : 'Open Page'}
+          </button>
+          
+        `;
+        container.appendChild(card);
+      });
+
+      renderPagination();
+    }
+
+    function renderPagination() {
+      const total = Math.ceil(filteredKeys.length / cardsPerPage);
+      const el = document.getElementById('pagination');
+      el.innerHTML = '';
+      if (total <= 1) return;
+      for (let i = 1; i <= total; i++) {
+        const b = document.createElement('button');
+        b.textContent = i;
+        b.onclick = () => { currentPage = i; renderCards(); };
+        if (i === currentPage) b.style.fontWeight = 'bold';
+        el.appendChild(b);
+      }
+    }
+
+    // ---------------- FILTERS ----------------
+    function applyFilters() {
+      const q = (document.getElementById('search-text').value || '').toLowerCase().trim();
+      const status = document.getElementById('filter-status').value; // '', 'active', 'inactive'
+
+      filteredKeys = keys.filter(id => {
+        const e = eventsData[id];
+
+        const matchesText =
+          !q ||
+          e.title.toLowerCase().includes(q) ||
+          e.description.toLowerCase().includes(q);
+
+        const matchesStatus =
+          !status ||
+          (status === 'active' && e.futureEvent) ||
+          (status === 'inactive' && !e.futureEvent);
+
+        return matchesText && matchesStatus;
+      });
+
+      currentPage = 1;
+      renderCards();
+    }
+
+    // ---------------- MODAL / GALLERY ----------------
+    function showEventModal(id) {
+      const e = eventsData[id];
+      const modalContent = document.getElementById('event-modal-content');
+      modalContent.innerHTML = `
+        <h2>${e.title}</h2>
+        <p>${e.description}</p>
+        <p><strong>Location:</strong> ${e.location}</p>
+        <p><strong>Type:</strong> ${e.type}</p>
+        <p><strong>Age Group:</strong> ${e.ageGroup}</p>
+      `;
+
+      currentEventImages = e.images || [];
+      currentImageIndex = 0;
+      updateImageGallery(currentEventImages);
+      document.getElementById('event-modal').classList.add('show');
+    }
+
+    function closeEventModal() {
+      document.getElementById('event-modal').classList.remove('show');
+    }
+
+    function updateImageGallery(images) {
+      const mainImage = document.getElementById('main-image');
+      const thumbs = document.querySelector('.image-thumbnails');
+
+      if (!images.length) {
+        mainImage.src = '';
+        thumbs.innerHTML = '';
+        document.getElementById('prev-button').disabled = true;
+        document.getElementById('next-button').disabled = true;
+        return;
+      }
+
+      mainImage.src = images[currentImageIndex];
+      mainImage.alt = `Main Image - ${currentImageIndex + 1}`;
+      mainImage.onclick = () => window.open(images[currentImageIndex], '_blank');
+
+      thumbs.innerHTML = '';
+      images.forEach((src, idx) => {
+        const t = document.createElement('img');
+        t.src = src;
+        t.alt = `Thumbnail ${idx + 1}`;
+        if (idx === currentImageIndex) t.classList.add('active');
+        t.onclick = () => { currentImageIndex = idx; updateImageGallery(images); };
+        thumbs.appendChild(t);
+      });
+
+      document.getElementById('prev-button').disabled = currentImageIndex === 0;
+      document.getElementById('next-button').disabled = currentImageIndex === images.length - 1;
+    }
+
+    function prevImage() {
+      if (currentImageIndex > 0) {
+        currentImageIndex--;
+        updateImageGallery(currentEventImages);
+      }
+    }
+
+    function nextImage() {
+      if (currentImageIndex < currentEventImages.length - 1) {
+        currentImageIndex++;
+        updateImageGallery(currentEventImages);
+      }
+    }
+
+    // init
+    renderCards();
+  </script>
+</body>
+</html>
+
+</body>
+</html>

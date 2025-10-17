@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Books </title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+  <meta name="description" content="Books and publications developed by the D³KIDS Lab to advance computer science, AI, and data science education for teachers and lifelong learners." />
+</head>
+<body>
+
+  <!-- Header + nav -->
+  <div class="header-container">
+    <div id="menu-placeholder"></div>
+    <script>
+      fetch('menu.html').then(r=>r.text()).then(html => {
+        document.getElementById('menu-placeholder').innerHTML = html;
+      });
+    </script>
+  </div>
+
+  <main class="page-wrap">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-card">
+        <h1>Books</h1>
+        <p>
+          Books provide a lasting way to share research, frameworks, and creative ideas that support teachers, students, and researchers.  
+          Our lab develops and contributes to books that make computer science, AI, and data science education more accessible for diverse learners and learning environments.  
+          These works highlight practical models, unplugged activities, and evidence-based strategies for teaching emerging technologies.
+        </p>
+        <p class="note"><em>More publications and upcoming releases will be added soon.</em></p>
+      </div>
+
+      <div class="hero-art">
+        <img height="440" src="assets/images/projects/books.png" alt="Books published by D³KIDS Lab" onerror="this.src='assets/images/about-safia.jpg'">
+      </div>
+    </section>
+
+    <!-- BOOK LIST -->
+    <section class="section">
+      <h2><i class="fa-solid fa-book icon"></i> Published Works</h2>
+      <div class="card">
+        <div class="pub-item">
+          <div class="pub-title">AI-Play: Introducing Artificial Intelligence through Unplugged Learning</div>
+          <div class="pub-meta">Developed by the D³KIDS Lab — Educational Technology Press, 2025</div>
+          <p>A practical guide for educators and parents introducing AI concepts to young learners through play-based, unplugged activities. Includes structured lesson plans and reflection prompts.</p>
+          <p><a href="#" onclick="return false;">Preview or order (coming soon)</a></p>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-title">Data Science for Everyone: A Practical Guide for Educators</div>
+          <div class="pub-meta">D³KIDS Lab — In preparation</div>
+          <p>Designed for K–12 teachers and higher education instructors, this book introduces data science foundations through real-world classroom projects, community datasets, and student-led inquiry.</p>
+          <p><a href="#" onclick="return false;">Details coming soon</a></p>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-title">Computational Thinking in Practice: Frameworks for Modern Classrooms</div>
+          <div class="pub-meta">D³KIDS Lab — In preparation</div>
+          <p>Presents research-backed frameworks and strategies for integrating computational thinking and AI literacy across grade levels. Focuses on developmentally appropriate, inclusive, and engaging learning design.</p>
+          <p><a href="#" onclick="return false;">Details coming soon</a></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- UPCOMING TITLES -->
+    <section class="section">
+      <h2><i class="fa-solid fa-bullhorn icon"></i> Upcoming Titles</h2>
+      <div class="card">
+        <ul>
+          <li><strong>AI for Teachers:</strong> A professional learning handbook supporting educators in integrating AI tools and literacy into their teaching practice.</li>
+          <li><strong>Learning by Doing:</strong> Practical strategies and activities that apply experiential learning principles to computing and data science education.</li>
+          <li><strong>The Creative Coder:</strong> A collection of classroom stories and design projects blending creativity, storytelling, and coding for young learners.</li>
+        </ul>
+        <p class="note"><em>Expected release timeline: 2026–2027</em></p>
+      </div>
+    </section>
+
+    <!-- GET INVOLVED -->
+    <section class="section">
+      <h2><i class="fa-solid fa-handshake-angle icon"></i> Get Involved</h2>
+      <div class="card">
+        <p>
+          We welcome educators, researchers, and students interested in contributing to book projects—through classroom pilots, chapter reviews, illustrations, or case study collaborations.
+        </p>
+        <div class="cta-row">
+          <a class="btn-lg btn-primary" href="mailto:safia@ksu.edu?subject=Book%20Collaboration%20Inquiry&body=Hello%20D3KIDS%20Team%2C%0A%0AI%27m%20interested%20in%20collaborating%20on%20your%20book%20projects.%20Here%27s%20how%20I%20could%20contribute%3A%0A%0A-%20Chapter%20review%0A-%20Lesson%20testing%0A-%20Co-authoring%0A-%20Illustration%0A-%20Editing%0A%0AThanks!">
+            <i class="fa-regular fa-envelope"></i> Email to Collaborate
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <div id="footer-placeholder"></div>
+  <script>
+    fetch('footer.html').then(r=>r.text()).then(html => {
+      document.getElementById('footer-placeholder').innerHTML = html;
+    });
+  </script>
+</body>
+</html>
