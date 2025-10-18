@@ -1,0 +1,38 @@
+{
+  "Education & Credentials": [
+    {
+      "id": "2017-08-01-doctor-of-philosophy-in-computer-science-70781",
+      "title": "Doctor of Philosophy in Computer Science",
+      "description": "",
+      "date_start": "2017-08-01",
+      "date_end": "2022-05-05",
+      "location": "Manhattan, KS, USA",
+      "organization": "Kansas State University",
+      "roles": null,
+      "categories": [
+        "Education & Credentials"
+      ],
+      "tags": null,
+      "links": null,
+      "notes": null
+    }
+  ],
+  "Academic Positions": [
+    {
+      "id": "2025-08-12-teaching-assistant-professor-31452",
+      "title": "Teaching Assistant Professor",
+      "description": "",
+      "date_start": "2025-08-12",
+      "date_end": null,
+      "location": "Manhattan, KS, USA",
+      "organization": "Computer Science Department, Kansas State University",
+      "roles": null,
+      "categories": [
+        "Academic Positions"
+      ],
+      "tags": null,
+      "links": null,
+      "notes": null
+    }
+  ]
+}

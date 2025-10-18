@@ -1,0 +1,366 @@
+[
+  {
+    "title": "Kansas Data Science Conference",
+    "description": "Annual statewide conference connecting educators, students, and industry leaders in data science.",
+    "images": ["img/dsconf1.jpg", "img/dsconf2.jpg"],
+    "start_date": "2022-01-15",
+    "end_date": "2022-01-17",
+    "location": "Manhattan, KS",
+    "category": "Conference",
+    "type": "Event",
+    "link": "https://kdsc.ksu.edu",
+    "roles": ["Host", "Speaker"]
+  },
+  {
+    "title": "AI & Kids Book Series",
+    "description": "A series of illustrated books introducing AI and coding concepts to young children.",
+    "images": ["img/aikids1.jpg", "img/aikids2.jpg"],
+    "start_date": "2021-04-01",
+    "end_date": null,
+    "location": "Published Online",
+    "category": "Book",
+    "type": "Publication",
+    "link": "https://example.com/aikidsbooks",
+    "roles": ["Author", "Illustrator"]
+  }
+  // Add more entries...
+]
+{
+  "basics": {
+    "name": "Safia A. Malallah",
+    "label": "Learning Scientist",
+    "email": "safia@ksu.edu",
+    "phone": "+1 785-532-7365",
+    "website": "https://safiamalallah.com/",
+    "location": {
+      "city": "Manhattan",
+      "region": "KS",
+      "country": "USA"
+    },
+    "profiles": [
+      { "network": "LinkedIn", "username": "safiaMalallah", "url": "https://www.linkedin.com/in/safiaMalallah" }
+    ]
+  },
+  "education": [
+    {
+      "institution": "Kansas State University",
+      "degree": "PhD",
+      "area": "Computer Science",
+      "startDate": "2017-08",
+      "endDate": "2022-05",
+      "location": "Manhattan, KS, USA"
+    },
+    {
+      "institution": "Kansas State University",
+      "degree": "MEd",
+      "area": "Curriculum and Instruction (Elementary & Middle Level)",
+      "startDate": "2024-06",
+      "endDate": "2025-12",
+      "location": "Manhattan, KS, USA"
+    },
+    {
+      "institution": "Montana State University",
+      "degree": "MS",
+      "area": "Computer Science",
+      "startDate": "2015-08",
+      "endDate": "2017-07",
+      "location": "Bozeman, MT, USA"
+    },
+    {
+      "institution": "Kansas State University",
+      "degree": "Graduate Certificate",
+      "area": "Educational Technology",
+      "startDate": "2024-06",
+      "endDate": "2025-06",
+      "location": "Manhattan, KS, USA"
+    },
+    {
+      "institution": "Tufts University",
+      "degree": "Graduate Certificate",
+      "area": "Technology and Early Childhood",
+      "startDate": "2020-08",
+      "endDate": "2021-08",
+      "location": "Medford, MA, USA"
+    },
+    {
+      "institution": "The Public Institution for Social Security / IBM",
+      "degree": "Certificate",
+      "area": "E-business Application Development",
+      "startDate": "2008-12",
+      "endDate": "2009-12",
+      "location": "Kuwait / Egypt"
+    },
+    {
+      "institution": "Kuwait University",
+      "degree": "BS",
+      "area": "Information Science (Minor: Nutrition)",
+      "startDate": "2003-08",
+      "endDate": "2008-01",
+      "location": "Kuwait City, Kuwait",
+      "notes": "Gap in 2003–2004 due to accident and hospitalization"
+    }
+  ],
+  "positions": [
+    {
+      "title": "Teaching Assistant Professor",
+      "organization": "Kansas State University, Computer Science Dept.",
+      "location": "Manhattan, KS, USA",
+      "startDate": "2023-08",
+      "endDate": "Present"
+    },
+    {
+      "title": "Project Coordinator",
+      "organization": "Kansas Data Science Consortium, Kansas State University",
+      "location": "Manhattan, KS, USA",
+      "startDate": "2022-08",
+      "endDate": "Present"
+    },
+    {
+      "title": "PostDoc - Researcher",
+      "organization": "Knowledge Discovery in Databases Lab, Kansas State University",
+      "location": "Manhattan, KS, USA",
+      "startDate": "2022-08",
+      "endDate": "2023-02"
+    },
+    {
+      "title": "STEM Teacher",
+      "organization": "UFM Community Learning Center",
+      "location": "Manhattan, KS, USA",
+      "startDate": "2020-09",
+      "endDate": "2023-03"
+    },
+    {
+      "title": "Graduate Teaching Assistant",
+      "organization": "Kansas State University, Computer Science Dept.",
+      "location": "Manhattan, KS, USA",
+      "startDate": "2019-01",
+      "endDate": "2020-05"
+    },
+    {
+      "title": "Graduate Teaching Assistant",
+      "organization": "Montana State University, Computer Science Dept.",
+      "location": "Bozeman, MT, USA",
+      "startDate": "2016-08",
+      "endDate": "2017-05"
+    }
+  ],
+  "industry": [
+    {
+      "title": "Senior Software Developer",
+      "organization": "Advanced Engineering Design Apps LLC",
+      "location": "Manhattan, KS, USA",
+      "startDate": "2023-03",
+      "endDate": "2023-07"
+    },
+    {
+      "title": "Web Developer",
+      "organization": "Dar Almohandes",
+      "location": "Kuwait City, Kuwait",
+      "startDate": "2015-06",
+      "endDate": "2020-08"
+    },
+    {
+      "title": "System Analyst and Web Developer",
+      "organization": "Kuwait Fund for Arab Economic Development",
+      "location": "Kuwait City, Kuwait",
+      "startDate": "2010-01",
+      "endDate": "2015-05"
+    },
+    {
+      "title": "E-business Application Development Program - Trainee",
+      "organization": "Public Institution for Social Security",
+      "location": "Kuwait City, Kuwait",
+      "startDate": "2009-04",
+      "endDate": "2009-12"
+    },
+    {
+      "title": "Data Analyst - Intern",
+      "organization": "Student Information Center, Kuwait University",
+      "location": "Kuwait City, Kuwait",
+      "startDate": "2008-06",
+      "endDate": "2008-08"
+    },
+    {
+      "title": "Graphic Designer",
+      "organization": "Aljusoor Company",
+      "location": "Kuwait City, Kuwait",
+      "startDate": "2006-06",
+      "endDate": "2009-12"
+    },
+    {
+      "title": "Freelancer Graphic Designer",
+      "organization": "Self-employed",
+      "location": "Kuwait / USA",
+      "startDate": "2002-01",
+      "endDate": "Present"
+    }
+  ],
+  "grants": [
+    {
+      "title": "CS4KS: Maintaining the Cyber Pipeline",
+      "role": "Co-Principal Investigator",
+      "period": "2024-07-01 – 2025-06-30",
+      "institution": "Kansas State University",
+      "agency": "Kansas Department of Education",
+      "amount": "$685,466"
+    },
+    {
+      "title": "CS4KS: Continuing to Expand the K-State Cyber Pipeline",
+      "role": "Co-Principal Investigator",
+      "period": "2023-10-01 – 2024-06-30",
+      "institution": "Kansas State University",
+      "agency": "Kansas Department of Education",
+      "amount": "$748,000"
+    }
+  ],
+  "publications": {
+    "conference_proceedings": [
+      { "authors": "Aponti, C.; Malallah, S.; Shamir, L.", "title": "A Review of K-12 Data Science Education in the United States: Trends, Tools, and Gaps.", "venue": "ASEE Annual Conference & Exposition", "year": 2025 },
+      { "authors": "Malallah, S.; Osiobe, E. U. P.; Shamir, L.; Bean, N. H.; Feldhausen, R.; Weese, J. L.", "title": "Developing a Computational Thinking Virtual Worlds Framework for Early Childhood.", "venue": "ASEE Annual Conference & Exposition", "year": 2025 },
+      { "authors": "Malallah, S.; Osiobe, E. U. P.; Shamir, L.; Bean, N. H.; Feldhausen, R.; Weese, J. L.", "title": "Designing a Virtual World Experience to Foster Computational Thinking in Young Learners: An Hour of Code Initiative.", "venue": "ASEE Annual Conference & Exposition", "year": 2025 },
+      { "authors": "Stewart, R.; Malallah, S.; Shamir, L.", "title": "Enhancing Academic Integrity in the Digital Age: An Image-Based Solution to Combat AI-Assisted Cheating.", "venue": "ASEE Annual Conference & Exposition", "year": 2025, "note": "Abstract Submitted" },
+      { "authors": "Marafie, Z.; Malallah, S.; Osiobe, E. U. P.; Shamir, L.", "title": "Exploring Student Confidence in Data Science: A Kuwaiti Case Study on Self-Efficacy.", "venue": "ASEE Annual Conference & Exposition", "year": 2025, "note": "Abstract Submitted" },
+      { "authors": "Malallah, S.; Osiobe, E. U.; Marafie, Z.; Henriquez-Coronel, P.; Shamir, L.; Carlson, E. L.; Weese, J. L.", "title": "Developing an Instrument for Assessing Self-Efficacy Confidence in Data Science.", "venue": "ASEE Annual Conference & Exposition", "year": 2024 },
+      { "authors": "Malallah, S.; Shamir, L.; Osiobe, E. U.", "title": "Gender stereotype in STEM fields: A case study of Kuwait.", "venue": "MINK Women in Computing Conference", "year": 2023, "doi": "10.13140/RG.2.2.13752.32003" },
+      { "authors": "Malallah, S.; Shamir, L.; Hsu, W. H.; Weese, J. L.; Alfailakawi, S.", "title": "Computational thinking pedagogical framework for early childhood education.", "venue": "ASEE Annual Conference & Exposition", "year": 2023 },
+      { "authors": "Malallah, S.; Weese, J. L.; Alsalmi, K. N.", "title": "The 'besTech' technology practice framework for early childhood education.", "venue": "ASEE Annual Conference & Exposition", "year": 2023 },
+      { "authors": "Malallah, S. A.; Shamir, L.; Hsu, W. H.; Weese, J. L.; Alfailakawi, S.", "title": "Data science (dataying) for early childhood.", "venue": "ASEE Annual Conference & Exposition", "year": 2023 },
+      { "authors": "Malallah, S.; Alfailakawi, S.; Alkhurafi, T. Y.; Weese, J. L.", "title": "Reversing gender stereotypes in STEM education in a gender-segregated region.", "venue": "ASEE Virtual Annual Conference", "year": 2021 },
+      { "authors": "Malallah, S.; Alsalmi, K. N.; Weese, J. L.", "title": "Measuring awareness of computational thinking in Kuwaiti educational institutions.", "venue": "ASEE Virtual Annual Conference", "year": 2021 },
+      { "authors": "Malallah, S.; Alfailakawi, S.; Weese, J. L.", "title": "A replicate study: Adoption of a STEM outreach program in Kuwait.", "venue": "ASEE Virtual Annual Conference", "year": 2020 },
+      { "authors": "Malallah, S.; Weese, J. L.", "title": "The effects of mind maps on computational thinking.", "venue": "ASEE Virtual Annual Conference", "year": 2020 }
+    ],
+    "journals": [
+      { "authors": "Osiobe, E. U.; Malallah, S. A.", "title": "Business and Labor Growth Opportunities: A Case Study of Rural America.", "venue": "Accreditation Council of Business Schools & Programs Midwestern Regional Council Meeting", "year": 2025 },
+      { "authors": "Osiobe, E. U.; Malallah, S.; Hammood, W. A.", "title": "A Literature Review of Human Capital and Educational Policies in Chile’s Educational System.", "venue": "International Business Management", "year": 2025, "volume": "8", "issue": "5", "pages": "15–21" },
+      { "authors": "Osiobe, E. U.; Malallah, S.; Hammood, W. A.; Rauf, R. I.", "title": "A Literature Review of Human Capital and Educational Policies in the Brazilian’s Educational System.", "venue": "The Journal of Business", "year": 2025, "volume": "8", "issue": "4", "pages": "79–86" },
+      { "authors": "Osiobe, E. U.; Malallah, S.", "title": "Big Data and Waste Management Economics.", "venue": "WSSA 2025 Conference", "year": 2025 },
+      { "authors": "Osiobe, E. U.; Malallah, S.; Al Noor, S.; Aliesawi, S. A.", "title": "Commonalities or Variations among Dimensions: An Analysis of Regions based on Hofstede’s Six Cultural Pillars.", "venue": "Journal of Social Science", "year": 2025, "volume": "8", "issue": "1", "pages": "284–299", "doi": "10.31014/aior.1991.08.01.563" },
+      { "authors": "Osiobe, E. U.; Malallah, S.; Al Noor, S.; Aliesawi, S. A.", "title": "Variations or Commonalities among Countries? A Data-Driven Approach to Diplomacy.", "venue": "Indian Journal of Law and Human Behavior", "year": 2025, "volume": "4", "issue": "1", "pages": "87–100" },
+      { "authors": "Osiobe, E. U.; Malallah, S.; Al Noor, S.; Hammood, W. A.", "title": "Tennessee and Kansas Industrial Diversity Analysis: A Case for Economic Development.", "venue": "SSRN Electronic Journal", "year": 2025, "doi": "10.2139/ssrn.5263213" },
+      { "authors": "Osiobe, E. U.; Malallah, S.; Al Noor, S.; Aliesawi, S. A.", "title": "Commonalities or Variations among Dimensions: An Analysis of Regions based on Hofstede’s Six Cultural Pillars.", "venue": "SSRN Electronic Journal", "year": 2025, "doi": "10.2139/ssrn.5191098" },
+      { "authors": "Osiobe, E. U.; Sewer, A. T.; Hammood, W. A.; Malallah, S. A.; Sofyan, D.; Abdullah, K. H.", "title": "Exportation and Big Data: An Analysis of Kansas Trade Trends 1995–2025.", "venue": "Journal of Economics, Management and Trade", "year": 2024, "volume": "30", "issue": "7", "pages": "47–55" },
+      { "authors": "Hammood, W. A.; Hammood, O. A.; Aliesawi, S. A.; Osiobe, E. U.; Hasan, R. A.; Malallah, S.; Abbas, D. H.", "title": "Data Analysis of An Exploring the Information Systems Success Factors for Early Warning Systems Adoption.", "venue": "Babylonian Journal of Machine Learning", "year": 2024, "pages": "102–111" },
+      { "authors": "Malallah, S.; Osiobe, E. U.; Shamir, L.", "title": "Data Science Self-Efficacy Assessment Tools: A Foundational Guide to Evaluating Progress.", "venue": "The Asian Institute of Research", "year": 2024, "date": "June 30, 2024" },
+      { "authors": "Osiobe, E. U.; Malallah, S.; Osiobe, N. E.", "title": "Enhancing Data Visualization Accessibility: A Case for Equity and Inclusion.", "venue": "Engineering and Technology Quarterly Reviews", "year": 2024, "volume": "7", "issue": "2" },
+      { "authors": "Osiobe, E. U.; Moore, J. T.; Malallah, S. A.; Abdullah, K. H.; Sofyan, D.", "title": "A Regional Development Plan: A Case Study of Douglas County, Kansas, USA.", "venue": "Economics and Business Quarterly Reviews", "year": 2024, "volume": "7", "issue": "2" },
+      { "authors": "Osiobe, E. U.; Malallah, S.; Al Noor, S.", "title": "Cultural dimensions: An Analysis of Regions Based on Hofstede’s Six Cultural Pillars.", "venue": "World Social Science Association (WSSA)", "year": 2024, "doi": "10.13140/RG.2.2.29620.67202" },
+      { "authors": "Malallah, S.; Osiobe, E. U.", "title": "Commonalities among Countries: A Data-Driven Approach to Diplomacy.", "venue": "World Social Science Association (WSSA)", "year": 2024, "doi": "10.13140/RG.2.2.12843.45603" }
+    ],
+    "posters": [
+      { "authors": "Malallah, S.; Shamir, L.; Osiobe, E. U.", "title": "ARISE Virtual World for Data Science Education for Young Learners.", "venue": "2025 ARISE Annual Symposium, Garden City, KS" },
+      { "authors": "Malallah, S.; Shamir, L.", "title": "A Data Science Course Embracing Real-World ARISE Projects.", "venue": "2024 ARISE Annual Symposium, Olathe, KS", "doi": "10.13140/RG.2.2.12945.03688" },
+      { "authors": "Malallah, S.; Shamir, L.", "title": "Course-based Real-World Capstone Data Science Experience.", "venue": "2023 ARISE Annual Symposium, Kansas" }
+    ],
+    "developed_tools": [
+      { "type": "Song", "title": "Data Science Song for K-5", "link": "https://youtu.be/rWBXU5AKYD8" },
+      { "type": "Story-Book", "title": "The Adventures of Pixel and Data - Exploring the World of Data Science", "link": "https://ksuemailprod-my.sharepoint.com/:b:/g/personal/safia_ksu_edu/EW9xrdxy7OBAv6AwFqtaiYUBiEwCSDBC7tKysdEAw_IyCw?e=eJRkrW" },
+      { "type": "Virtual World", "title": "The Computational Thinking Island - Roblox", "link": "https://www.roblox.com/games/6791204917/CT-Island" }
+    ]
+  },
+  "workshops_and_talks": [
+    { "title": "CS for Elementary Learners", "role": "Presenter", "date": "May 2025", "event": "Computer Science Education for Kansas, Manhattan, KS" },
+    { "title": "Building an Augmented Reality Piano", "role": "Lead", "date": "May 2025", "event": "Computer Science Education for Kansas, Manhattan, KS" },
+    { "title": "Exploring Computer Science Through Unplugged Activities", "role": "Facilitator", "date": "Summer 2025", "event": "Computer Science Education for Kansas, Manhattan, KS" },
+    { "title": "ChatGPT in CS Education", "role": "Organizer/Panelist", "date": "Summer 2025", "event": "Computer Science Education for Kansas, Manhattan, KS" },
+    { "title": "K-5 Coding Contest", "role": "Host", "date": "Fall 2025", "event": "Kansas State University" },
+    { "title": "Sushi Workshop", "role": "Presenter", "date": "Nov 1, 2024", "event": "Diversity in Computing and Women in Engineering, K-State" },
+    { "title": "Keys to a Great Job Interview", "role": "Presenter", "date": "Oct 4, 2024", "event": "Diversity in Computing, K-State" },
+    { "title": "Artificial Intelligence", "role": "Workshop Leader", "date": "Sep 2024", "event": "Engineering’s Senior Experience Day, K-State" },
+    { "title": "What Makes a Good Goal", "role": "Host", "date": "Sep 6, 2024", "event": "Diversity in Computing, K-State" },
+    { "title": "CS Ed for Early Childhood", "role": "Workshop Leader", "date": "Jun 2024", "event": "CSTA Chapter Annual Conference, K-State" },
+    { "title": "Data Science Education for K-12", "role": "Workshop Leader", "date": "Jun 2024", "event": "CSTA Chapter Annual Conference, K-State" },
+    { "title": "CS Ed for Elementary BOF", "role": "Workshop Leader", "date": "2024", "event": "CSTA Chapter Annual Conference, K-State" },
+    { "title": "Navigating the Future of Business Analytics: Challenges, Opportunities, and Best Practices - Data Science", "role": "Panelist", "date": "2024", "event": "ProfCon 2024, Salt Lake City, Utah" },
+    { "title": "Data Science Education Around Kansas", "role": "Panel Organizer", "date": "2024", "event": "Kansas Data Science Consortium, Wichita, KS" },
+    { "title": "Women in Data Science in Kansas", "role": "Speaker", "date": "2024", "event": "Kansas Data Science Consortium, Wichita, KS" },
+    { "title": "Empowering Tomorrow’s Resilient Leaders: ARISE Young Engagement Initiative", "role": "Speaker", "date": "2024", "event": "ARISE Annual Symposium, Olathe, KS" },
+    { "title": "Data Science for Non-STEM Majors", "role": "Speaker", "date": "2024", "event": "Kansas State University and Baker University" },
+    { "title": "Kansas Women in Data Science", "role": "Speaker", "date": "2024", "event": "Women in Data Science Kansas chapter event, K-State" },
+    { "title": "Coding Your Hero Using VR and Data Science", "role": "Workshop Leader", "date": "2024", "event": "GROW Event, K-State" },
+    { "title": "K-12 Data Science Education", "role": "Workshop Leader", "date": "2023", "event": "1st Kansas Data Science Conference, Lawrence, KS" },
+    { "title": "Gender Stereotype in STEM Fields: A Case Study of Kuwait", "role": "Speaker", "date": "April 2023", "event": "MINK Women in Computing Conference, Kansas City, KS" },
+    { "title": "How to Become an Annotator", "role": "Workshop Leader", "date": "2022", "event": "Knowledge Discovery in Databases, K-State" },
+    { "title": "Our Virtual Camp Experience", "role": "Speaker", "date": "2021", "event": "ScratchJr Virtual Event" },
+    { "title": "What is Computational Thinking?", "role": "Speaker", "date": "2020", "event": "Barcamp 8 Event, Kuwait" },
+    { "title": "Sorting With Style", "role": "Workshop Leader", "date": "2018", "event": "GROW Event, K-State" },
+    { "title": "Build a Rocket from Scratch on Scratch!", "role": "Workshop Leader", "date": "2018", "event": "GROW Event, K-State" },
+    { "title": "Kuwait Digital Library for Schools", "role": "Speaker", "date": "2010", "event": "Barcamp 1 Event, Kuwait" },
+    { "title": "My Journey as a Mother and a Programmer", "role": "Invited Speaker", "date": "2010", "event": "Microsoft DigiGirlz event, Kuwait" }
+  ],
+  "teaching": [
+    { "course": "CC 110 - Introduction to Computing", "level": "Undergraduate", "delivery": "Online", "terms": ["Fall 2023", "Spring 2024", "Fall 2024", "Spring 2025", "Fall 2025"], "institution": "Kansas State University" },
+    { "course": "CC 111 – Elements of Computer Programming", "level": "Undergraduate", "delivery": "Online/In-person", "terms": ["Fall 2023", "Spring 2024", "Fall 2024", "Spring 2025", "Fall 2025"], "institution": "Kansas State University" },
+    { "course": "CC 120 - Web Page Development", "level": "Undergraduate", "delivery": "Online", "terms": ["Fall 2024", "Fall 2025"], "institution": "Kansas State University" },
+    { "course": "CIS 115 – Introduction to Computing Science", "level": "Undergraduate", "delivery": "In-person", "terms": ["Fall 2023", "Spring 2024", "Spring 2025", "Fall 2025"], "institution": "Kansas State University" },
+    { "course": "CIS 116 – Introduction to Programming", "level": "Undergraduate", "delivery": "In-person", "terms": ["Fall 2024", "Spring 2025", "Fall 2025"], "institution": "Kansas State University" },
+    { "course": "CC 315 – Data Structures and Algorithms 2", "level": "Undergraduate", "delivery": "Online", "terms": ["Fall 2023", "Spring 2024"], "institution": "Kansas State University" },
+    { "course": "CS 145 Web Design", "level": "Undergraduate", "delivery": "In-person", "terms": ["Fall 2016", "Spring 2017"], "institution": "Montana State University" },
+    { "course": "CIS 501 Software Architecture and Design", "level": "Undergraduate", "delivery": "In-person", "terms": ["Spring 2020"], "institution": "Kansas State University" },
+    { "course": "CIS 526 Web Interface Design", "level": "Undergraduate", "delivery": "In-person", "terms": ["Fall 2019"], "institution": "Kansas State University" },
+    { "course": "CIS 490 Introduction to Research in K-12 CS Education", "level": "Undergraduate", "delivery": "In-person", "terms": ["Fall 2024", "Fall 2025"], "institution": "Kansas State University" },
+    { "course": "CIS 890/590 Data Science in Practice", "level": "Graduate", "delivery": "In-person", "terms": ["Spring 2023", "Spring 2024", "Spring 2025", "Fall 2025"], "institution": "Kansas State University" },
+    { "course": "CIS 744 Advanced Software Analysis and Design", "level": "Graduate", "delivery": "In-person", "terms": ["Fall 2020"], "institution": "Kansas State University" },
+    { "course": "CIS 751/551 Introduction to Computer Security", "level": "Graduate", "delivery": "In-person", "terms": ["Fall 2019"], "institution": "Kansas State University" },
+    { "course": "Coding into the Virtual World", "level": "Grades 7-9", "delivery": "In-person", "terms": ["Summer 2023"], "institution": "USD383 Summer STEM Camp, Manhattan, KS" },
+    { "course": "Minecraft Adventure", "level": "Grades 3-6", "delivery": "In-person", "terms": ["Spring 2023", "Summer 2023"], "institution": "UFM Community Learning Center, Manhattan, KS" },
+    { "course": "Coding Around with Makey Makey", "level": "Grades 3-5", "delivery": "In-person", "terms": ["Fall 2022", "Spring 2022"], "institution": "UFM Community Learning Center, Manhattan, KS" },
+    { "course": "Coding and Folding", "level": "Grades 2-5", "delivery": "In-person", "terms": ["Spring 2022"], "institution": "UFM Community Learning Center, Manhattan, KS" },
+    { "course": "Tinkering and Coding Around", "level": "PreK-3", "delivery": "In-person", "terms": ["Spring 2020"], "institution": "MHK Play Studio, Manhattan, KS" },
+    { "course": "Coding and Robotics", "level": "PreK-3", "delivery": "In-person", "terms": ["Spring 2020"], "institution": "MHK Play Studio, Manhattan, KS" },
+    { "course": "Starbase", "level": "Grades 4-6", "delivery": "In-person", "terms": ["Fall 2018"], "institution": "Starbase Program, Manhattan, KS" }
+  ],
+  "app_development": [
+    { "name": "Concrete Mix Design Calculator", "description": "Online tool for construction project data and mix formula proposal.", "tech": ["C# .NET", "Azure"], "client": "Kuwait Fund / AEDA" },
+    { "name": "DAR", "description": "Dual-platform system for clients and employees.", "tech": [".NET"], "client": "Dar Almohandes" },
+    { "name": "Kfund Yearly Party", "description": "Annual event management application.", "tech": ["VB.NET", "JavaScript", "HTML", "MS Flash"], "client": "Kuwait Fund" },
+    { "name": "Eastern Sudan Donors Conference Website", "description": "Conference registration and information platform.", "tech": ["VB.NET"], "client": "Kuwait Fund" },
+    { "name": "1st International Workshop on Metamorphic Testing Website", "description": "Workshop website for the 38th ICSE.", "tech": ["WordPress"], "client": "Montana State University" },
+    { "name": "Kuwaiti Consumer Protection Civil Society", "description": "Public engagement website.", "tech": ["WordPress"], "client": "Consumer Protection Civil Society" },
+    { "name": "Kuwait Fund Branch System", "description": "Branch operations management platform.", "tech": ["VB.NET"], "client": "Kuwait Fund" },
+    { "name": "Job Application System", "description": "Online job application tracking system.", "tech": ["VB.NET"], "client": "Kuwait Fund" },
+    { "name": "Engineers Report Tracking System", "description": "Progress reporting for trainees.", "tech": ["VB.NET"], "client": "Kuwait Fund" },
+    { "name": "Kuwait Fund iPhone App", "description": "Mobile app for fund services.", "tech": ["Objective-C"], "client": "Kuwait Fund" },
+    { "name": "Public Relations Website", "description": "Up-to-date news/initiatives website.", "tech": ["VB.NET"], "client": "Kuwait Fund" },
+    { "name": "Ramadan Contest System", "description": "Automated contest management.", "tech": ["VB.NET"], "client": "Kuwait Fund" },
+    { "name": "Consulting Firms Registering System", "description": "Consultant registration management.", "tech": ["VB.NET"], "client": "Kuwait Fund" },
+    { "name": "Windows Desktop application", "description": "Departmental communication tool.", "tech": ["VB.NET", "Silverlight"], "client": "Kuwait Fund" },
+    { "name": "Survey System", "description": "Custom survey creation and analytics.", "tech": ["VB.NET", "Crystal Reports"], "client": "Kuwait Fund" },
+    { "name": "Training Centre Application", "description": "Training program management.", "tech": ["VB.NET", "Crystal Reports"], "client": "Public Institution for Social Security" },
+    { "name": "Employee Attendance Management System", "description": "Attendance and leave tracking.", "tech": ["VB.NET", "Crystal Reports"], "client": "Public Institution for Social Security" },
+    { "name": "Central Bank Loan Governor", "description": "Loan approval/management system.", "tech": ["Java"], "client": "Public Institution for Social Security" }
+  ],
+  "supervised_students": [
+    { "name": "Tatenda Sekabanja", "program": "K-State CIS 598 Capstone", "term": "Spring 2025" },
+    { "name": "Lucas Boice", "program": "K-State CIS 598 Capstone", "term": "Fall 2024" },
+    { "name": "Carrie Aponte", "program": "K-State CIS 598 Capstone", "term": "Spring 2024" }
+  ],
+  "graduate_committees": [
+    { "name": "Josh Barron", "program": "PhD, K-State", "term": "Spring 2025 – Current" },
+    { "name": "Robert Stewart", "program": "PhD, K-State", "term": "Spring 2024 – Current" },
+    { "name": "Fatima Alromoh", "program": "MS, University of Liverpool, UK", "term": "Spring 2024 – Current" }
+  ],
+  "community_and_committees": [
+    { "organization": "SIGCSE", "roles": ["Member (Fall 2023–Current)", "Judge (2025)"] },
+    { "organization": "Women in Data Science - Kansas (WIDSKS)", "roles": ["Ambassador (Spring 2024–Current)"] },
+    { "organization": "Association for Computing Machinery (ACM-W)", "roles": ["Member (Fall 2023–Current)", "Advisor, K-State chapter (Spring 2025)"] },
+    { "organization": "American Society for Engineering Education (ASEE)", "roles": ["Member (Fall 2020–Current)", "Reviewer (2021, 2023, 2024, 2025)"] },
+    { "organization": "Diversity in Computing Club (DIC)", "roles": ["Advisor (Spring 2024–Current)"] },
+    { "organization": "Hack K-State", "roles": ["Judge (Spring 2023)"] },
+    { "organization": "MINK WIC", "roles": ["Member (Fall 2023–Current)", "Organizer (2025)", "Judge (2023)"] },
+    { "organization": "Kansas Data Science Consortium (KDSC)", "roles": ["Member (Fall 2023–Current)", "Workshops/Sessions (2023, 2024)", "Panelist (2024)", "Conference Organizer (2023, 2024)"] },
+    { "organization": "ARISE", "roles": ["Member (Fall 2022–Current)", "Sessions (2024–2025)"] },
+    { "organization": "Data-Driven Discovery Lab (DDD), K-State", "roles": ["Member (Fall 2022–Current)"] },
+    { "organization": "Knowledge Discovery in Databases (KDD), K-State", "roles": ["Member (Fall 2018–Spring 2023)", "Workshop (Spring 2023)"] },
+    { "organization": "Software Engineering Lab, Montana State University", "roles": ["Member (Fall 2016–Spring 2017)"] },
+    { "organization": "Click it Club, College for Women, Kuwait University", "roles": ["Member (Fall 2006–Fall 2007)"] },
+    { "organization": "Kuwait Consumer Protection Civil Society", "roles": ["Member (2011–Current)"] },
+    { "organization": "Kuwait Information Technology Society", "roles": ["Member (2010–Current)"] },
+    { "organization": "Art Studio, College of Engineering, Kuwait University", "roles": ["Member (2003–2009)"] }
+  ],
+  "awards": [
+    { "title": "Graduate Student of the Month", "institution": "Carl R. Ice College of Engineering – K-State" },
+    { "title": "Employee of the Year", "institution": "IT Dept, Kuwait Fund for Arab Economic Development" }
+  ]
+}
+

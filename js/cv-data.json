@@ -1,0 +1,233 @@
+{
+  "basics": {
+    "name": "Safia A. Malallah",
+    "label": "Learning Scientist",
+    "email": "safia@ksu.edu",
+    "phone": "+1 785-532-7365",
+    "website": "https://safiamalallah.com/",
+    "location": {
+      "city": "Manhattan",
+      "region": "KS",
+      "country": "USA"
+    },
+    "profiles": [
+      { "network": "LinkedIn", "username": "safiaMalallah", "url": "https://www.linkedin.com/in/safiaMalallah" }
+    ]
+  },
+  "education": [
+    {
+      "institution": "Kansas State University",
+      "degree": "PhD",
+      "area": "Computer Science",
+      "startDate": "Aug 2017",
+      "endDate": "May 2022",
+      "location": "Manhattan, KS, USA"
+    },
+    {
+      "institution": "Kansas State University",
+      "degree": "MEd",
+      "area": "Curriculum and Instruction (Elementary & Middle Level)",
+      "startDate": "Jun 2024",
+      "endDate": "Dec 2025",
+      "location": "Manhattan, KS, USA"
+    },
+    {
+      "institution": "Montana State University",
+      "degree": "MS",
+      "area": "Computer Science",
+      "startDate": "Aug 2015",
+      "endDate": "Jul 2017",
+      "location": "Bozeman, MT, USA"
+    },
+    {
+      "institution": "Kansas State University",
+      "degree": "Graduate Certificate",
+      "area": "Educational Technology",
+      "startDate": "Jun 2024",
+      "endDate": "Jun 2025",
+      "location": "Manhattan, KS, USA"
+    },
+    {
+      "institution": "Tufts University",
+      "degree": "Graduate Certificate",
+      "area": "Technology and Early Childhood",
+      "startDate": "Aug 2020",
+      "endDate": "Aug 2021",
+      "location": "Medford, MA, USA"
+    },
+    {
+      "institution": "The Public Institution for Social Security / IBM",
+      "degree": "Certificate",
+      "area": "E-business Application Development",
+      "startDate": "Dec 2008",
+      "endDate": "Dec 2009",
+      "location": "Kuwait / Egypt"
+    },
+    {
+      "institution": "Kuwait University",
+      "degree": "BS",
+      "area": "Information Science (Minor: Nutrition)",
+      "startDate": "Aug 2003",
+      "endDate": "Jan 2008",
+      "location": "Kuwait City, Kuwait",
+      "notes": "Gap in 2003–2004 due to accident and hospitalization"
+    }
+  ],
+  "positions": [
+    {
+      "title": "Teaching Assistant Professor",
+      "organization": "Kansas State University, Computer Science Dept.",
+      "location": "Manhattan, KS, USA",
+      "startDate": "Aug 2023",
+      "endDate": "Present"
+    },
+    {
+      "title": "Project Coordinator",
+      "organization": "Kansas Data Science Consortium, Kansas State University",
+      "location": "Manhattan, KS, USA",
+      "startDate": "Aug 2022",
+      "endDate": "Present"
+    },
+    {
+      "title": "PostDoc - Researcher",
+      "organization": "Knowledge Discovery in Databases Lab, Kansas State University",
+      "location": "Manhattan, KS, USA",
+      "startDate": "Aug 2022",
+      "endDate": "Feb 2023"
+    },
+    {
+      "title": "STEM Teacher",
+      "organization": "UFM Community Learning Center",
+      "location": "Manhattan, KS, USA",
+      "startDate": "Sep 2020",
+      "endDate": "Mar 2023"
+    },
+    {
+      "title": "Graduate Teaching Assistant",
+      "organization": "Kansas State University, Computer Science Dept.",
+      "location": "Manhattan, KS, USA",
+      "startDate": "Jan 2019",
+      "endDate": "May 2020"
+    },
+    {
+      "title": "Graduate Teaching Assistant",
+      "organization": "Montana State University, Computer Science Dept.",
+      "location": "Bozeman, MT, USA",
+      "startDate": "Aug 2016",
+      "endDate": "May 2017"
+    }
+  ],
+  "industry": [
+    {
+      "title": "Senior Software Developer",
+      "organization": "Advanced Engineering Design Apps LLC",
+      "location": "Manhattan, KS, USA",
+      "startDate": "Mar 2023",
+      "endDate": "Jul 2023"
+    },
+    {
+      "title": "Web Developer",
+      "organization": "Dar Almohandes",
+      "location": "Kuwait City, Kuwait",
+      "startDate": "Jun 2015",
+      "endDate": "Aug 2020"
+    },
+    {
+      "title": "System Analyst and Web Developer",
+      "organization": "Kuwait Fund for Arab Economic Development",
+      "location": "Kuwait City, Kuwait",
+      "startDate": "Jan 2010",
+      "endDate": "May 2015"
+    },
+    {
+      "title": "E-business Application Development Program - Trainee",
+      "organization": "Public Institution for Social Security",
+      "location": "Kuwait City, Kuwait",
+      "startDate": "Apr 2009",
+      "endDate": "Dec 2009"
+    },
+    {
+      "title": "Data Analyst - Intern",
+      "organization": "Student Information Center, Kuwait University",
+      "location": "Kuwait City, Kuwait",
+      "startDate": "Jun 2008",
+      "endDate": "Aug 2008"
+    },
+    {
+      "title": "Graphic Designer",
+      "organization": "Aljusoor Company",
+      "location": "Kuwait City, Kuwait",
+      "startDate": "Jun 2006",
+      "endDate": "Dec 2009"
+    },
+    {
+      "title": "Freelancer Graphic Designer",
+      "organization": "Self-employed",
+      "location": "Kuwait / USA",
+      "startDate": "Jan 2002",
+      "endDate": "Present"
+    }
+  ],
+  "grants": [
+    {
+      "title": "CS4KS: Maintaining the Cyber Pipeline",
+      "role": "Co-Principal Investigator",
+      "period": "Jul 2024–Jun 2025",
+      "institution": "Kansas State University",
+      "agency": "Kansas Department of Education",
+      "amount": "$685,466"
+    },
+    {
+      "title": "CS4KS: Continuing to Expand the K-State Cyber Pipeline",
+      "role": "Co-Principal Investigator",
+      "period": "Oct 2023–Jun 2024",
+      "institution": "Kansas State University",
+      "agency": "Kansas Department of Education",
+      "amount": "$748,000"
+    }
+  ],
+  "publications": {
+    "conference_proceedings": [
+      { "authors": "Aponti, C.; Malallah, S.; Shamir, L.", "title": "A Review of K-12 Data Science Education in the United States: Trends, Tools, and Gaps.", "venue": "ASEE Annual Conference & Exposition", "year": "2025" },
+      { "authors": "Malallah, S.; Osiobe, E. U. P.; Shamir, L.; Bean, N. H.; Feldhausen, R.; Weese, J. L.", "title": "Developing a Computational Thinking Virtual Worlds Framework for Early Childhood.", "venue": "ASEE Annual Conference & Exposition", "year": "2025" },
+      { "authors": "Malallah, S.; Osiobe, E. U. P.; Shamir, L.; Bean, N. H.; Feldhausen, R.; Weese, J. L.", "title": "Designing a Virtual World Experience to Foster Computational Thinking in Young Learners: An Hour of Code Initiative.", "venue": "ASEE Annual Conference & Exposition", "year": "2025" },
+      { "authors": "Stewart, R.; Malallah, S.; Shamir, L.", "title": "Enhancing Academic Integrity in the Digital Age: An Image-Based Solution to Combat AI-Assisted Cheating.", "venue": "ASEE Annual Conference & Exposition", "year": "2025", "note": "Abstract Submitted" },
+      { "authors": "Marafie, Z.; Malallah, S.; Osiobe, E. U. P.; Shamir, L.", "title": "Exploring Student Confidence in Data Science: A Kuwaiti Case Study on Self-Efficacy.", "venue": "ASEE Annual Conference & Exposition", "year": "2025", "note": "Abstract Submitted" },
+      { "authors": "Malallah, S.; Osiobe, E. U.; Marafie, Z.; Henriquez-Coronel, P.; Shamir, L.; Carlson, E. L.; Weese, J. L.", "title": "Developing an Instrument for Assessing Self-Efficacy Confidence in Data Science.", "venue": "ASEE Annual Conference & Exposition", "year": "2024" }
+    ],
+    "journals": [
+      { "authors": "Osiobe, E. U.; Malallah, S. A.", "title": "Business and Labor Growth Opportunities: A Case Study of Rural America.", "venue": "Accreditation Council of Business Schools & Programs Midwestern Regional Council Meeting", "year": "2025" },
+      { "authors": "Osiobe, E. U.; Malallah, S.; Hammood, W. A.", "title": "A Literature Review of Human Capital and Educational Policies in Chile’s Educational System.", "venue": "International Business Management", "year": "2025", "volume": "8", "issue": "5", "pages": "15–21" }
+    ],
+    "posters": [
+      { "authors": "Malallah, S.; Shamir, L.; Osiobe, E. U.", "title": "ARISE Virtual World for Data Science Education for Young Learners.", "venue": "2025 ARISE Annual Symposium, Garden City, KS" }
+    ],
+    "developed_tools": [
+      { "type": "Song", "title": "Data Science Song for K-5", "link": "https://youtu.be/rWBXU5AKYD8" },
+      { "type": "Story-Book", "title": "The Adventures of Pixel and Data - Exploring the World of Data Science", "link": "https://ksuemailprod-my.sharepoint.com/:b:/g/personal/safia_ksu_edu/EW9xrdxy7OBAv6AwFqtaiYUBiEwCSDBC7tKysdEAw_IyCw?e=eJRkrW" },
+      { "type": "Virtual World", "title": "The Computational Thinking Island - Roblox", "link": "https://www.roblox.com/games/6791204917/CT-Island" }
+    ]
+  },
+  "workshops_and_talks": [
+    { "title": "CS for Elementary Learners", "role": "Presenter", "date": "May 2025", "event": "Computer Science Education for Kansas, Manhattan, KS" },
+    { "title": "Building an Augmented Reality Piano", "role": "Lead", "date": "May 2025", "event": "Computer Science Education for Kansas, Manhattan, KS" }
+  ],
+  "teaching": [
+    { "course": "CC 110 - Introduction to Computing", "level": "Undergraduate", "delivery": "Online", "terms": ["Fall 2023", "Spring 2024", "Fall 2024", "Spring 2025", "Fall 2025"], "institution": "Kansas State University" }
+  ],
+  "app_development": [
+    { "name": "Concrete Mix Design Calculator", "description": "Online tool for construction project data and mix formula proposal.", "tech": ["C# .NET", "Azure"], "client": "Kuwait Fund / AEDA" }
+  ],
+  "supervised_students": [
+    { "name": "Tatenda Sekabanja", "program": "K-State CIS 598 Capstone", "term": "Spring 2025" }
+  ],
+  "graduate_committees": [
+    { "name": "Josh Barron", "program": "PhD, K-State", "term": "Spring 2025 – Current" }
+  ],
+  "community_and_committees": [
+    { "organization": "SIGCSE", "roles": ["Member (Fall 2023–Current)", "Judge (2025)"] }
+  ],
+  "awards": [
+    { "title": "Graduate Student of the Month", "institution": "Carl R. Ice College of Engineering – K-State" }
+  ]
+}

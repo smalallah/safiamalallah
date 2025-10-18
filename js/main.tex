@@ -1,0 +1,905 @@
+%  For credit to source, please look at the readme.txt file. 
+
+%   We suggest to 
+    %  Start all bullet item items with action verbs. You may base form or ing form or verbs where suited. See action verbs here, https://ecs.ihu.edu.gr/co/employment-cvcletter/action-verbs.html
+    %  Provide the most relevant information
+    %  Provide evidence for your skills.  For example, if you include MS Office and Python in your skills list, then provide bullet points detailing what YOU can do in MS Office and Python.  
+    %  In each section--start entries with the most recent one
+    %  Pay attention to grammar, avoid typos
+    %  Avoid using abbreviations
+    %  If you're applying for jobs, put your experience and skills before education
+    %  Some examples of presentations are provided
+
+
+\documentclass[11pt]{article}
+
+
+\usepackage[T1]{fontenc}
+\usepackage{inter} 
+\renewcommand*\familydefault{\sfdefault}
+\usepackage{hyperref}
+
+
+\usepackage{geometry}
+\geometry{
+    a4paper,
+    top=1.8cm,
+    bottom=1in,
+    left=2.5cm,
+    right=2.5cm
+}
+
+\setcounter{secnumdepth}{0} % remove section numbering
+\pdfgentounicode=1 % make ATS friendly
+
+\usepackage{enumitem}
+\setlist[itemize]{
+    noitemsep,
+    left=2em
+}
+\setlist[description]{itemsep=0pt}
+\setlist[enumerate]{align=left}
+\usepackage[dvipsnames]{xcolor}
+\colorlet{icnclr}{RoyalPurple}
+\usepackage{titlesec}
+\titlespacing{\subsection}{0pt}{*0}{*0}
+\titlespacing{\subsubsection}{0pt}{*0}{*0}
+\titleformat{\section}{\color{RoyalPurple}\large\fontseries{black}\selectfont\uppercase}{}{}{\ruleafter}[\global\RemVStrue]
+\titleformat{\subsection}{\fontseries{bold}\selectfont}{}{}{\rvs}
+\titleformat{\subsubsection}{\color{gray}\fontseries{bold}\selectfont}{}{}{}
+
+\usepackage{xhfill} 
+\newcommand\ruleafter[1]{#1~\xrfill[.5ex]{1pt}[RoyalPurple]} % add rule after title in .5 x-height 
+
+\newif\ifRemVS % remove vspace between \section & \subsection
+\newcommand{\rvs}{
+    \ifRemVS
+        \vspace{-1.5ex}
+    \fi
+    \global\RemVSfalse
+}
+
+\usepackage{fontawesome5}
+
+\usepackage[bookmarks=false]{hyperref} % [imp!]
+\hypersetup{ 
+    colorlinks=true,
+    linkcolor=purple,
+    urlcolor=RoyalPurple,
+    citecolor=purple, 
+    pdftitle={My Resume},
+}
+
+
+\usepackage[page]{totalcount}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}	
+\fancyhf{}							
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{xcolor}      % for text colors
+\usepackage{tcolorbox}   % for creating customized environments
+
+
+
+
+\titleformat{\paragraph}
+{\color{violet}\fontseries{black}\selectfont\uppercase}{}{}{}[\global\RemVStrue]
+
+
+\begin{document}
+
+%== HEADER ==%
+\begin{center}      
+    {\fontsize{28}{28}\selectfont \textbf{ Safia A. Malallah}} \\ \bigskip
+     {\fontsize{16}{16}\selectfont  {\color{icnclr}\faLessThan[regular]}  Learning Scientist /  {\color{icnclr}\faGreaterThan[regular]}  } \\ 
+   %faLaptopCode
+\end{center}
+\begin{center}   
+    {\color{icnclr}\faLinkedin[regular]} \href{https://www.linkedin.com/in/safiaMalallah}{/in/safiaMalallah} 
+       \quad
+   {\color{icnclr}\faGlobe[regular]} \href{https://safiamalallah.com/}{https://safiamalallah.com/}
+     
+    \quad
+      {\color{icnclr}\faEnvelope[regular]} \href{mailto:safia@ksu.edu}{safia@ksu.edu} 
+       \quad
+    {\color{icnclr}\faIcon{mobile-alt}} \href{tel:+1 4065808118}{+1 785-532-7365} 
+    % You can also put your LinkedIn or website address
+   % {\color{icnclr}\faLinkedinIn} \href{https://www.linkedin.com/}{linkedin.com/in/username}
+\end{center}
+%==============
+%==============
+%==============
+
+%==============
+%==============
+\section{Education}
+%==============
+%==============
+%==============
+%==============
+
+
+
+\vspace{0.8em} % Adds 0.5em of vertical space
+
+\subsection{Doctor of Philosophy in Computer Science  \hfill \normalfont Aug 2017-May 2022}  
+\subsubsection{Kansas State University,  Manhattan, KS, USA}
+\vspace{0.8em} % Adds 0.5em of vertical space
+
+\subsection{Master of Education in Curriculum and Instruction \hfill \normalfont Jun 2024-Dec 2025}  
+\subsection{Elementary \& Middle Level}  
+\subsubsection{Kansas State University,  Manhattan, KS, USA}
+
+\vspace{0.8em} % Adds 0.5em of vertical space
+
+\subsection{Master of Science in Computer Science  \hfill \normalfont Aug 2015-July 2017}  
+\subsubsection{Montana State University,  Bozeman, MT, USA}
+\vspace{0.8em} % Adds 0.5em of vertical space
+
+\subsection{Graduate Certificate in Educational Technology\hfill \normalfont Jun 2024-Jun 2025}  
+\subsubsection{Kansas State University,  Manhattan, KS, USA}
+\vspace{0.8em} % Adds 0.5em of vertical space
+
+
+\subsection{Graduate Certificate in Technology and Early Childhood  \hfill \normalfont Aug 2020-Aug 2021}  
+\subsubsection{Tufts University, Medford, Massachusetts, USA}
+\vspace{0.8em} % Adds 0.5em of vertical space
+
+\subsection{Certificate in E-business Application Development  \hfill \normalfont Dec 2008-Dec 2009}  
+\subsubsection{The Public Institution for Social Security,  Mirqab, Kuwait |  IBM, GIZA, Egypt}
+\vspace{0.8em} % Adds 0.5em of vertical space
+
+\subsection{Bachelor of Science in Information Science  \hfill \normalfont Aug 2003-Jan 2008}  
+\subsubsection{Kuwait University, Kuwait City - Kuwait}
+\begin{itemize}
+    \item \textit{Minor}: Nutrition
+    \end{itemize}
+       \noindent\textit{Gap between 2003 and 2004}: I had to interrupt my class attendance for two terms because of an accident I experienced during my pregnancy. This accident resulted in a miscarriage and necessitated my hospitalization for several months
+
+%==============
+%==============
+\section{Academic Experience}
+\vspace{0.8em} % Adds 0.5em of vertical space
+%==============
+%==============
+%==============
+%==============
+\subsection{Teaching Assistant Professor\hfill \normalfont Aug 2023 - Current}  
+\subsubsection{Computer Science Department, Kansas State University,  Manhattan, KS, USA}
+    \noindent Teach undergraduate courses, including \hyperref[sec:CC110]{CC110}, \hyperref[sec:CC111]{CC111}, \hyperref[sec:CC120]{CC120}, \hyperref[sec:CC315]{CC315}, \hyperref[sec:CIS115]{CIS115}, \hyperref[sec:CIS116]{CIS116}, and co-teach CIS590 and \hyperref[sec: CIS890]{CIS890}. 
+\vspace{0.8em} % Adds 0.5em of vertical space
+
+
+\subsection{Project Coordinator\hfill \normalfont Aug 2022 - Current}  
+\subsubsection{Kansas Data Science Consortium, Kansas State University,  Manhattan, KS, USA}
+ \noindent
+My responsibilities include fostering collaboration with various institutions representing Kansas State University, to drive innovative data science initiatives funded by the National Science Foundation. I contribute to the delivery of immersive data science courses that connect academic theory with industry practices. In addition, aid students in publishing their research and actively assists in organizing Data Science Conferences
+\newline
+
+
+
+\subsection{PostDoc - Researcher\hfill \normalfont Aug 2022-Feb 2023}  
+\subsubsection{Knowledge Discovery in Databases Lab, Kansas State University, Manhattan, KS, USA}
+ \noindent
+Developing and facilitating an annotation training course with certification for new lab annotators, creating comprehensive bee image datasets, and conducting research on image quality criteria to build a classification model for evaluating bee image quality
+
+\vspace{0.8em} % Adds 0.5em of vertical space
+
+\subsection{STEM Teacher \hfill \normalfont Sep 2020-Mar 2023}  
+\subsubsection{UFM Community Learning Center,  Manhattan, KS, USA}
+ \noindent
+Design and lead hands-on STEM and computer science workshops to promote computational thinking. Workshops include \hyperref[sec: VR]{Coding into the Virtual World}, \hyperref[sec: Minecraft1]{Minecraft Adventure}, \hyperref[sec: MakeyMakey1]{Coding Around with Makey Makey}, \hyperref[sec: CodingFolding]{Coding and Folding}, \hyperref[sec: Tinkering]{Tinkering and Coding Around}, \hyperref[sec: Starbase]{Starbase}  and   \hyperref[sec: Robotics1]{Coding and Robotics}. 
+
+\vspace{0.8em} % Adds 0.5em of vertical space
+
+
+\subsection{Graduate Teaching Assistant - Kansas \hfill \normalfont Jan 2019–May 2020 }  
+\subsubsection{Computer Science Department, Kansas State University,  Manhattan, KS, USA}
+ \noindent
+Conducting office hours, grading assignments and exams, and supervising laboratory sessions for both undergraduate and graduate courses, including: \hyperref[sec: CIS751/551]{CIS751/551}, \hyperref[sec: CIS501]{CIS501}, \hyperref[sec: CIS526]{CIS526}, and \hyperref[sec: CIS744]{CIS744}. 
+
+
+
+\vspace{0.8em} % Adds 0.5em of vertical space
+
+%\clearpage
+\subsection{Graduate Teaching Assistant - Montana \hfill \normalfont Aug 2016–May 2017 }  
+\subsubsection{Computer Science Department, Montana State University,  Bozeman, MT, USA}
+ \noindent
+Supervising laboratory sessions, conducting office hours, and grading projects for the undergraduate course \hyperref[sec: CS145]{CS145}. 
+
+\vspace{0.8em} % Adds 0.5em of vertical space
+
+
+
+
+\section{Industry Experience}
+\subsection{Senior Software Developer\hfill \normalfont Mar 2023-Jul 2023}  
+\subsubsection{Advanced Engineering Design Apps LLC, Manhattan, KS, USA}
+ \noindent
+Responsible for the design, development, and implementation of software programs and applications for mobile phones, tablets, and computer platforms, specifically tailored to the engineering marketplace. One such application developed is the \hyperref[sec: MixDesign]{Concrete Mix Design Web Calculator}.
+     
+\vspace{0.8em} % Adds 0.5em of vertical space
+
+\subsection{Web Developer \hfill \normalfont Jun 2015-Aug 2020}  
+\subsubsection{Dar Almohandes,  Kuwait City, Kuwait} 
+ \noindent
+Developing functional, user-friendly systems and ensuring seamless operation for both the client and customers. Additionally, managing the social media account. Application descriptions: \hyperref[sec: DARMEKW-C]{DAR Customer-Side} and \hyperref[sec: DARMEKW-S]{DAR Employee-Side}. 
+
+\vspace{0.8em} % Adds 0.5em of vertical space
+
+\subsection{System Analyst and Web Developer \hfill \normalfont Jan 2010–May 2015}  
+\subsubsection{Kuwait Fund for Arab Economic Development, Kuwait City, Kuwait}
+ \noindent
+Managing and resolving Help Desk tickets, conducting research to enhance existing software systems, and leading the development and upgrades of various applications, including the Kuwait Fund’s systems. Developed applications include:  \hyperref[sec: Kfund-Party]{Kfund Yearly Party}, \hyperref[sec: Kfund-BranchSystem]{Fund Branch}, \hyperref[sec: Kfund-Job]{Job Application}, \hyperref[sec: Kfund-TrackingSystem]{Engineers Report Tracking System}, \hyperref[sec: Kfund-iphone]{Kfund iPhone App}, \hyperref[sec: Kfund-PublicRelations]{Public Relations Website}, \hyperref[sec: Kfund-Ramadan]{Ramadan Contest System}, \hyperref[sec: Kfund-ConsultingFirms]{Consulting Firms Registering System}, \hyperref[sec: Kfund-desktop]{Windows Desktop application}, \hyperref[sec: Kfund-Survey]{Survey System} and \hyperref[sec: Kfund-Training]{Training Centre Application}.
+
+
+\vspace{0.8em} % Adds 0.5em of vertical space
+
+\subsection{E-business Application Development Program - Trainee \hfill \normalfont Apr 2009–Dec 2009}  
+\subsubsection{Public Institution for Social Security, Kuwait City, Kuwait}
+ \noindent
+The program required the development of business projects that aligned with the objectives of each taught module. Key projects included: \hyperref[sec: pifss-Bank]{Central Bank Loan Governor} and \hyperref[sec: pifss-Attendance]{Employee Attendance Management System}.
+
+
+\vspace{0.8em} % Adds 0.5em of vertical space
+
+\subsection{Data Analyst - Intern \hfill \normalfont Jun 2008–Aug 2008}  
+\subsubsection{Student Information Center, Kuwait University, Shuwaik, Kuwait}
+ \noindent Producing comprehensive statistical educational reports covering key areas such as class performance, departmental metrics, faculty activities, and student achievement
+
+ \vspace{0.8em} % Adds 0.5em of vertical space
+
+
+
+\subsection{Graphic Designer \hfill \normalfont Jun 2006–Dec 2009}  
+\subsubsection{Aljusoor Company, Kuwait City, Kuwait}
+ \noindent Created graphic designs for both short- and long-term projects, including advertisements, brochures, handouts, flyers, and online graphics
+
+\vspace{0.8em} % Adds 0.5em of vertical space
+
+\subsection{Freelancer Graphic Designer \hfill \normalfont 2002 – Current}  
+ \noindent Designed visual content for a wide range of clients including startups, NGOs, and educational institutions.
+
+
+\vspace{0.8em} % Adds 0.5em of vertical space
+
+%==============
+%==============
+\section{Grants}
+\begin{itemize}
+    \item \textbf{Project Title:} CS4KS: Maintaining the Cyber Pipeline \\
+    \textbf{Role:} Co-Principal Investigator \\
+    \textbf{Period:} 07/01/2024 – 06/30/2025 \\
+    \textbf{Host Institution:} Kansas State University \\
+    \textbf{Awarding Agency:} Kansas Department of Education \\
+    \textbf{Amount:} \$685,466 \\
+    \item \textbf{Project Title:} CS4KS: Continuing to Expand the K-State Cyber Pipeline \\
+    \textbf{Role:} Co-Principal Investigator \\
+    \textbf{Period:} 10/01/2023 – 06/30/2024 \\
+    \textbf{Host Institution:} Kansas State University \\
+    \textbf{Awarding Agency:} Kansas Department of Education \\
+    \textbf{Amount:} \$748,000 \\
+
+\end{itemize}
+
+
+\section*{Publication}
+\paragraph{Peer-reviewed Conference Proceedings}
+    % Only print the items related to articles
+\begin{enumerate}
+\item Aponti, c. Malallah, S.,\& Shamir, L. (2025) A Review of K-12 Data Science Education in the United States: Trends, Tools, and Gaps. In \textit{2025 ASEE Annual Conference \& Exposition}.
+
+\item Malallah, S., Osiobe, E. U., P., Shamir, L., Bean, N, H., Feldhausen R., \& Weese, J. L. (2025) Developing a Computational Thinking Virtual Worlds Framework for Early Childhood. In \textit{2025 ASEE Annual Conference \& Exposition}.
+
+
+\item Malallah, S., Osiobe, E. U., P., Shamir, L., Bean, N, H., Feldhausen R., \& Weese, J. L. (2025) Designing a Virtual World Experience to Foster Computational Thinking in Young Learners: An Hour of Code Initiative. In \textit{2025 ASEE Annual Conference \& Exposition}.
+
+\item \textbf{(Abstract Submitted)} Stewart R., Malallah, S., Shamir, L. (2025) Enhancing Academic Integrity in the Digital Age: An Image-Based Solution to Combat AI-Assisted Cheating. In \textit{2025 ASEE Annual Conference \& Exposition}.
+
+\item \textbf{(Abstract Submitted)} Marafie, Z. Malallah, S., Osiobe, E. U. P., Shamir, L. (2025) Exploring Student Confidence in Data Science: A Kuwaiti Case Study on Self-Efficacy. In \textit{2025 ASEE Annual Conference \& Exposition}.
+
+
+%Developing 
+\item Malallah, S., Osiobe, E. U., Marafie, Z., Henriquez-Coronel, P., Shamir, L., Carlson, E. L., \& Weese, J. L. (2024) Developing an Instrument for Assessing Self-Efficacy Confidence in Data Science. In \textit{2024 ASEE Annual Conference \& Exposition}.
+
+%Gender Stereotype in STEM Fields: A Case Study of Kuwait
+\item Malallah, S., Shamir, L., \& Osiobe, E. U. (2023). Gender stereotype in STEM fields: A case study of Kuwait. In \textit{Missouri, Iowa, Nebraska, and Kansas, Women in Computing Conference}. DOI: \href{https://doi.org/10.13140/RG.2.2.13752.32003}{10.13140/RG.2.2.13752.32003}. 
+
+%Computational thinking pedagogical framework
+\item Malallah, S., Shamir, L., Hsu, W. H., Weese, J. L., \& Alfailakawi, S. (2023). Computational thinking pedagogical framework for early childhood education. In \textit{2023 ASEE Annual Conference \& Exposition}.
+
+%The "besTech" technology practice 
+\item Malallah, S., Weese, J. L., \& Alsalmi, K. N. (2023) The "besTech" technology practice framework for early childhood education. In \textit{2023 ASEE Annual Conference \& Exposition}.
+
+% dataying
+\item Malallah, S. A., Shamir, L., Hsu, W. H., Weese, J. L., \& Alfailakawi, S. (2023). Data science (dataying) for early childhood. In \textit{2023 ASEE Annual Conference \& Exposition}.
+
+%Reverse 
+\item Malallah, S., Alfailakawi, S., Alkhurafi, T. Y., \& Weese, J. L. (2021). Reversing gender stereotypes in STEM education in a gender-segregated region. In \textit{2021 ASEE Virtual Annual Conference Content Access}.
+
+%awarness
+\item Malallah, S., Alsalmi, K. N., \& Weese, J. L. (2021). Measuring awareness of computational thinking in Kuwaiti educational institutions. In \textit{2021 ASEE Virtual Annual Conference Content Access}.
+
+%replicate
+\item Malallah, S., Alfailakawi, S., \& Weese, J. L. (2020). A replicate study: Adoption of a STEM outreach program in Kuwait. In \textit{2020 ASEE Virtual Annual Conference Content Access}.
+
+%effect
+\item Malallah, S., \& Weese, J. L. (2020). The effects of mind maps on computational thinking. . In \textit{2020 ASEE Virtual Annual Conference Content Access}.
+
+\end{enumerate}
+
+
+
+\paragraph{Journal Papers}
+\begin{enumerate}
+%Exportation
+
+\item Osiobe, E. U., \& Malallah, S. A. (2025). \textit{Business and Labor Growth Opportunities: A Case Study of Rural America}. Accreditation Council of Business Schools \& Programs Midwestern Regional Council Meeting.
+
+\item Osiobe, E. U., Malallah, S., \& Hammood, W. A. (2025). \textit{A Literature Review of Human Capital and Educational Policies in Chile’s Educational System}. \textit{International Business Management}, 8(5), 15–21.
+
+\item Osiobe, E. U., Malallah, S., Hammood, W. A., \& Rauf, R. I. (2025). \textit{A Literature Review of Human Capital and Educational Policies in the Brazilian's Educational System}. \textit{The Journal of Business}, 8(4), 79–86.
+
+\item Osiobe, E. U., \& Malallah, S. (2025). \textit{Big Data and Waste Management Economics}. In WSSA 2025 Conference.
+
+\item Osiobe, E. U., Malallah, S., Al Noor, S., \& Aliesawi, S. A. (2025). \textit{Commonalities or Variations among Dimensions: An Analysis of Regions based on Hofstede's Six Cultural Pillars}. \textit{Journal of Social Science}, 8(1), 284–299. DOI: \href{https://doi.org/10.31014/aior.1991.08.01.563}{10.31014/aior.1991.08.01.563}.
+
+\item Osiobe, E. U., Malallah, S., Al Noor, S., \& Aliesawi, S. A. (2025). \textit{Variations or Commonalities among Countries? A Data-Driven Approach to Diplomacy}. \textit{Indian Journal of Law and Human Behavior}, 4(1), 87–100.
+
+\item Osiobe, E. U., Malallah, S., Al Noor, S., \& Hammood, W. A. (2025). \textit{Tennessee and Kansas Industrial Diversity Analysis: A Case for Economic Development}. \textit{SSRN Electronic Journal}. DOI: \href{https://doi.org/10.2139/ssrn.5263213}{10.2139/ssrn.5263213}.
+
+\item Osiobe, E. U., Malallah, S., Al Noor, S., \& Aliesawi, S. A. (2025). \textit{Commonalities or Variations among Dimensions: An Analysis of Regions based on Hofstede's Six Cultural Pillars}. \textit{SSRN Electronic Journal}. DOI: \href{https://doi.org/10.2139/ssrn.5191098}{10.2139/ssrn.5191098}.
+
+\item Osiobe, E. U., Sewer, A. T., Hammood, W. A., Malallah, S. A., Sofyan, D., \& Abdullah, K. H. (2024). \textit{Exportation and Big Data: An Analysis of Kansas Trade Trends 1995–2025}. \textit{Journal of Economics, Management and Trade}, 30(7), 47–55.
+
+\item Hammood, W. A., Hammood, O. A., Aliesawi, S. A., Osiobe, E. U., Hasan, R. A., Malallah, S., \& Abbas, D. H. (2024). \textit{Data Analysis of An Exploring the Information Systems Success Factors for Early Warning Systems Adoption}. \textit{Babylonian Journal of Machine Learning}, 102–111.
+
+\item Malallah, S., Osiobe, E. U., \& Shamir, L. (2024). \textit{Data Science Self-Efficacy Assessment Tools: A Foundational Guide to Evaluating Progress}. \textit{The Asian Institute of Research}, June 30, 2024.
+
+\item Osiobe, E. U., Malallah, S., \& Osiobe, N. E. (2024). \textit{Enhancing Data Visualization Accessibility: A Case for Equity and Inclusion}. \textit{Engineering and Technology Quarterly Reviews}, 7(2).
+
+\item Osiobe, E. U., Moore, J. T., Malallah, S. A., Abdullah, K. H., \& Sofyan, D. (2024). \textit{A Regional Development Plan: A Case Study of Douglas County, Kansas, USA}. \textit{Economics and Business Quarterly Reviews}, 7(2).
+
+\item Osiobe, E. U., Malallah, S., \& Al Noor, S. (2024). \textit{Cultural dimensions: An Analysis of Regions Based on Hofstede’s Six Cultural Pillars}. In \textit{World Social Science Association (WSSA) 2024}. DOI: \href{https://doi.org/10.13140/RG.2.2.29620.67202}{10.13140/RG.2.2.29620.67202}.
+
+\item Malallah, S., \& Osiobe, E. U. (2024). \textit{Commonalities among Countries: A Data-Driven Approach to Diplomacy}. In \textit{World Social Science Association (WSSA) 2024}. DOI: \href{https://doi.org/10.13140/RG.2.2.12843.45603}{10.13140/RG.2.2.12843.45603}.
+
+\end{enumerate}
+
+
+\paragraph{Posters}
+\begin{enumerate}
+\item Malallah, S., Shamir, L. \& Osiobe, E. U.  ARISE Virtual World for Data Science education for Young Learners. In \textit{2025 ARISE Annual Symposium},  Garden City, Kansas. 
+
+\item Malallah, S., \& Shamir, L. A data science course embracing real-world ARISE projects. In \textit{2024 ARISE Annual Symposium}, Olathe, Kansas. DOI: \href{https://doi.org/10.13140/RG.2.2.12945.03688}{10.13140/RG.2.2.12945.03688}
+
+\item Malallah, S., \& Shamir, L. Course-based Real-World Capstone Data Science Experience. In \textit{2023 ARISE Annual Symposium}, Kansas. 
+
+\end{enumerate}
+
+
+
+\paragraph{Developed Tools/Resources}
+\begin{enumerate}
+%Developing 
+
+\item \textbf{Kids Song:} Data Science Song for k-5 {\href{https://youtu.be/rWBXU5AKYD8}{\color{icnclr} \faGlobe[regular] }}
+
+
+\item \textbf{Story-Book:} The Adventures of Pixel and Data - Exploring the World of Data Science {\href{https://ksuemailprod-my.sharepoint.com/:b:/g/personal/safia_ksu_edu/EW9xrdxy7OBAv6AwFqtaiYUBiEwCSDBC7tKysdEAw_IyCw?e=eJRkrW}{\color{icnclr} \faGlobe[regular] }}
+
+\item \textbf{Virtual World:} The Computational Thinking Island - Roblox  {\href{https://www.roblox.com/games/6791204917/CT-Island}{\color{icnclr} \faGlobe[regular] }}
+
+
+\end{enumerate}
+
+
+
+\paragraph{Workshops, Colloquia, and Seminars}
+
+\begin{enumerate}
+\item CS for Elementary Learners. Malallah, S. (May 2025) Presented a workshop at \textit{\href{https://alt.cs.ksu.edu/cs4ks/}{Computer Science Education for Kansas,}}. Manhattan, KS {\href{https://alt.cs.ksu.edu/cs4ks/files/cs4ks2025/CS4KS_2025_Schedule.pdf}{\color{icnclr} \faGlobe[regular] }}
+
+\item Building an Augmented Reality Piano. Malallah, S. (May 2025) Led a hands-on session at \textit{\href{https://alt.cs.ksu.edu/cs4ks/}{Computer Science Education for Kansas,}}. Manhattan, KS {\href{https://alt.cs.ksu.edu/cs4ks/files/cs4ks2025/CS4KS_2025_Schedule.pdf}{\color{icnclr} \faGlobe[regular] }}
+
+\item Exploring Computer Science Through Unplugged Activities. Malallah, S. (Summer – 2025) Facilitated an interactive session at \textit{\href{https://alt.cs.ksu.edu/cs4ks/}{Computer Science Education for Kansas,}}. Manhattan, KS {\href{https://alt.cs.ksu.edu/cs4ks/files/cs4ks2025/CS4KS_2025_Schedule.pdf}{\color{icnclr} \faGlobe[regular] }}
+
+
+\item  ChatGPT in CS Education. Malallah, S. (Summer - 2025) Organize a panel at \textit{ \href{https://alt.cs.ksu.edu/cs4ks/}{Computer Science Education for Kansas,}}. Manhattan, KS {\href{https://alt.cs.ksu.edu/cs4ks/files/cs4ks2025/CS4KS_2025_Schedule.pdf}{\color{icnclr} \faGlobe[regular] }} 
+
+\item K-5 Coding Contest. Malallah, S. (Fall - 2025). Host at  Kansas State University, Manhattan, KS, USA {\href{https://people.cs.ksu.edu/~safia/AnnoKIDS/k5Contest.html}{\color{icnclr} \faGlobe[regular] }} 
+
+
+\item Sushi Workshop. A. Amama, S. Malallah, H. McGinty (2024). Present at the Social Event of Diversity in Computing and Women in Engineering, 2024 Nov 1st. Carl R. Ice College of Engineering - Kansas State University, Manhattan, KS {\href{https://www.linkedin.com/posts/safiamalallah_womeninstem-womeninengineers-diversityincomputing-activity-7258414173519249408-fLgx?utm_source=share&utm_medium=member_desktop}{\color{icnclr} \faGlobe[regular] }}
+
+
+\item Keys to a Great Job Interview. S. Malallah, H. McGinty (2024). Present at the 2nd Social Event of Diversity in Computing, 2024 Oct 4th. Carl R. Ice College of Engineering - Kansas State University, Manhattan, KS {\href{https://www.linkedin.com/posts/safiamalallah_diversityintech-womenindatascience-wids-activity-7248430448274522114-rPlE?utm_source=share&utm_medium=member_desktop}{\color{icnclr} \faGlobe[regular] }}
+
+\item Artificial intelligence. S. Malallah, J. Weese.R. Feldhausen  (2024). Workshop at  \href{https://engg.k-state.edu/senior-experience-day/}{Engineering’s Senior Experience Day}, 2024 Sep. Carl R. Ice College of Engineering - Kansas State University, Manhattan, KS   {\href{https://www.linkedin.com/posts/safiamalallah_i-am-happy-to-have-facilitated-an-engaging-activity-7242966364993323008-NAQr?utm_source=share&utm_medium=member_desktop}{\color{icnclr} \faGlobe[regular]  }}
+
+\item What Makes a Good Goal, S. Malallah, H. McGinty  (2024). Host at  Diversity in Computing, 2024 Sep 6th. Carl R. Ice College of Engineering - Kansas State University, Manhattan, KS   {\href{https://ksuemailprod-my.sharepoint.com/:b:/g/personal/safia_ksu_edu/EezK-s2HbFROvmHt65ljAz4BevuIKAB-Xjvl-w1K8wzOyQ?e=1wiEmx}{\color{icnclr} \faFilePdf[regular]  }}
+
+
+\item Computer Science Education for Early Childhood. S. Malallah, L. Shamir. (2024). Workshop at the \href{https://alt.cs.ksu.edu/cs4ks2024/}{Computer Science Teachers Association (CSTA) Chapter Annual Conference}, 2024 Jun. Kansas State University, Manhattan, KS   {\href{https://www.youtube.com/watch?v=l7GRY_xQB4w}{\color{icnclr} \faCaretSquareRight[regular]  }}
+
+
+
+\item  Data Science Education for K-12. S. Malallah, J. Weese. (2024). Workshop at the \href{https://alt.cs.ksu.edu/cs4ks2024/}{Computer Science Teachers Association (CSTA) Chapter Annual Conference}, 2024 Jun. Kansas State University, Manhattan, KS   {\href{https://www.youtube.com/watch?v=InEI8MIgOQ4}{\color{icnclr} \faCaretSquareRight[regular]  }}
+
+
+\item  Computer Science Education for Elementary BOF. N. Bean, S. Malallah. (2024). Workshop at the \href{https://alt.cs.ksu.edu/cs4ks2024/}{Computer Science Teachers Association (CSTA) Chapter Annual Conference}. Kansas State University, Manhattan, KS  {\href{https://www.youtube.com/watch?v=UC0Ti_S267Q}{\color{icnclr} \faCaretSquareRight[regular]  }}
+ 
+\item  Navigating the Future of Business Analytics: Challenges, Opportunities, and Best Practices - Data Science. S. Malallah. E. Osiobe. (2024). Panel Discussion at \textit{ {\href{https://www.stukent.com/profcon-2024-agenda/}{ProfCon 2024}}}. Salt Lake City. Utah. DOI: \href{https://doi.org/10.13140/RG.2.2.15621.77287}{10.13140/RG.2.2.15621.77287} {\href{https://drive.google.com/file/d/1OquyckRjU0ML1gdGrjtBWdm_GyXpzJiv/view}{\color{icnclr} \faCaretSquareRight[regular]  }}
+
+ 
+\item  Data Science Education Around Kansas. Malallah, S., \& Shamir, L. (2024). Organize a panel at \textit{ \href{https://data.ku.edu/kdscon2024}{Kansas Data Science Consortium,}}. Wichita, KS {\href{https://www.linkedin.com/posts/safiamalallah_kansasdatascience-datascienceeducation-womenindatascience-activity-7190988975367417857-htmg?utm_source=share&utm_medium=member_desktop}{\color{icnclr} \faGlobe[regular] }} 
+
+\item  Women in Data Science in Kansas. Malallah, S., \& Shamir, L. (2024). Talk at \textit{Kansas Data Science Consortium}. Wichita, KS. DOI: \href{https://doi.org/10.13140/RG.2.2.18607.34728}{10.13140/RG.2.2.18607.34728}. 
+
+\item  Empowering Tomorrow's Resilient Leaders: ARISE Young Engagement Initiative. Malallah, S., \& Shamir, L. (2024). Talk at \textit{\href{https://www.linkedin.com/posts/safiamalallah_ariseconference-kdsc-activity-7185007409768095744-uVWI?utm_source=share&utm_medium=member_desktop}{2024 ARISE Annual Symposium}}. Olathe, KS. DOI: \href{https://doi.org/10.13140/RG.2.2.14622.75847}{10.13140/RG .2.2.14622.75847} 
+
+\item K-5 Coding Contest. Malallah, S. (2024). Host at  Kansas State University, Manhattan, KS, USA {\href{https://www.linkedin.com/posts/safiamalallah_although-its-a-little-late-i-am-thrilled-activity-7199213583623233536-0Wp-?utm_source=share&utm_medium=member_desktop}{\color{icnclr} \faGlobe[regular] }} 
+ 
+
+\item Data Science for Non-STEM Majors.(2024). Talk DOI: \href{https://doi.org/10.13140/RG.2.2.23640.51203}{10.13140/RG.2.2.23640.51203}. Kansas State University and Baker University
+
+
+\item Kansas Women in Data Science. Malallah, S., Osiobe, E. Shamir, L.(2024) Talk at the \href{https://www.linkedin.com/posts/safiamalallah_wids2024-activity-7171923711581798400-Q8-v?utm_source=share&utm_medium=member_desktop}{Social event of  Women in Data Science Kansas chapter} concurrent with the 
+\href{https://www.youtube.com/watch?v=H4F_1RXwKmE&list=PLHAk3jHXWpxLDtsmXXNw-H1gLLNBZQGaG}{virtual women in data science worldwide conference by Standford University} and \href{https://www.bakeru.edu/bedo/}{BEDO Lab at Baker University}. Kansas State University, Manhattan, KS.    
+
+\item Coding Your Hero Using VR and Data Science. Malallah, S. (2024). Workshop at the {\normalfont {\href{https://www.k-state.edu/kawse/}{Girls Researching Our World (GROW)}} } Event,  {\normalfont {\href{https://www.k-state.edu/kawse/grow/}{Office for the Advancement of Women in Science and Engineering}}, Manhattan, KS, USA  }
+
+
+\item  K-12 Data Science Education. Malallah, S., \& Shamir, L. (2023). Workshop at \textit{\href{https://nsfepscor.ku.edu/2023/05/23/data-science-on-display/}{1st Kansas Data Science Conference - Kansas Data Science Consortium} }. Lawrence, KS. {\href{https://www.linkedin.com/posts/safiamalallah_our-esteemed-team-comprising-members-from-activity-7059951265413279744-z3gf?utm_source=share&utm_medium=member_desktop}{\color{icnclr} \faGlobe[regular] }}
+
+
+\item  Gender Stereotype in STEM Fields: A Case Study of Kuwait. Malallah, S., Osiobe, E. Shamir, L. (April 2023). Talk at \textit{2023 Missouri, Iowa, Nebraska, and Kansas Women in Computing Conference}. Kansas City, KS. \href{https://doi.org/10.13140/RG.2.2.13752.32003}{10.13140/RG.2.2.13752.32003}
+
+
+
+\item How to Become an Annotator. Malallah, S., \& Hsu, W. (2022). Workshop on data annotation for computer vision (CV) and pattern recognition (PR) applications at the  Laboratory for Knowledge Discovery in Databases, Computer Science Department, Manhattan, KS {\href{https://www.kddresearch.org/page/research-cv-annotation#gsc.tab=0}{\color{icnclr} \faGlobe[regular] }}
+
+
+\item Our Virtual Camp Experience. Malallah, S. (2021). Talk at the ScratchJr Virtual Event 2021. {\href{https://youtu.be/8DHLORFX0dY?si=Jg6yeiA0Rj-QJwAb&t=1852}{\color{icnclr} \faCaretSquareRight[regular] }} 
+
+
+\item What is Computational Thinking? Malallah, S. (2020). Talk at the virtual Barcamp 8 Event, Kuwait. {\href{https://www.youtube.com/watch?v=geX029dhihk&t=5s}{\color{icnclr} \faCaretSquareRight[regular] }} {\href{https://barcampkw.wordpress.com/2020/06/18/barcamp-kuwait-eight-speakers-and-presentations/}{\color{icnclr} \faGlobe[regular] }}
+
+\item Sorting With Style. Malallah, S. (2018). Workshop at the {\normalfont {\href{https://www.k-state.edu/kawse/}{Girls Researching Our World (GROW)}} } Event,  {\normalfont {\href{https://www.k-state.edu/kawse/grow/}{Office for the Advancement of Women in Science and Engineering}}, Manhattan, KS, USA  }
+
+
+\item Build a Rocket from Scratch on Scratch!. Malallah, S. (2018). Workshop at the {\normalfont {\href{https://www.k-state.edu/kawse/}{Girls Researching Our World (GROW)}} } Event,  {\normalfont {\href{https://www.k-state.edu/kawse/grow/}{Office for the Advancement of Women in Science and Engineering}}, Manhattan, KS, USA  }
+
+
+
+
+
+
+
+
+
+
+\item Kuwait Digital Library for Schools. Malallah, S. (2010). Talk at the Barcamp 1 Event, Kuwait {\href{https://barcampkw.wordpress.com/2010/10/16/barcamp-kuwait-one/}{\color{icnclr} \faGlobe[regular] }}
+
+
+
+\item My Journey as a Mother and a Programmer.  Malallah, S.  (2010). Invited speaker at \href{https://news.microsoft.com/2010/05/04/digigirlz-program-ten-years-inspiring-high-school-girls-to-explore-careers-in-technology/}{Microsoft DigiGirlz}  event Kuwait
+
+
+
+
+\end{enumerate}
+
+
+
+\section{Supervised} % This could be a short version of your master's thesis title
+\subsection{Undergraduate Capstone Project}
+\begin{itemize}
+    \item  Tatenda Sekabanja |K-State | CIS 598 | (Spring 2025)
+    \item  Lucas Boice| K-State | CIS 598 | (Fall 2024)
+    \item  Carrie Aponte |K-State | CIS 598 | (Spring 2024)
+\end{itemize}
+\subsection{Graduate Committee Member}
+\begin{itemize}
+    \item  Josh Barron | Ph.D. | K-State | (Spring 2025 - Current)
+    \item  Robert Stewart | Ph.D. | K-State | (Spring 2024 - Current)
+    \item  Fatima Alromoh  | M.S.| The University of Liverpool, UK | (Spring 2024 - Current)
+\end{itemize}
+
+\section{Committee Member} % This could be a short version of your master's thesis title
+\begin{itemize}
+    \item  CS Academic Standards Committee  | member | K-State | (Spring 2025 - Current)
+\end{itemize}
+%==============
+
+
+
+
+
+%==============
+
+
+\section{Community partnerships} 
+\subsection{ Special Interest Group on Computer Science Education (SIGCSE) \hfill  \normalfont   }
+\subsubsection{ \normalfont Role: Member(Fall 2023-Current {\href{https://www.sigcse.org/} {\color{icnclr} \faGlobe[regular] }}) - Judge(2025 {\href{https://www.linkedin.com/posts/safiamalallah_sigcse2025-sigcse2025-activity-7301434956394770435-hOr1?utm_source=share&utm_medium=member_desktop&rcm=ACoAABJKbzEBmgHMDtElQ0_iQOO7nV-6MmS9_-w}{\color{icnclr} \faGlobe[regular]}}) }
+
+\vspace{0.5em} % Adds 0.5em of vertical space
+
+\subsection{ Women in Data Science - Kansas (WIDSKS)\hfill  \normalfont   }
+\subsubsection{ \normalfont Role: Ambassador(Spring 2024-Current {\href{https://www.widsworldwide.org/get-inspired/blog/people/safia-malallah/}{\color{icnclr} \faGlobe[regular] }}) }
+\vspace{0.5em} % Adds 0.5em of vertical space
+\subsection{Association for Computing Machinery - (ACM-W) \hfill  \normalfont    }
+\subsubsection{ \normalfont Role: Member(Fall 2023-Current) - Advisor-Kstate chapter(Spring 2025)  }
+\vspace{0.5em} % Adds 0.5em of vertical space
+
+\subsection{American Society for Engineering Education - (ASEE) \hfill  \normalfont    }
+\subsubsection{\normalfont Role: Member(Fall 2020-current) - Reviewer(2021, 2023 {\href{https://ksuemailprod-my.sharepoint.com/:b:/g/personal/safia_ksu_edu/EWK_XZXJOGBEnH548AQ3_1UBEaWK0H4SrvoqV1gzne7wDw?e=wVeXI7}{\color{icnclr} \faCertificate[regular] }}, 2024 {\href{https://ksuemailprod-my.sharepoint.com/:b:/g/personal/safia_ksu_edu/EZeU2M_nmiBJonqwmHarQ6IBt8jost0KJ0caw3H0cDGnnw?e=sBjYB8}{\color{icnclr} \faCertificate[regular] }}, 2025) }
+\vspace{0.5em} % Adds 0.5em of vertical space
+
+\subsection{ Diversity in Computing Club (DIC) \hfill  \normalfont   }
+\subsubsection{ \normalfont Role: {\href{https://orgcentral.k-state.edu/dic/home/}{Advisor}(Spring 2024-Current)}}
+\vspace{0.5em} % Adds 0.5em of vertical space
+
+
+
+\subsection{ Hackathon - {\href{https://hackkstate.tech/}{Hack K-State}}  \hfill  \normalfont }
+\subsubsection{ \normalfont Role: Judge(Spring 2023)}
+\vspace{0.5em} % Adds 0.5em of vertical space
+
+
+
+
+
+
+\subsection{The Missouri, Iowa, Nebraska, and Kansas Women in Computing (MINK WIC) \hfill  \normalfont    }
+\subsubsection{\normalfont Role: Member(Fall 2023-Current) - Organizer(2025) - Judge(2023 {\href{https://www.linkedin.com/posts/safiamalallah_minkwic23-activity-7124098645448151040-Bcgf?utm_source=share&utm_medium=member_desktop}{\color{icnclr} \faGlobe[regular]}})}
+\vspace{0.5em} % Adds 0.5em of vertical space
+
+
+
+
+\subsection{Kansas Data Science Consortium - (KDSC) \hfill    }
+\subsubsection{\normalfont Role: Member
+(Fall 2023-Current{\href{https://nsfepscor.ku.edu/2023/09/30/data-science-hub-benefits-students-and-organizations-in-kansas/}{\color{icnclr} \faGlobe[regular] }}) - Workshops/sessions( 2023 {\href{https://nsfepscor.ku.edu/2023/05/23/data-science-on-display/}{\color{icnclr} \faGlobe[regular]}}, 2024 {\href{https://data.ku.edu/kdscon2024}{\color{icnclr} \faGlobe[regular] }}) - Panelist(2024 {\href{https://www.linkedin.com/posts/safiamalallah_kansasdatascience-datascienceeducation-womenindatascience-activity-7190988975367417857-htmg?utm_source=share&utm_medium=member_desktop}{\color{icnclr} \faGlobe[regular]}}) - Conference Organizer(2023 {\href{https://www.linkedin.com/posts/safiamalallah_our-esteemed-team-comprising-members-from-activity-7059951265413279744-z3gf?utm_source=share&utm_medium=member_desktop}{\color{icnclr} \faGlobe[regular]}}, 2024 {\href{https://data.ku.edu/kdscon2024}{\color{icnclr} \faGlobe[regular]}})
+}
+
+
+\vspace{0.5em} % Adds 0.5em of vertical space
+
+
+
+\subsection{Adaptive and Resilient Infrastructures driven by Social Equity - (ARISE) \hfill    }
+\subsubsection{\normalfont Role: Member(Fall 2022-Current) - Sessions(2024-2025)}
+\vspace{0.5em} % Adds 0.5em of vertical space
+
+
+\subsection{Data-Driven Discovery lab - DDD | \normalfont  Kansas State University   }
+\subsubsection{ \normalfont Role: Member(Fall 2022-current)}
+\vspace{0.5em} % Adds 0.5em of vertical space
+
+
+\subsection{Laboratory for Knowledge Discovery in Databases - (KDD) | \normalfont  Kansas State University   }
+\subsubsection{ \normalfont Role: Member(Fall 2018-Spring 2023), Workshop(Spring 2023)}
+\vspace{0.5em} % Adds 0.5em of vertical space
+
+
+\subsection{Software Engineering Lab | \normalfont  Montana State University   }
+\subsubsection{\normalfont Role: Member(Fall 2016-Spring 2017)}
+\vspace{0.5em} % Adds 0.5em of vertical space
+
+\subsection{Click it Club | \normalfont College for Women, Kuwait University University, Kuwait  }
+\subsubsection{\normalfont Role: Member(Fall 2006-Fall 2007)}
+\vspace{0.5em} % Adds 0.5em of vertical space
+
+
+
+\subsection{Kuwait Consumer Protection Civil Society | \normalfont Kuwait  }
+\subsubsection{\normalfont Role: Member(2011-Current)}
+\vspace{0.5em} % Adds 0.5em of vertical space
+
+\subsection{Kuwait Information Technology Society | \normalfont Kuwait  }
+\subsubsection{ \normalfont Role: Member(2010-Current)}
+\vspace{0.5em} % Adds 0.5em of vertical space
+
+\subsection{Art Studio | \normalfont College of Engineering, Kuwait University, Kuwait  }
+\subsubsection{\normalfont Role: Member(2003-2009)}
+
+
+\vspace{2em} % Adds 0.5em of vertical space
+
+
+\section{Awards} % This could be a short version of your master's thesis title
+\subsection{Graduate Student of the Month {\href{https://engg.k-state.edu/research/graduate-student/student-of-the-month/february/}{\color{icnclr} \faGlobe[regular] }}}
+\subsubsection{Carl R. Ice College of Engineering – Kansas State University, Manhattan, KS }
+\vspace{.5em} % Adds 0.5em of vertical space
+
+
+
+
+
+\subsection{Employee of the Year }
+\subsubsection{IT Department – Kuwait Fund for Arab Economic Development, Kuwait City, Kuwait }
+
+\vspace{2em} % Adds 0.5em of vertical space
+
+
+\section{Teaching Experience}
+%==============
+\label{sec:CC110} 
+\subsection{ CC 110 - Introduction to Computing  \hfill  \normalfont  Fall 2023 - Spring 2024 -Fall 2024 - Spring 2025 - Fall 2025 } 
+ \subsubsection{ Undergraduate course | Introductory | online | non-computer science major   }
+  \subsubsection{ \textcolor{lightgray}{\normalfont Kansas State University, Manhattan, KS, USA   }}
+ \vspace{0.2em} % Adds 0.5em of vertical space
+  \noindent
+The course explores the history of computers and programming, highlighting key historical figures and their influence on modern computing. It also covers major topics in computer science, including artificial intelligence, high-performance computing, cryptography, big data, cybersecurity, and robotics, among others. 
+
+\label{sec:CC111} 
+\vspace{0.8em} % Adds 0.5em of vertical space
+
+   \subsection{ CC 111 – Elements of Computer Programming \hfill \normalfont Fall 2023 - Spring 2024 - Fall 2024 - Spring 2025  - Fall 2025}
+    \subsubsection{ Undergraduate course | Introductory | online/in-person | non-CS major   }
+  \subsubsection{ \normalfont \textcolor{lightgray}{Kansas State University, Manhattan, KS, USA   }}
+     \vspace{0.2em} % Adds 0.5em of vertical space
+   \noindent
+The course provides a foundational introduction to computer programming. It covers essential concepts such as variables, data types, functions, conditionals, iterations, and collections. Utilizing the Python programming language, the course includes engaging interactive lessons and projects designed to reinforce and apply these new skills and concepts. The in-class time dedicated to discussions, activities, and programming exercises
+
+\label{sec:CC120} 
+   \vspace{0.8em} % Adds 0.5em of vertical space
+
+  \subsection{ CC 120 - Web Page Development  \hfill \normalfont  Fall 2024  - Fall 2025}
+ \subsubsection{ Undergraduate course | Introductory | online | non-computer science major   }
+  \subsubsection{ \normalfont \textcolor{lightgray}{Kansas State University, Manhattan, KS, USA   }}
+    \vspace{0.4em} % Adds 0.5em of vertical space
+     \noindent
+This course is designed to cover the theory of web development and teaches how to build a basic website. Topics include the Internet, web browsers, and web page development using Hypertext Markup Language (HTML) and CSS. The course also explores integrating scripts into web pages, as well as an introduction to graphic design, animation, and server utilization. 
+
+
+\label{sec:CIS115} 
+   \vspace{0.8em} % Adds 0.5em of vertical space
+   
+   \subsection{ CIS 115 – Introduction to Computing Science  \hfill \normalfont Fall 2023 - Spring 2024 - Spring 2025  - Fall 2025}
+   \subsubsection{ Undergraduate course | Introductory |  in-person | computer science major   }
+  \subsubsection{ \normalfont \textcolor{lightgray}{Kansas State University, Manhattan, KS, USA   }}
+     \vspace{0.4em} % Adds 0.5em of vertical space
+      \noindent
+This course is designed to introduce the history, fundamental theories, and basic programming concepts within Computing Science. Students engage in hands-on activities, in-class discussions, and research on key topics in the field. The course covers the evolution of computing, computational thinking, algorithm design, and internet technology, along with areas such as artificial intelligence, human-computer interaction, cybersecurity, and the connections between Computing Science and other disciplines. The in-class time dedicated to activities, and programming exercises
+
+\label{sec:CIS116} 
+   \vspace{0.8em} % Adds 0.5em of vertical space
+   
+    \subsection{ CIS 116 – Introduction to Programming   \hfill \normalfont Fall 2024 - Spring 2025 - Fall 2025}
+     \subsubsection{ Undergraduate course | Introductory |  in-person | computer science major   }
+  \subsubsection{ \normalfont \textcolor{lightgray}{Kansas State University, Manhattan, KS, USA   }}
+      \vspace{0.4em} % Adds 0.5em of vertical space
+       \noindent
+This in-person lab introduces fundamental programming concepts, engaging students through interactive, hands-on programming activities
+
+
+\label{sec:CC315} 
+   \vspace{0.8em} % Adds 0.5em of vertical space
+   
+  \subsection{CC 315 – Data Structures and Algorithms 2  \hfill \normalfont Fall 2023 - Spring 2024 }
+  \subsubsection{ Undergraduate course | Middle level | online | non-computer science major   }
+  \subsubsection{ \normalfont \textcolor{lightgray}{ Kansas State University, Manhattan, KS, USA   }}
+    \vspace{0.4em} % Adds 0.5em of vertical space
+     \noindent
+This course covers advanced data structures like trees, graphs, and heaps, and the algorithms associated with them. It emphasizes formal software development methods and software engineering fundamentals, including requirements analysis processes
+
+\label{sec: CS145} 
+   \vspace{0.8em} % Adds 0.5em of vertical space
+   
+\subsection{ CS 145 Web Design \hfill \normalfont Fall 2016-Spring 2017}
+\subsubsection{ Undergraduate course | Introductory | in-person | non-computer science major   }
+  \subsubsection{ \normalfont \textcolor{lightgray}{Montana State University, Bozeman, MT, USA   }}
+ \vspace{0.4em} % Adds 0.5em of vertical space
+    \noindent
+ This course covers fundamental design principles and their application to website construction. Students gain skills in both graphic design and web development. The course is co-taught by the Computer Science and Graphic Design departments, with each alternating in teaching sessions and leading projects
+
+   \label{sec: CIS501} 
+   \vspace{0.8em} % Adds 0.5em of vertical space
+   
+       \subsection{ CIS 501 Software Architecture and Design   \hfill \normalfont Spring 2020 }
+        \subsubsection{ Undergraduate course | Upper-level | in-person | computer science major   }
+  \subsubsection{ \normalfont \textcolor{lightgray}{ Kansas State University, Manhattan, KS, USA   }}
+        \vspace{0.4em} % Adds 0.5em of vertical space
+          \noindent This course focuses on software engineering and software architecture. It teaches students how to read and write software blueprints, convert these blueprints into code, and apply standard design patterns and software architectures in real-world systems
+
+\label{sec: CIS526} 
+   \vspace{0.8em} % Adds 0.5em of vertical space
+   
+  \subsection{ CIS 526 Web Interface Design   \hfill \normalfont Fall 2019 }
+     \subsubsection{ Undergraduate course | Upper-level | in-person | computer science major   }
+  \subsubsection{ \normalfont \textcolor{lightgray}{Kansas State University, Manhattan, KS, USA   }}
+    \vspace{0.4em} % Adds 0.5em of vertical space
+   \noindent Fundamental principles and best practices of interface design, web service design, advanced web interfaces, web development frameworks, web standards, and accessibility issues
+
+\label{sec: CIS490} 
+   \vspace{0.8em} % Adds 0.5em of vertical space
+
+  \subsection{ CIS 490 Introduction to Research in K-12 Computer Science Education  \hfill \normalfont  Fall 2024 - Fall 2025  }
+    \subsubsection{ Undergraduate course | Upper-level | in-person | non-computer science major  and computer science major   }
+  \subsubsection{ \normalfont \textcolor{lightgray} {Kansas State University, Manhattan, KS, USA   }}
+    \vspace{0.4em} % Adds 0.5em of vertical space
+   \noindent This project-based course involves students working on a research project related to K-12 computer science education. Students receive guidance throughout the project, to prepare their work for publication as a poster or paper. The course emphasizes research methods and the process of generating a scholarly paper, providing students with practical experience in academic research and communication.
+
+\label{sec: CIS890} 
+   \vspace{0.8em} % Adds 0.5em of vertical space
+
+\subsection{ CIS 890 Data Science in Practice | CIS 590 Data Science in Practice  \hfill \normalfont Spring 2023 - Spring 2024 - Spring 2025 - Fall 2025 }
+    \subsubsection{ Graduate course | Upper-level | in-person | computer science major   }
+  \subsubsection{ \normalfont \textcolor{lightgray} {Kansas State University, Manhattan, KS, USA   }}
+  \vspace{0.4em} % Adds 0.5em of vertical space
+   \noindent An overview of fundamental concepts in Data Science, exploring the relationship between Data Science and Computer Science, as well as practical applications of data science principles in software development through hands-on experience in solving problems using data science techniques by developing and implementing software solutions. Utilize a range of popular tools, including Scikit-learn, Weka, Gensim, and others
+
+\label{sec: CIS744} 
+   \vspace{0.8em} % Adds 0.5em of vertical space
+     
+   \subsection{ CIS 744 Advanced Software Analysis and Design   \hfill \normalfont Fall 2020 }
+       \subsubsection{ Graduate course | Upper-level | in-person | computer science major   }
+  \subsubsection{ \normalfont \textcolor{lightgray}{ Kansas State University, Manhattan, KS, USA   }}
+     \vspace{0.4em} % Adds 0.5em of vertical space
+       \noindent This course explores key aspects of software engineering and architecture, including object-oriented principles, modeling, and various design methodologies. Students learn to perform requirements analysis, domain analysis, and behavior analysis, and apply design principles across different levels, from static to low-level design
+
+\label{sec: CIS751/551} 
+   \vspace{0.8em} % Adds 0.5em of vertical space
+  \subsection{ CIS 751/551 Introduction to Computer Security  \hfill \normalfont Fall 2019  }
+      \subsubsection{ Graduate course | Upper-level | in-person | computer science major   }
+  \subsubsection{ \normalfont \textcolor{lightgray}{Kansas State University, Manhattan, KS, USA   }}
+    \vspace{0.4em} % Adds 0.5em of vertical space
+       \noindent
+This course covers the basics of computer security: from notions of operating system security to notions of cryptography and network security. The course is quite hands-on, with in-class demos and five programming assignments focused on writing buffer overflow-based exploits
+
+
+
+\label{sec: VR} 
+   \vspace{0.8em} % Adds 0.5em of vertical space
+\subsection{ Coding into the Virtual World \hfill  \normalfont Summer 2023 } 
+ \subsubsection{ Grade7-9 | in-person | beginners   }
+  \subsubsection{ \textcolor{lightgray}{\normalfont USD383 Summer STEM Camp, Manhattan, KS, USA   }}
+ \vspace{0.2em} % Adds 0.5em of vertical space
+  \noindent The camp empowers students to build 3D games, Virtual Reality, and Augmented Reality apps that aim to make learning fun and engaging by immersing them in a safe virtual environment using the Hatch XR platform. The platform offers a variety of educational experiences in different subjects, including science, history, and language, such as exploring the human body, discovering ancient civilizations, and learning about different animals and their habitats. 
+\vspace{0.8em} % Adds 0.5em of vertical space
+
+
+\label{sec: Minecraft1} 
+\subsection{ Minecraft Adventure \hfill  \normalfont  Spring 2023 - Summer 2023 } 
+ \subsubsection{ Grade3-6 | in-person | beginners   }
+  \subsubsection{ \textcolor{lightgray}{\normalfont UFM Community Learning Center, Manhattan, KS, USA   }}
+ \vspace{0.2em} % Adds 0.5em of vertical space
+  \noindent This class offers children the opportunity to enrich their school learning by engaging with academic materials in virtual worlds. Using Minecraft Education Edition, students can safely explore educational adventures, collaborate with peers on a private server, and experience school concepts in an innovative, interactive way
+\vspace{0.8em} % Adds 0.5em of vertical space
+
+
+\label{sec: MakeyMakey1} 
+\subsection{ Coding Around with Makey Makey \hfill  \normalfont  Fall 2022 - Spring 2022 } 
+ \subsubsection{ Grade3-5 | in-person | beginners   }
+  \subsubsection{ \textcolor{lightgray}{\normalfont UFM Community Learning Center, Manhattan, KS, USA   }}
+ \vspace{0.2em} % Adds 0.5em of vertical space
+  \noindent This class introduces children to coding, electricity, math, literacy, art, and music in an engaging, hands-on environment. Students apply engineering concepts to build art projects and use computer science principles to create interactive actions. One project involves designing musical instruments from everyday objects like bananas, recycled materials, and even the human body, generating sound through touch. Students utilize innovative tools such as the Makey Makey electronic invention kit and the Scratch app to bring their creations to life, combining creativity with STEM learning
+\vspace{0.8em} % Adds 0.5em of vertical space
+
+\label{sec: CodingFolding} 
+\subsection{Coding and Folding \hfill  \normalfont  Spring 2022 } 
+ \subsubsection{ Grade2-5 | in-person | beginners   }
+  \subsubsection{ \textcolor{lightgray}{\normalfont UFM Community Learning Center, Manhattan, KS, USA   }}
+ \vspace{0.2em} % Adds 0.5em of vertical space
+  \noindent Designed and facilitated a course that combines coding and art using an art-based robot to create animal origami robots. The class explores various animals, such as worms, cats, butterflies, and frogs, as children learn to fold origami and bring it to life with block-based programming. Through this course, students develop coding skills to control the robots while engaging in creative, hands-on learning
+\vspace{0.8em} % Adds 0.5em of vertical space
+
+
+
+\label{sec: Tinkering} 
+\subsection{ Tinkering and Coding Around \hfill  \normalfont  Spring 2020 }  
+  \subsubsection{ Grade prek-3 | in-person | beginners  }
+  \subsubsection{ \textcolor{lightgray}{\normalfont MHK Play Studio (previously named IeDiscoveries Center), Manhattan, KS, USA   }}
+ \vspace{0.2em} % Adds 0.5em of vertical space
+  \noindent This course is tailored for young kids, providing a hands-on introduction to coding using delightful, child-friendly robots (KIBO). Through creative tinkering and playful coding challenges.
+\vspace{0.8em} % Adds 0.5em of vertical space
+
+\label{sec: Robotics1} 
+\subsection{ Coding and Robotics  \hfill  \normalfont  Spring 2020 } 
+ \subsubsection{ Grade prek-3 | in-person | beginners  }
+  \subsubsection{ \textcolor{lightgray}{\normalfont MHK Play Studio (previously named IeDiscoveries Center), Manhattan, KS, USA   }}
+ \vspace{0.2em} % Adds 0.5em of vertical space
+  \noindent Facilitated a computational thinking camp for early childhood students, introducing them to coding concepts through interactive activities with robotic companions such as Robot Mouse, Bee-Bot, Orimagi, and Ozobot. These hands-on experiences were designed to engage young learners and foster an early interest in technology and problem-solving
+\vspace{0.8em} % Adds 0.5em of vertical space
+
+\label{sec: Starbase} 
+\subsection{Starbase \hfill  \normalfont  Fall 2018 } 
+ \subsubsection{ Grade4-6 | in-person | beginners   }
+  \subsubsection{ \textcolor{lightgray}{\normalfont Manhattan Kansas Starbase Program, Manhattan, KS, USA   }}
+ \vspace{0.2em} % Adds 0.5em of vertical space
+  \noindent Assisted in facilitating a coding workshop that paired programming with music. Students translated sheet music for the song "Ode to Joy" using the Scratch programming language
+\vspace{0.8em} % Adds 0.5em of vertical space
+
+
+
+\section{Application Development Experience} 
+        \begin{itemize} 
+        \label{sec: MixDesign} 
+        \item \textbf{Concrete Mix Design Calculator}  - Developed for the Kuwait Fund to AEDA as a free, online tool that uses construction project data to propose the optimal mix formula. The formula includes percentages for water, cementitious materials, coarse aggregate, fine aggregate, and air. \textcolor{lightgray} { \textbf{Developed in} C\# .NET with Azure    }    \label{sec: DARMEKW-C} \label{sec: DARMEKW-S}
+        \vspace{0.8em} % Adds 0.5em of vertical space
+          \item \textbf{DAR} - A dual-platform system. The Client-Side allows users to update profiles, view architectural designs, and submit paperwork clearance requests. The Employee-Side enables engineers to manage client designs, oversee architectural modifications, and handle paperwork clearance workflows  \textcolor{lightgray} { \textbf{Developed in}  .NET    } 
+          \vspace{0.8em} % Adds 0.5em of vertical space
+              \item \label{sec: Kfund-Party} \textbf{Kfund Yearly Party} – An application developed for the Kuwait Fund for Arab Economic Development’s annual employee party, in collaboration with the Public Relations team. The app automates employee name selection, generates contest questions, and manages event timers. Designed as an interactive game, it enhances the party experience by organizing activities, providing real-time updates, and engaging attendees with dynamic content.  \textcolor{lightgray} { \textbf{Developed in}  VB.NET, JavaScript, HTML, and MS Flash  }  
+  \vspace{0.8em} % Adds 0.5em of vertical space
+               \item \label{sec: Kfund-sudan}  \textbf{Eastern Sudan Donors Conference Website} – Designed to enable countries to register for the conference and access key information, including the agenda and event details. \textcolor{lightgray} { \textbf{Developed in}  VB.NET } 
+  \vspace{0.8em} % Adds 0.5em of vertical space
+               \item \label{sec: Kfund-MET1}  \textbf{The 1st International Workshop on Metamorphic Testing in conjunction with the 38th International Conference on Software Engineering Website} – Designed to enable users to register for and access key information, including the agenda and event details. \textcolor{lightgray} { \textbf{Developed in}  WordPress} {\href{https://www.cs.montana.edu/met16/}{\color{icnclr} \faGlobe[regular] }}
+
+               \item \label{sec: KCPCS}  \textbf{Kuwaiti Consumer Protection Civil Society} – Developed the website to help the society share resources, deliver messages, and engage with the community effectively. \textcolor{lightgray} { \textbf{Developed in}  WordPress}  {\href{https://www.kwcpcs.com/}{\color{icnclr} \faGlobe[regular] }}
+
+                 \vspace{0.8em} % Adds 0.5em of vertical space
+               \item \label{sec: Kfund-BranchSystem}  \textbf{Kuwait Fund Branch System} – Developed for the Kuwait Fund to manage operations across the Fund’s global locations, enabling staff to submit reports, update information, and access centralized resources. \textcolor{lightgray} { \textbf{Developed in}  VB.NET } 
+                \vspace{0.8em} % Adds 0.5em of vertical space
+                \item \label{sec: Kfund-Job}  \textbf{Job Application System} - An online platform for the Kuwait Fund that streamlines the job application process, allowing users to submit and track applications electronically. It includes features for application review, sorting, and status updates \textcolor{lightgray} { \textbf{Developed in}  VB.NET } 
+          \vspace{0.8em} % Adds 0.5em of vertical space
+                \item \label{sec: Kfund-TrackingSystem}  \textbf{ Engineers Report Tracking System} - Developed for the Kuwait Fund to support the engineering trainee program. This application allows trainees to submit progress reports and track their development. Program administrators and supervisors can monitor progress, validate reports, and provide feedback   \textcolor{lightgray} { \textbf{Developed in}  VB.NET }     
+                  \vspace{0.8em} % Adds 0.5em of vertical space
+                \item   \label{sec: Kfund-iphone}  \textbf{ Kuwait Fund iPhone App} - Developed for the Kuwait Fund to shares the Fund’s services and information. Key features include real-time updates, notifications, and quick access to essential resources.
+\textcolor{lightgray} { \textbf{Developed in}  objective-C} 
+               \vspace{0.8em} % Adds 0.5em of vertical space
+                \item   \label{sec: Kfund-PublicRelations} \textbf{Public Relations Website} - Developed for the Kuwait Fund to enhance communication and public engagement, this website provides up-to-date information on the Fund’s activities, initiatives, and events \textcolor{lightgray} { \textbf{Developed in}  VB.NET } 
+            
+                 \vspace{0.8em} % Adds 0.5em of vertical space
+                \item      \label{sec: Kfund-Ramadan} \textbf{Ramadan Contest System} - Developed for the Kuwait Fund to manage contests during Ramadan. The application automates entry submissions, manages participant data, and displays contest results {\textcolor{lightgray} { \textbf{Developed in}  VB.NET }} 
+                 \label{sec: Kfund-ConsultingFirms} 
+                 \vspace{0.8em} % Adds 0.5em of vertical space
+                \item \textbf{Consulting Firms Registering System} -Developed for the Kuwait Fund to streamline the registration and management of consulting firms. The system allows firms to register, update information, and track application status.
+                {\textcolor{lightgray} { \textbf{Developed in}  VB.NET }}
+                \vspace{0.8em} % Adds 0.5em of vertical space
+                \item \label{sec: Kfund-desktop} \textbf{Windows Desktop application}  - Developed to facilitate communication across departments, allowing Kuwait Fund employees to submit requests, view profile information such as attendance, and receive administrative announcements. 
+                 {\textcolor{lightgray} { \textbf{Developed in}  VB.NET and Silverlight}} 
+                 
+               \vspace{0.8em} % Adds 0.5em of vertical space
+                \item \textbf{Survey System} -  \label{sec: Kfund-Survey} Designed to facilitate the creation, distribution, and analysis of surveys within the Kuwait Fund. This application enables users to design customized surveys, collect responses, and generate detailed reports. {\textcolor{lightgray} { \textbf{Developed in}  VB.NET and Crystal Reports}} 
+               \vspace{0.8em} % Adds 0.5em of vertical space
+                    \item  \textbf{Training Centre Application}   \label{sec: Kfund-Training} - Developed for the Public Institution for Social Security to manage employee training programs. The application streamlines scheduling, registration, and tracking of training sessions. {\textcolor{lightgray} { \textbf{Developed in}  VB.NET and Crystal Reports }} 
+\vspace{0.8em} % Adds 0.5em of vertical space
+      \label{sec: pifss-Attendance} 
+     \item  \textbf{Employee Attendance Management System} -  Developed for the Public Institution for Social Security to track and manage employee attendance. The system records clock-ins, clock-outs, and leave requests, and includes tools for generating attendance reports and managing policies.  {\textcolor{lightgray} { \textbf{Developed in}  VB.NET and Crystal Reports }} 
+\vspace{0.8em} % Adds 0.5em of vertical space
+     \label{sec: pifss-Bank} 
+     \item  \textbf{Central Bank Loan Governor} – Developed for the Public Institution for Social Security to manage and oversee loan processes for the central bank. The system tracks and processes loan applications, supports approval workflows, and provides financial reporting {\textcolor{lightgray} { \textbf{Developed in}  Java }} 
+
+
+
+
+
+
+
+\end{itemize}
+
+
+
+
+\end{document}
+
+
+hour of code : https://www.linkedin.com/posts/safiamalallah_hourofcode-kansas-ksu-activity-7137603632182566914-akTK?utm_source=share&utm_medium=member_desktop
+https://www.linkedin.com/posts/safiamalallah_csadvocacy-hourofcode-computerscienceeducation-activity-7139631364110249984-s2ZU?utm_source=share&utm_medium=member_desktop
+https://www.linkedin.com/posts/safiamalallah_our-recent-event-for-middle-school-girls-activity-7172657708154703872-izHV?utm_source=share&utm_medium=member_desktop
+
+
+coding conest
+https://www.linkedin.com/posts/safiamalallah_although-its-a-little-late-i-am-thrilled-activity-7199213583623233536-0Wp-?utm_source=share&utm_medium=member_desktop
+
+
+
+hour consult 
+https://www.linkedin.com/posts/safiamalallah_manhattan-ks-dr-lior-shamir-and-i-activity-7167581044303486976-lxvz?utm_source=share&utm_medium=member_desktop
+
+
+Grow super hero
+https://www.linkedin.com/posts/safiamalallah_excited-for-the-upcoming-grow-girls-researching-activity-7169100065628704769-tAne?utm_source=share&utm_medium=member_desktop
+
+
+windks kansas
+https://www.linkedin.com/posts/safiamalallah_wids2024-activity-7171923711581798400-Q8-v?utm_source=share&utm_medium=member_desktop
+
+aseee membership
+https://peer.asee.org/authors/safia-malallah
