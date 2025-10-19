@@ -2067,3 +2067,75 @@ ul li a {
     .theory-links{display:flex;gap:10px;flex-wrap:wrap}
     .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 12px;border-radius:10px;border:1px solid #e5e7eb;background:#f5f7fb;color:#111827;text-decoration:none;font-weight:700}
     .btn:hover{transform:translateY(-1px);box-shadow:0 6px 16px rgba(0,0,0,.06)}
+
+
+
+
+
+
+
+
+
+
+    /* --- Hiring Section --- */
+.hiring-section {
+  text-align: center;
+  margin: 1rem auto;
+  max-width: 1000px;
+ background: #00b3b3;
+}
+
+.hiring-section h2 {
+  color: var(--primary-color, #ffffff);
+  font-size: 1.8rem;
+  font-weight: 400px;
+  text-align: center;
+}
+
+.hiring-section .team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 0.5rem;
+  justify-items: center;
+}
+
+.hiring-section .person {
+  background: #f8f9ff;
+  border-radius: 10px;
+  padding: 1.5rem;
+  width: 90%;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  height: 100px;
+  
+}
+
+.hiring-section .person:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.hiring-section .name {
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: #2c3e50;
+}
+
+.job-icon {
+  font-size: 2.5rem;
+  color: #c4971b;
+}
+
+.hiring-section .role a {
+  color: #4b0082;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.hiring-section .role a:hover {
+  color: #8e44ad;
+}
+
+
